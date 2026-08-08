@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+:root {
+  --color-navy-950: #0a1220;
+  --color-navy-900: #0f1b2d;
+  --color-navy-800: #16273f;
+  --color-navy-700: #1e3350;
+  --color-navy-600: #2c4468;
+
+  --color-brass-600: #9c7638;
+  --color-brass-500: #b8935f;
+  --color-brass-400: #cba876;
+  --color-brass-300: #ddc49a;
+  --color-brass-100: #f2e8d8;
+
+  --color-ivory-50: #fbf8f3;
+  --color-ivory-100: #f5efe3;
+  --color-ivory-200: #ece1cd;
+
+  --color-ink-900: #17191c;
+  --color-ink-700: #3a3d42;
+  --color-ink-500: #6b6f76;
+
+  --background: var(--color-ivory-50);
+  --foreground: var(--color-ink-900);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-navy-950: var(--color-navy-950);
+  --color-navy-900: var(--color-navy-900);
+  --color-navy-800: var(--color-navy-800);
+  --color-navy-700: var(--color-navy-700);
+  --color-navy-600: var(--color-navy-600);
+
+  --color-brass-600: var(--color-brass-600);
+  --color-brass-500: var(--color-brass-500);
+  --color-brass-400: var(--color-brass-400);
+  --color-brass-300: var(--color-brass-300);
+  --color-brass-100: var(--color-brass-100);
+
+  --color-ivory-50: var(--color-ivory-50);
+  --color-ivory-100: var(--color-ivory-100);
+  --color-ivory-200: var(--color-ivory-200);
+
+  --color-ink-900: var(--color-ink-900);
+  --color-ink-700: var(--color-ink-700);
+  --color-ink-500: var(--color-ink-500);
+
+  --font-display: var(--font-fraunces);
+  --font-sans: var(--font-inter);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+h1, h2, h3, h4,
+.font-display {
+  font-family: var(--font-display), ui-serif, Georgia, serif;
+}
+
+::selection {
+  background: var(--color-brass-300);
+  color: var(--color-navy-900);
+}
+
+/* Respect reduced-motion preference globally; components also guard motion via useReducedMotion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  background: var(--color-navy-900);
+  color: var(--color-ivory-50);
+  padding: 0.75rem 1.25rem;
+  border-radius: 0 0 0.5rem 0;
+}
+
+.skip-link:focus {
+  left: 0;
+}

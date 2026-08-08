@@ -1,0 +1,61 @@
+"use client";
+
+import { motion, useReducedMotion, type Variants } from "framer-motion";
+import { cn } from "@/lib/cn";
+
+const containerVariants: Variants = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.08 },
+  },
+};
+
+const itemVariants: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
+  },
+};
+
+export function AnimatedGrid({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
+  const shouldReduceMotion = useReducedMotion();
+
+  return (
+    <motion.div
+      className={cn(className)}
+      initial={shouldReduceMotion ? undefined : "hidden"}
+      whileInView={shouldReduceMotion ? undefined : "visible"}
+      viewport={{ once: true, margin: "-60px" }}
+      variants={shouldReduceMotion ? undefined : containerVariants}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
+export function AnimatedGridItem({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
+  const shouldReduceMotion = useReducedMotion();
+
+  return (
+    <motion.div
+      className={cn(className)}
+      variants={shouldReduceMotion ? undefined : itemVariants}
+    >
+      {children}
+    </motion.div>
+  );
+}
