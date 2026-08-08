@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
+import { Logo } from "@/components/brand/Logo";
 import { NAV_LINKS, COMPANY } from "@/lib/content/company";
 
 export function Footer() {
@@ -9,10 +10,8 @@ export function Footer() {
     <footer className="border-t border-navy-900/10 bg-navy-950 text-ivory-100">
       <Container className="grid grid-cols-1 gap-10 py-16 sm:grid-cols-2 lg:grid-cols-4">
         <div>
-          <p className="font-display text-xl font-semibold text-ivory-50">
-            {COMPANY.name}
-          </p>
-          <p className="mt-3 max-w-xs text-sm leading-relaxed text-ivory-100/70">
+          <Logo variant="white" className="h-7 w-auto" />
+          <p className="mt-4 max-w-xs text-sm leading-relaxed text-ivory-100/70">
             Premium school uniforms, manufactured in Delhi with a heritage of
             tailoring that goes back to 1995.
           </p>

@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
+import { Logo } from "@/components/brand/Logo";
 import { NAV_LINKS, COMPANY } from "@/lib/content/company";
 import { cn } from "@/lib/cn";
 
@@ -24,11 +25,8 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-navy-900/10 bg-ivory-50/90 backdrop-blur">
       <Container className="flex h-18 items-center justify-between py-4">
-        <Link
-          href="/"
-          className="font-display text-xl font-semibold tracking-tight text-navy-900"
-        >
-          {COMPANY.name}
+        <Link href="/" className="shrink-0" aria-label={`${COMPANY.name} home`}>
+          <Logo priority className="h-7 w-auto sm:h-8" />
         </Link>
 
         <nav aria-label="Primary" className="hidden lg:block">
