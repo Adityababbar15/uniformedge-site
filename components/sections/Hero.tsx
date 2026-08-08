@@ -11,7 +11,7 @@ export function Hero() {
     <section className="relative overflow-hidden bg-navy-950">
       <Container className="relative z-10 py-16 sm:py-20 lg:py-32">
         <div className="lg:max-w-xl">
-          <p className="mb-5 text-xs font-semibold uppercase tracking-[0.25em] text-brass-400">
+          <p className="mb-5 text-xs font-semibold uppercase tracking-[0.25em] text-crimson-400">
             {COMPANY.city} &middot; Since 1995
           </p>
           <h1 className="font-display text-4xl leading-[1.1] text-ivory-50 sm:text-5xl lg:text-6xl">
@@ -51,7 +51,7 @@ export function Hero() {
           aria-hidden="true"
           className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/25 to-transparent lg:bg-[linear-gradient(to_right,rgba(10,18,32,0.97)_0%,rgba(10,18,32,0.92)_34%,rgba(10,18,32,0.4)_56%,rgba(10,18,32,0)_74%)]"
         />
-        <span className="absolute left-4 top-4 rounded-full bg-navy-950/80 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-brass-300 backdrop-blur lg:left-auto lg:right-4">
+        <span className="absolute left-4 top-4 rounded-full bg-navy-950/80 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-crimson-300 backdrop-blur lg:left-auto lg:right-4">
           AI Placeholder
         </span>
       </div>

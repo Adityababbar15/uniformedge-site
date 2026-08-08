@@ -50,7 +50,7 @@ export default function ProductsPage() {
                           sizes="(min-width: 1024px) 360px, 90vw"
                           className="object-cover"
                         />
-                        <span className="absolute left-3 top-3 rounded-full bg-navy-950/80 px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-brass-300 backdrop-blur">
+                        <span className="absolute left-3 top-3 rounded-full bg-navy-950/80 px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-crimson-300 backdrop-blur">
                           AI Placeholder
                         </span>
                       </>
@@ -218,7 +218,7 @@ export default function ProductsPage() {
                   sizes="(min-width: 768px) 720px, 92vw"
                   className="object-cover"
                 />
-                <span className="absolute left-3 top-3 rounded-full bg-navy-950/80 px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-brass-300 backdrop-blur">
+                <span className="absolute left-3 top-3 rounded-full bg-navy-950/80 px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-crimson-300 backdrop-blur">
                   AI Placeholder
                 </span>
               </div>

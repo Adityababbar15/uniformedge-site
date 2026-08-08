@@ -8,7 +8,7 @@ export function FounderStory() {
     <section className="bg-ivory-100/60 py-20 sm:py-28">
       <Container className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
         <AnimatedSection>
-          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-brass-600">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-crimson-600">
             Our Story
           </p>
           <h2 className="font-display text-3xl leading-tight text-navy-900 sm:text-4xl">

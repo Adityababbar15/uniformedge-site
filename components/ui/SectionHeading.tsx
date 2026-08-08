@@ -22,7 +22,7 @@ export function SectionHeading({
       )}
     >
       {eyebrow && (
-        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-brass-600">
+        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-crimson-600">
           {eyebrow}
         </p>
       )}

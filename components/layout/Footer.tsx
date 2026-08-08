@@ -18,7 +18,7 @@ export function Footer() {
         </div>
 
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brass-400">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-crimson-400">
             Navigate
           </p>
           <ul className="mt-4 space-y-2">
@@ -26,7 +26,7 @@ export function Footer() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="text-sm text-ivory-100/80 transition-colors hover:text-brass-300"
+                  className="text-sm text-ivory-100/80 transition-colors hover:text-crimson-300"
                 >
                   {link.label}
                 </Link>
@@ -36,18 +36,18 @@ export function Footer() {
         </div>
 
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brass-400">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-crimson-400">
             Contact
           </p>
           <ul className="mt-4 space-y-2 text-sm text-ivory-100/80">
             <li>{COMPANY.city}</li>
             <li>
-              <a href={COMPANY.phoneHref} className="transition-colors hover:text-brass-300">
+              <a href={COMPANY.phoneHref} className="transition-colors hover:text-crimson-300">
                 {COMPANY.phone}
               </a>
             </li>
             <li>
-              <a href={`mailto:${COMPANY.email}`} className="transition-colors hover:text-brass-300">
+              <a href={`mailto:${COMPANY.email}`} className="transition-colors hover:text-crimson-300">
                 {COMPANY.email}
               </a>
             </li>
@@ -55,7 +55,7 @@ export function Footer() {
         </div>
 
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brass-400">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-crimson-400">
             For Schools
           </p>
           <p className="mt-4 text-sm leading-relaxed text-ivory-100/80">
@@ -64,7 +64,7 @@ export function Footer() {
           </p>
           <Link
             href="/contact"
-            className="mt-4 inline-block text-sm font-medium text-brass-300 underline underline-offset-4 hover:text-brass-200"
+            className="mt-4 inline-block text-sm font-medium text-crimson-300 underline underline-offset-4 hover:text-crimson-200"
           >
             Request a Quote &rarr;
           </Link>

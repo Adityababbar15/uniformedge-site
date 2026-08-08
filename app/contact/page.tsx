@@ -40,7 +40,7 @@ export default function ContactPage() {
                 <dd className="mt-1">
                   <a
                     href={COMPANY.phoneHref}
-                    className="text-base text-ink-900 underline decoration-brass-500/60 underline-offset-4 hover:text-navy-900"
+                    className="text-base text-ink-900 underline decoration-crimson-500/60 underline-offset-4 hover:text-navy-900"
                   >
                     {COMPANY.phone}
                   </a>
@@ -53,7 +53,7 @@ export default function ContactPage() {
                 <dd className="mt-1">
                   <a
                     href={`mailto:${COMPANY.email}`}
-                    className="text-base text-ink-900 underline decoration-brass-500/60 underline-offset-4 hover:text-navy-900"
+                    className="text-base text-ink-900 underline decoration-crimson-500/60 underline-offset-4 hover:text-navy-900"
                   >
                     {COMPANY.email}
                   </a>

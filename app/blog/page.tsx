@@ -53,14 +53,14 @@ export default function BlogIndexPage() {
                     </Link>
                   )}
                   <div className="flex flex-1 flex-col p-8">
-                  <p className="text-xs font-semibold uppercase tracking-[0.15em] text-brass-600">
+                  <p className="text-xs font-semibold uppercase tracking-[0.15em] text-crimson-600">
                     {dateFormat.format(new Date(post.published))} ·{" "}
                     {post.readingMinutes} min read
                   </p>
                   <h2 className="font-display mt-4 text-xl leading-snug text-navy-900">
                     <Link
                       href={`/blog/${post.slug}`}
-                      className="transition-colors hover:text-brass-600"
+                      className="transition-colors hover:text-crimson-700"
                     >
                       {post.title}
                     </Link>
@@ -70,7 +70,7 @@ export default function BlogIndexPage() {
                   </p>
                   <Link
                     href={`/blog/${post.slug}`}
-                    className="mt-6 text-sm font-medium text-brass-600 underline underline-offset-4 hover:text-brass-500"
+                    className="mt-6 text-sm font-medium text-crimson-600 underline underline-offset-4 hover:text-crimson-700"
                   >
                     Read article &rarr;
                   </Link>

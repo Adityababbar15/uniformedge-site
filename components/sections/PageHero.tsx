@@ -13,7 +13,7 @@ export function PageHero({
     <section className="bg-navy-950 py-16 sm:py-20">
       <Container>
         {eyebrow && (
-          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-brass-400">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-crimson-400">
             {eyebrow}
           </p>
         )}

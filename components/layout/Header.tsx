@@ -43,7 +43,7 @@ export function Header() {
                     aria-current={active ? "page" : undefined}
                     className={cn(
                       "text-sm font-medium tracking-wide text-ink-700 transition-colors hover:text-navy-900",
-                      active && "text-navy-900 underline decoration-brass-500 decoration-2 underline-offset-8",
+                      active && "text-navy-900 underline decoration-crimson-500 decoration-2 underline-offset-8",
                     )}
                   >
                     {link.label}

@@ -1,17 +1,23 @@
 @import "tailwindcss";
 
 :root {
-  --color-navy-950: #0a1220;
-  --color-navy-900: #0f1b2d;
-  --color-navy-800: #16273f;
-  --color-navy-700: #1e3350;
-  --color-navy-600: #2c4468;
+  /* Navy anchored on the brand navy from the logo package (#0F2A4D). */
+  --color-navy-950: #071a30;
+  --color-navy-900: #0f2a4d;
+  --color-navy-800: #17395f;
+  --color-navy-700: #1f4877;
+  --color-navy-600: #2a5a91;
 
-  --color-brass-600: #9c7638;
-  --color-brass-500: #b8935f;
-  --color-brass-400: #cba876;
-  --color-brass-300: #ddc49a;
-  --color-brass-100: #f2e8d8;
+  /* Crimson anchored on the brand red (#E53935 = crimson-500).
+     The brand red itself only clears WCAG AA at large sizes, so it is
+     reserved for decorative fills; -600 and -700 carry text and buttons. */
+  --color-crimson-700: #b71c1c;
+  --color-crimson-600: #d32f2f;
+  --color-crimson-500: #e53935;
+  --color-crimson-400: #e57373;
+  --color-crimson-300: #ef9a9a;
+  --color-crimson-200: #f9d2ce;
+  --color-crimson-100: #fdecea;
 
   --color-ivory-50: #fbf8f3;
   --color-ivory-100: #f5efe3;
@@ -35,11 +41,13 @@
   --color-navy-700: var(--color-navy-700);
   --color-navy-600: var(--color-navy-600);
 
-  --color-brass-600: var(--color-brass-600);
-  --color-brass-500: var(--color-brass-500);
-  --color-brass-400: var(--color-brass-400);
-  --color-brass-300: var(--color-brass-300);
-  --color-brass-100: var(--color-brass-100);
+  --color-crimson-700: var(--color-crimson-700);
+  --color-crimson-600: var(--color-crimson-600);
+  --color-crimson-500: var(--color-crimson-500);
+  --color-crimson-400: var(--color-crimson-400);
+  --color-crimson-300: var(--color-crimson-300);
+  --color-crimson-200: var(--color-crimson-200);
+  --color-crimson-100: var(--color-crimson-100);
 
   --color-ivory-50: var(--color-ivory-50);
   --color-ivory-100: var(--color-ivory-100);
@@ -65,7 +73,7 @@ h1, h2, h3, h4,
 }
 
 ::selection {
-  background: var(--color-brass-300);
+  background: var(--color-crimson-300);
   color: var(--color-navy-900);
 }
 

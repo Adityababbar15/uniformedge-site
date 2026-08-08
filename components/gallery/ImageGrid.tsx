@@ -32,7 +32,7 @@ export function ImageGrid({
                 sizes={sizes}
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
-              <span className="absolute left-2 top-2 rounded-full bg-navy-950/80 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wide text-brass-300 backdrop-blur">
+              <span className="absolute left-2 top-2 rounded-full bg-navy-950/80 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wide text-crimson-300 backdrop-blur">
                 AI Placeholder
               </span>
             </div>

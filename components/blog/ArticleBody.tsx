@@ -40,7 +40,7 @@ export function ArticleBody({ blocks }: { blocks: Block[] }) {
                   >
                     <span
                       aria-hidden="true"
-                      className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brass-500"
+                      className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-crimson-500"
                     />
                     <span>{item}</span>
                   </li>
@@ -57,7 +57,7 @@ export function ArticleBody({ blocks }: { blocks: Block[] }) {
                   >
                     <span
                       aria-hidden="true"
-                      className="font-display shrink-0 text-lg leading-tight text-brass-500"
+                      className="font-display shrink-0 text-lg leading-tight text-crimson-600"
                     >
                       {String(n + 1).padStart(2, "0")}
                     </span>
@@ -114,7 +114,7 @@ export function ArticleBody({ blocks }: { blocks: Block[] }) {
             return (
               <p
                 key={i}
-                className="rounded-xl border-l-4 border-brass-500 bg-ivory-100/70 px-6 py-5 text-base leading-relaxed text-navy-800"
+                className="rounded-xl border-l-4 border-crimson-500 bg-ivory-100/70 px-6 py-5 text-base leading-relaxed text-navy-800"
               >
                 {block.text}
               </p>

@@ -75,7 +75,7 @@ export default function ManufacturingPage() {
             {PROCESS_STEPS.map((item) => (
               <AnimatedGridItem key={item.step}>
                 <div className="h-full rounded-2xl border border-navy-900/10 bg-white p-6">
-                  <span className="font-display text-3xl text-brass-500">
+                  <span className="font-display text-3xl text-crimson-600">
                     {item.step}
                   </span>
                   <h3 className="mt-3 font-display text-lg text-navy-900">
@@ -123,7 +123,7 @@ export default function ManufacturingPage() {
                 <li key={check} className="flex gap-3 text-sm leading-relaxed text-ink-700">
                   <span
                     aria-hidden="true"
-                    className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brass-500"
+                    className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-crimson-500"
                   />
                   {check}
                 </li>

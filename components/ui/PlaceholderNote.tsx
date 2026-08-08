@@ -11,7 +11,7 @@ export function PlaceholderNote({
     <div
       role="note"
       className={cn(
-        "rounded-xl border border-dashed border-brass-500/60 bg-brass-100/50 px-5 py-4 text-sm text-navy-800",
+        "rounded-xl border border-dashed border-crimson-500/60 bg-crimson-100/50 px-5 py-4 text-sm text-navy-800",
         className,
       )}
     >

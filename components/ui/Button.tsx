@@ -13,11 +13,13 @@ type ButtonProps = {
 };
 
 const base =
-  "inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium tracking-wide transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass-500 disabled:opacity-50 disabled:pointer-events-none";
+  "inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium tracking-wide transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-crimson-500 disabled:opacity-50 disabled:pointer-events-none";
 
 const variants = {
   primary: "bg-navy-900 text-ivory-50 hover:bg-navy-800",
-  secondary: "bg-brass-500 text-navy-950 hover:bg-brass-400",
+  // crimson-600 not the brand crimson-500: white on #E53935 is only 4.23:1,
+  // below the 4.5:1 AA threshold for this text size. -600 gives 4.98:1.
+  secondary: "bg-crimson-600 text-white hover:bg-crimson-700",
   ghost: "bg-transparent text-navy-900 border border-navy-900/20 hover:border-navy-900/50",
 };
 

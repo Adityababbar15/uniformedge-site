@@ -76,7 +76,7 @@ export default async function BlogPostPage({
         <Container className="max-w-3xl">
           <Link
             href="/blog"
-            className="text-xs font-semibold uppercase tracking-[0.2em] text-brass-400 hover:text-brass-300"
+            className="text-xs font-semibold uppercase tracking-[0.2em] text-crimson-400 hover:text-crimson-300"
           >
             &larr; Insights
           </Link>
@@ -101,7 +101,7 @@ export default async function BlogPostPage({
               sizes="(min-width: 896px) 896px, 92vw"
               className="object-cover"
             />
-            <span className="absolute left-3 top-3 rounded-full bg-navy-950/80 px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-brass-300 backdrop-blur">
+            <span className="absolute left-3 top-3 rounded-full bg-navy-950/80 px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-crimson-300 backdrop-blur">
               AI Placeholder
             </span>
           </figure>
@@ -125,7 +125,7 @@ export default async function BlogPostPage({
                 <li key={r.slug}>
                   <Link
                     href={`/blog/${r.slug}`}
-                    className="font-display text-lg text-navy-900 underline decoration-brass-500/50 underline-offset-4 hover:text-brass-600"
+                    className="font-display text-lg text-navy-900 underline decoration-crimson-500/50 underline-offset-4 hover:text-crimson-700"
                   >
                     {r.title}
                   </Link>

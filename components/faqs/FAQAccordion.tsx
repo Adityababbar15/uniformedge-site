@@ -9,7 +9,7 @@ export function FAQAccordion({ items }: { items: FAQ[] }) {
             {item.question}
             <span
               aria-hidden="true"
-              className="shrink-0 text-xl text-brass-500 transition-transform duration-200 group-open:rotate-45"
+              className="shrink-0 text-xl text-crimson-600 transition-transform duration-200 group-open:rotate-45"
             >
               +
             </span>

@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/Button";
 import { COMPANY } from "@/lib/content/company";
 
 const fieldClasses =
-  "w-full rounded-lg border border-navy-900/15 bg-white px-4 py-3 text-sm text-ink-900 placeholder:text-ink-500/60 focus:border-brass-500 focus:outline-none focus:ring-2 focus:ring-brass-500/30 disabled:bg-ivory-100/60 disabled:text-ink-500";
+  "w-full rounded-lg border border-navy-900/15 bg-white px-4 py-3 text-sm text-ink-900 placeholder:text-ink-500/60 focus:border-crimson-500 focus:outline-none focus:ring-2 focus:ring-crimson-500/30 disabled:bg-ivory-100/60 disabled:text-ink-500";
 
 // Public Formspree form endpoint (not a secret — it is called from the browser).
 // Set NEXT_PUBLIC_FORMSPREE_ENDPOINT in .env.local; see .env.example.
@@ -77,7 +77,7 @@ export function ContactForm() {
           If it&apos;s urgent, call us on{" "}
           <a
             href={COMPANY.phoneHref}
-            className="underline decoration-brass-500/60 underline-offset-4"
+            className="underline decoration-crimson-500/60 underline-offset-4"
           >
             {COMPANY.phone}
           </a>
