@@ -21,12 +21,12 @@ export function Footer() {
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-crimson-400">
             Navigate
           </p>
-          <ul className="mt-4 space-y-2">
+          <ul className="mt-3 space-y-0.5">
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="text-sm text-ivory-100/80 transition-colors hover:text-crimson-300"
+                  className="inline-block py-2 text-sm text-ivory-100/80 transition-colors hover:text-crimson-300"
                 >
                   {link.label}
                 </Link>
@@ -39,15 +39,21 @@ export function Footer() {
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-crimson-400">
             Contact
           </p>
-          <ul className="mt-4 space-y-2 text-sm text-ivory-100/80">
-            <li>{COMPANY.city}</li>
+          <ul className="mt-3 space-y-0.5 text-sm text-ivory-100/80">
+            <li className="py-2">{COMPANY.city}</li>
             <li>
-              <a href={COMPANY.phoneHref} className="transition-colors hover:text-crimson-300">
+              <a
+                href={COMPANY.phoneHref}
+                className="inline-block py-2 transition-colors hover:text-crimson-300"
+              >
                 {COMPANY.phone}
               </a>
             </li>
             <li>
-              <a href={`mailto:${COMPANY.email}`} className="transition-colors hover:text-crimson-300">
+              <a
+                href={`mailto:${COMPANY.email}`}
+                className="inline-block py-2 transition-colors hover:text-crimson-300"
+              >
                 {COMPANY.email}
               </a>
             </li>
@@ -64,7 +70,7 @@ export function Footer() {
           </p>
           <Link
             href="/contact"
-            className="mt-4 inline-block text-sm font-medium text-crimson-300 underline underline-offset-4 hover:text-crimson-200"
+            className="mt-3 inline-block py-2 text-sm font-medium text-crimson-300 underline underline-offset-4 hover:text-crimson-200"
           >
             Request a Quote &rarr;
           </Link>

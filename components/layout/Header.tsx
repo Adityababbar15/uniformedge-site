@@ -25,7 +25,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-navy-900/10 bg-ivory-50/90 backdrop-blur">
       <Container className="flex h-18 items-center justify-between py-4">
-        <Link href="/" className="shrink-0" aria-label={`${COMPANY.name} home`}>
+        <Link href="/" className="shrink-0 py-2" aria-label={`${COMPANY.name} home`}>
           <Logo priority className="h-7 w-auto sm:h-8" />
         </Link>
 

@@ -15,7 +15,7 @@ import {
 export const metadata: Metadata = {
   title: "School Programs & Bulk Orders",
   description:
-    "UniformEdge school uniform programs for single schools, established schools with recurring reorders, and multi-branch school groups — including GeM tender-eligible supply.",
+    "School uniform programs for single schools, recurring reorders, and multi-branch groups — including GeM tender-eligible supply.",
 };
 
 export default function SchoolProgramsPage() {

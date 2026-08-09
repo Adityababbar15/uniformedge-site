@@ -198,7 +198,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "What Makes a High-Quality School Uniform?",
     metaTitle: "What Makes a High-Quality School Uniform? | UniformEdge",
     metaDescription:
-      "Fabric weight, stitching at stress points, colourfastness and shrink control — the construction details that determine whether a school uniform survives a full academic year.",
+      "Fabric weight, stitching at stress points, colourfastness and shrink control — what decides whether a school uniform survives the year.",
     excerpt:
       "A uniform gets washed weekly and worn hard. Here's where quality is actually won or lost — and how to inspect for it.",
     primaryKeyword: "high quality school uniform",
