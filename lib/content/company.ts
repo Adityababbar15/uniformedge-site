@@ -11,9 +11,26 @@ export const SITE_URL = "https://www.uniformedge.co.in";
 // URLs indexed against canonicals pointing somewhere else — painful to unwind later.
 export const SITE_INDEXABLE = false;
 
+// Top nav is capped at eight: adding Sectors as a tenth item overflowed the header
+// at 1024px. Gallery and FAQs move to the footer — Gallery is reachable from
+// Products, FAQs from the footer and the contact flow.
 export const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
+  { href: "/sectors", label: "Sectors" },
+  { href: "/products", label: "Products" },
+  { href: "/manufacturing", label: "Manufacturing" },
+  { href: "/school-programs", label: "Programs" },
+  { href: "/blog", label: "Insights" },
+  { href: "/contact", label: "Contact" },
+] as const;
+
+// Every indexable page — drives the footer and the sitemap, so nothing drops out
+// of either just because it is not in the top nav.
+export const FOOTER_LINKS = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/sectors", label: "Sectors" },
   { href: "/products", label: "Products" },
   { href: "/manufacturing", label: "Manufacturing" },
   { href: "/school-programs", label: "Programs" },
@@ -25,7 +42,8 @@ export const NAV_LINKS = [
 
 export const COMPANY = {
   name: "UniformEdge",
-  tagline: "Premium school uniforms, tailored for trust",
+  tagline: "Premium uniforms, tailored for trust",
+  schoolTagline: "Premium school uniforms, tailored for trust",
   city: "Delhi, India",
   phone: "+91 99533 99534",
   phoneHref: "tel:+919953399534",

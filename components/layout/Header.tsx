@@ -29,8 +29,8 @@ export function Header() {
           <Logo priority className="h-7 w-auto sm:h-8" />
         </Link>
 
-        <nav aria-label="Primary" className="hidden lg:block">
-          <ul className="flex items-center gap-8">
+        <nav aria-label="Primary" className="hidden xl:block">
+          <ul className="flex items-center gap-6">
             {NAV_LINKS.map((link) => {
               const active =
                 link.href === "/"
@@ -54,7 +54,7 @@ export function Header() {
           </ul>
         </nav>
 
-        <div className="hidden lg:block">
+        <div className="hidden xl:block">
           <Button href="/contact" variant="secondary">
             Request a Quote
           </Button>
@@ -62,7 +62,7 @@ export function Header() {
 
         <button
           type="button"
-          className="flex h-10 w-10 items-center justify-center rounded-full text-navy-900 lg:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-full text-navy-900 xl:hidden"
           aria-expanded={open}
           aria-controls="mobile-menu"
           aria-label={open ? "Close menu" : "Open menu"}
@@ -96,7 +96,7 @@ export function Header() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-            className="overflow-hidden border-b border-navy-900/10 bg-ivory-50 lg:hidden"
+            className="overflow-hidden border-b border-navy-900/10 bg-ivory-50 xl:hidden"
           >
             <Container className="flex flex-col gap-1 py-4">
               {NAV_LINKS.map((link) => (

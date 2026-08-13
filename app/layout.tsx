@@ -24,16 +24,16 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "UniformEdge | Premium School Uniform Manufacturer, Delhi",
+    default: "UniformEdge | School & Corporate Uniform Manufacturer, Delhi",
     template: "%s | UniformEdge",
   },
   description:
-    "UniformEdge designs and manufactures premium school uniforms in Delhi, India — in-house tailoring, dependable quality, and school partnerships built on trust.",
+    "UniformEdge manufactures school, corporate, healthcare, hospitality and industrial uniforms in Delhi, India — in-house tailoring, exact colour matching, and partnerships built on trust.",
   alternates: { canonical: "/" },
   openGraph: {
-    title: "UniformEdge | Premium School Uniform Manufacturer, Delhi",
+    title: "UniformEdge | School & Corporate Uniform Manufacturer, Delhi",
     description:
-      "UniformEdge designs and manufactures premium school uniforms in Delhi, India — in-house tailoring, dependable quality, and school partnerships built on trust.",
+      "UniformEdge manufactures school, corporate, healthcare, hospitality and industrial uniforms in Delhi, India — in-house tailoring, exact colour matching, and partnerships built on trust.",
     siteName: "UniformEdge",
     locale: "en_IN",
     type: "website",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "UniformEdge | Premium School Uniform Manufacturer, Delhi",
+    title: "UniformEdge | School & Corporate Uniform Manufacturer, Delhi",
     description:
       "Premium school uniforms manufactured in Delhi — crest-accurate embroidery, exact colour matching, and a standing reorder programme.",
     images: ["/images/og/og-default.jpg"],
@@ -69,7 +69,7 @@ const organizationSchema = {
   url: SITE_URL,
   slogan: COMPANY.tagline,
   description:
-    "UniformEdge designs and manufactures school uniforms from its own facility in Delhi, India.",
+    "UniformEdge manufactures school, corporate, healthcare, hospitality and industrial uniforms from its own facility in Delhi, India.",
   foundingDate: "1995",
   telephone: COMPANY.phone,
   email: COMPANY.email,

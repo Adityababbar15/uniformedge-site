@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { Logo } from "@/components/brand/Logo";
-import { NAV_LINKS, COMPANY } from "@/lib/content/company";
+import { FOOTER_LINKS, COMPANY } from "@/lib/content/company";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -22,7 +22,7 @@ export function Footer() {
             Navigate
           </p>
           <ul className="mt-3 space-y-0.5">
-            {NAV_LINKS.map((link) => (
+            {FOOTER_LINKS.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
