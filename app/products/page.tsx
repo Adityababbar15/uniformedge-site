@@ -34,7 +34,15 @@ export default function ProductsPage() {
 
       <section className="py-16 sm:py-20">
         <Container>
-          <AIPlaceholderBanner />
+          <SectionHeading
+            eyebrow="Categories"
+            title="What we make"
+            description="Seven garment categories, each manufactured to your school's colours, crest and sizing."
+          />
+
+          <div className="mt-8">
+            <AIPlaceholderBanner />
+          </div>
 
           <AnimatedGrid className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {PRODUCT_CATEGORIES.map((category) => (

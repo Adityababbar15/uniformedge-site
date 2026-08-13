@@ -3,6 +3,14 @@
 // or search engines will index URLs that redirect.
 export const SITE_URL = "https://www.uniformedge.co.in";
 
+// FLIP TO true ONLY once SITE_URL actually resolves to this site.
+//
+// While false the site sends noindex and robots.txt disallows everything. That is
+// deliberate: the site is currently served from a *.vercel.app host while SITE_URL
+// points at uniformedge.co.in. Letting Google crawl in that state gets the vercel.app
+// URLs indexed against canonicals pointing somewhere else — painful to unwind later.
+export const SITE_INDEXABLE = false;
+
 export const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
