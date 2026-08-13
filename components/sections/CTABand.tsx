@@ -3,8 +3,8 @@ import { Button } from "@/components/ui/Button";
 import { AnimatedSection } from "@/components/motion/AnimatedSection";
 
 export function CTABand({
-  title = "Ready to outfit your school?",
-  description = "Tell us about your student strength, timeline, and style requirements — we'll take it from there.",
+  title = "Ready to outfit your team?",
+  description = "Tell us your sector, headcount and timeline — we'll come back with a garment mix and a quote.",
 }: {
   title?: string;
   description?: string;

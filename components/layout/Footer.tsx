@@ -12,8 +12,8 @@ export function Footer() {
         <div>
           <Logo variant="white" className="h-7 w-auto" />
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-ivory-100/70">
-            Premium school uniforms, manufactured in Delhi with a heritage of
-            tailoring that goes back to 1995.
+            School, corporate, healthcare, hospitality and industrial uniforms,
+            manufactured in Delhi with a tailoring heritage going back to 1995.
           </p>
         </div>
 

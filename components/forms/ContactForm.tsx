@@ -3,6 +3,7 @@
 import { useId, useState, type FormEvent } from "react";
 import { Button } from "@/components/ui/Button";
 import { COMPANY } from "@/lib/content/company";
+import { SECTORS } from "@/lib/content/sectors";
 
 const fieldClasses =
   "w-full rounded-lg border border-navy-900/15 bg-white px-4 py-3 text-sm text-ink-900 placeholder:text-ink-500/60 focus:border-crimson-500 focus:outline-none focus:ring-2 focus:ring-crimson-500/30 disabled:bg-ivory-100/60 disabled:text-ink-500";
@@ -30,6 +31,17 @@ export function ContactForm() {
         "This form isn't connected yet. Please reach us on WhatsApp, or by phone or email — the details are on this page.",
       );
       return;
+    }
+
+    // Label the email by sector so enquiries are triageable from the subject
+    // line alone, rather than every one reading as a school enquiry.
+    const formData = new FormData(form);
+    const sector = String(formData.get("sector") || "").trim();
+    const subject = form.elements.namedItem("_subject");
+    if (subject instanceof HTMLInputElement) {
+      subject.value = sector
+        ? `New enquiry: ${sector} — uniformedge.co.in`
+        : "New uniform enquiry — uniformedge.co.in";
     }
 
     setStatus("submitting");
@@ -97,7 +109,7 @@ export function ContactForm() {
       <input
         type="hidden"
         name="_subject"
-        value="New school uniform enquiry — uniformedge.co.in"
+        defaultValue="New uniform enquiry — uniformedge.co.in"
       />
       {/* Spam trap: bots fill this, people never see it. */}
       <input
@@ -132,7 +144,7 @@ export function ContactForm() {
           htmlFor={`${formId}-school`}
           className="mb-2 block text-sm font-medium text-navy-900"
         >
-          School / organisation
+          Organisation
         </label>
         <input
           id={`${formId}-school`}
@@ -178,6 +190,33 @@ export function ContactForm() {
             className={fieldClasses}
           />
         </div>
+      </div>
+
+      <div>
+        <label
+          htmlFor={`${formId}-sector`}
+          className="mb-2 block text-sm font-medium text-navy-900"
+        >
+          What do you need uniforms for?
+        </label>
+        <select
+          id={`${formId}-sector`}
+          name="sector"
+          required
+          disabled={busy}
+          defaultValue=""
+          className={fieldClasses}
+        >
+          <option value="" disabled>
+            Select a sector
+          </option>
+          {SECTORS.map((sector) => (
+            <option key={sector.slug} value={sector.name}>
+              {sector.name}
+            </option>
+          ))}
+          <option value="Other">Something else</option>
+        </select>
       </div>
 
       <div>
