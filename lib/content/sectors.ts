@@ -66,6 +66,9 @@ export const SECTORS: Sector[] = [
     ],
     fabricNote:
       "Pure cotton for warm-climate daily wear, poly-cotton where wrinkle resistance and fast drying matter, terry cotton for trousers and skirts that need structure.",
+    image: "/images/campus/students-corridor-between-periods.webp",
+    imageAlt:
+      "Senior students in grey and white school uniforms walking along a school corridor",
     ctaTitle: "Outfitting a school?",
     ctaBody:
       "Tell us your student strength, term start and current uniform, and we'll map a programme and timeline back from delivery.",
@@ -103,6 +106,9 @@ export const SECTORS: Sector[] = [
     ],
     fabricNote:
       "Poly-cotton and blended suiting for shirts and formal wear — wrinkle resistance and colour retention matter most where garments are worn daily and laundered often.",
+    image: "/images/sectors/corporate-office-team.webp",
+    imageAlt:
+      "Corporate staff in matching light-blue shirts and navy blazers in an office reception",
     ctaTitle: "Dressing a corporate team?",
     ctaBody:
       "Send us your brand colours, headcount and the roles you need covered, and we'll come back with a garment mix and quote.",
@@ -139,6 +145,9 @@ export const SECTORS: Sector[] = [
     ],
     fabricNote:
       "Poly-cotton blends for scrubs and tunics, where shape and colour survive repeated hot washing better than pure cotton. Specific finishes — fluid-resistant or antimicrobial — are specified to your requirement rather than assumed.",
+    image: "/images/sectors/healthcare-staff-corridor.webp",
+    imageAlt:
+      "Healthcare staff in teal scrubs and a white lab coat walking a hospital corridor",
     ctaTitle: "Outfitting a hospital or clinic?",
     ctaBody:
       "Tell us your departments, headcount and any colour-coding you already use, and we'll build a programme around it.",
@@ -175,6 +184,9 @@ export const SECTORS: Sector[] = [
     ],
     fabricNote:
       "Heavier poly-cotton for chef wear, where durability and stain tolerance lead. Lighter blends front-of-house, where appearance and drape lead. Garments intended for food-handling areas are specified to your operating requirements.",
+    image: "/images/sectors/hospitality-kitchen-pass.webp",
+    imageAlt:
+      "Chefs in white coats handing a plated dish to a server in waistcoat and apron at the kitchen pass",
     ctaTitle: "Kitting out a restaurant or hotel?",
     ctaBody:
       "Tell us your covers, kitchen and floor headcount, and the look you want, and we'll propose a range for both sides.",
@@ -211,6 +223,9 @@ export const SECTORS: Sector[] = [
     ],
     fabricNote:
       "Heavier cotton and poly-cotton drills for durability and abrasion resistance. Specialist protective finishes — flame-resistant or chemical-resistant — are sourced and specified against your stated requirement, not offered as a blanket claim.",
+    image: "/images/sectors/industrial-warehouse-team.webp",
+    imageAlt:
+      "Industrial workers in navy coveralls and high-visibility vests in a warehouse",
     ctaTitle: "Kitting out a site or factory?",
     ctaBody:
       "Tell us the roles, headcount, and any safety specification you work to, and we'll quote against it.",
