@@ -69,22 +69,24 @@ export const CLIENTS: Client[] = [
 ];
 
 // Non-identifying proof: who we supply, by type rather than by name. The 50+
-// figure is client-supplied; everything else is derivable from the client list
-// above. A count is the kind of claim a buyer can check, so it must stay accurate.
+// figure is client-supplied and counts clients across all sectors; the sector
+// descriptors are derived from the client list above. A count is the kind of
+// claim a buyer can check, so it must stay accurate.
 export const CLIENT_PROOF = [
   {
-    // "50+" supplied by the client. ASSUMPTION: this is schools, not total
-    // clients across all sectors — confirm before launch and correct if wrong.
-    label: "50+ schools",
-    detail: "International, global and convent schools across Delhi NCR",
+    // 50+ confirmed by the client as TOTAL clients across all sectors,
+    // not schools alone. Keep the label as "clients" — narrowing it to
+    // schools would overstate the school figure.
+    label: "50+ clients",
+    detail: "Organisations across Delhi NCR, supplied since 1995",
+  },
+  {
+    label: "Schools",
+    detail: "International, global and convent schools — our core business",
   },
   {
     label: "Healthcare",
     detail: "Diagnostic imaging and pathology laboratories",
-  },
-  {
-    label: "Since",
-    detail: "1995, under our founding school-uniform business",
   },
 ] as const;
 
