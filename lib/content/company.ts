@@ -100,6 +100,5 @@ export const COMPANY = {
 export const PLACEHOLDERS = {
   leadershipSignature: "[Leadership Name & Title Needed — who signs this message?]",
   officeAddress: "[Office Address Needed]",
-  schoolsServed: "[Number of Schools Served — figure pending]",
   yearsAsUniformEdge: "[Years Operating as UniformEdge — figure pending]",
 } as const;

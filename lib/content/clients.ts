@@ -1,3 +1,28 @@
+// PUBLIC DISPLAY IS OFF.
+//
+// Client names and crests are retained here but are NOT rendered anywhere on the
+// site. A school crest is a trademark, and showing it implies endorsement — that
+// needs written permission, which has not been confirmed. Until it is, the site
+// uses non-identifying descriptors (see CLIENT_PROOF below) plus "references on
+// request", which is credible without attributing anything to anyone.
+//
+// The crest image files have been moved OUT of public/ to
+// ../../client-crests/ so they are not reachable by URL while permission is
+// unconfirmed. The logo paths below therefore point at files that are not
+// currently served.
+//
+// To switch names/crests back on once permission is in writing:
+//   1. move client-crests/* back to public/images/clients/
+//   2. set DISPLAY_CLIENT_IDENTITIES to true
+//   3. restore the crest grid in components/sections/ClientProof.tsx and
+//      app/gallery/page.tsx
+//
+// Unresolved before re-enabling: three separate entries (Indraprastha
+// International / World / Global) currently share one crest file. Either they are
+// one group and should be a single entry, or two of them are showing the wrong
+// crest.
+export const DISPLAY_CLIENT_IDENTITIES = false;
+
 export type Client = {
   name: string;
   logo?: string;
@@ -42,6 +67,26 @@ export const CLIENTS: Client[] = [
   { name: "Star Imaging Path Labs", category: "institution" },
   { name: "Janta X-ray", category: "institution" },
 ];
+
+// Non-identifying proof: who we supply, by type rather than by name. The 50+
+// figure is client-supplied; everything else is derivable from the client list
+// above. A count is the kind of claim a buyer can check, so it must stay accurate.
+export const CLIENT_PROOF = [
+  {
+    // "50+" supplied by the client. ASSUMPTION: this is schools, not total
+    // clients across all sectors — confirm before launch and correct if wrong.
+    label: "50+ schools",
+    detail: "International, global and convent schools across Delhi NCR",
+  },
+  {
+    label: "Healthcare",
+    detail: "Diagnostic imaging and pathology laboratories",
+  },
+  {
+    label: "Since",
+    detail: "1995, under our founding school-uniform business",
+  },
+] as const;
 
 export const SCHOOL_CLIENTS = CLIENTS.filter((c) => c.category === "school");
 export const INSTITUTION_CLIENTS = CLIENTS.filter(

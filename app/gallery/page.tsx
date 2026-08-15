@@ -1,29 +1,25 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { PageHero } from "@/components/sections/PageHero";
 import { Container } from "@/components/ui/Container";
+import { Button } from "@/components/ui/Button";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { AIPlaceholderBanner } from "@/components/gallery/AIPlaceholderBanner";
 import { ImageGrid } from "@/components/gallery/ImageGrid";
-import { AnimatedGrid, AnimatedGridItem } from "@/components/motion/AnimatedGrid";
 import { CTABand } from "@/components/sections/CTABand";
-import { SCHOOL_CLIENTS } from "@/lib/content/clients";
 import { CONTEXT_IMAGES } from "@/lib/content/gallery";
 
 export const metadata: Metadata = {
   title: "Gallery",
   description:
-    "A look at UniformEdge uniform styles and the school partners we work with in Delhi.",
+    "A visual look at UniformEdge uniform styles across schools, corporate, healthcare, hospitality and industrial sectors.",
 };
 
 export default function GalleryPage() {
-  const schoolsWithLogos = SCHOOL_CLIENTS.filter((c) => c.logo);
-
   return (
     <>
       <PageHero
         eyebrow="Gallery"
-        title="Uniform styles & school partnerships"
+        title="Uniform styles across every sector"
         description="A visual look at what we make, and who we make it for."
       />
 
@@ -62,29 +58,23 @@ export default function GalleryPage() {
       </section>
 
       <section className="bg-ivory-100/60 py-16 sm:py-20">
-        <Container>
+        <Container className="max-w-3xl">
           <SectionHeading
             eyebrow="School Partners"
-            title="Genuine crests from schools we work with"
+            title="Who these uniforms are made for"
+            description="We supply international, global and convent schools across Delhi NCR, alongside diagnostic and pathology laboratories."
           />
-          <AnimatedGrid className="mt-10 grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-6">
-            {schoolsWithLogos.map((client) => (
-              <AnimatedGridItem key={client.name}>
-                <div className="flex flex-col items-center gap-3 text-center">
-                  <div className="relative h-16 w-full">
-                    <Image
-                      src={client.logo!}
-                      alt={`${client.name} crest`}
-                      fill
-                      sizes="140px"
-                      className="object-contain"
-                    />
-                  </div>
-                  <p className="text-xs text-ink-500">{client.name}</p>
-                </div>
-              </AnimatedGridItem>
-            ))}
-          </AnimatedGrid>
+          <p className="mt-6 text-base leading-relaxed text-ink-700">
+            We don&apos;t publish our clients&apos; names or crests without their
+            written permission — a school&apos;s crest is its own mark to control,
+            not ours to advertise with. If you would like to speak to a school we
+            already supply, ask us and we will arrange an introduction.
+          </p>
+          <div className="mt-8">
+            <Button href="/contact" variant="primary">
+              Request a reference
+            </Button>
+          </div>
         </Container>
       </section>
 

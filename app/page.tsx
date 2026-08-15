@@ -1,5 +1,5 @@
 import { Hero } from "@/components/sections/Hero";
-import { ClientLogos } from "@/components/sections/ClientLogos";
+import { ClientProof } from "@/components/sections/ClientProof";
 import { SectorsBand } from "@/components/sections/SectorsBand";
 import { ValueProps } from "@/components/sections/ValueProps";
 import { FounderStory } from "@/components/sections/FounderStory";
@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <ClientLogos />
+      <ClientProof />
       <SectorsBand />
       <ValueProps />
       <FounderStory />
