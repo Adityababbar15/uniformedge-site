@@ -151,6 +151,12 @@ export default function ProductsPage() {
 
           <AnimatedSection className="mt-12">
             <h3 className="font-display text-xl text-navy-900">Sample colourways</h3>
+            <p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink-500">
+              Screen colours are indicative only — they shift between monitors and
+              phones, and no display reproduces dyed fabric exactly. Nothing is
+              matched from a screen: we work from a physical swatch or a Pantone
+              reference, and you approve a physical sample before bulk cutting.
+            </p>
             <ul className="mt-6 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4">
               {COLOUR_SWATCHES.map((swatch) => (
                 <li key={swatch.code} className="flex items-center gap-3">

@@ -19,7 +19,7 @@ export const FAQS: FAQ[] = [
   {
     question: "What is your typical lead time?",
     answer:
-      "Typically 4–6 weeks from approved sample to delivery. Where it falls in that range depends on the size of the order, how many garment types are involved, and whether your crest and colour references are already on file — a first programme sits at the longer end, a repeat order at the shorter. Peak season runs longer than the rest of the year, so schools on a standing programme get priority production slots ahead of it. We confirm a firm delivery date in writing at quotation, working backwards from your term start.",
+      "For a school's bulk programme, typically 4–6 weeks from approved sample to delivery. Where it falls in that range depends on the size of the order, how many garment types are involved, and whether your crest and colour references are already on file — a first programme sits at the longer end, a repeat order at the shorter. Peak season runs longer than the rest of the year, so schools on a standing programme get priority production slots ahead of it. We confirm a firm delivery date in writing at quotation, working backwards from your term start. This is the manufacturing lead time for a bulk order — parents reordering a single garment we already hold are not waiting weeks; see our For Parents page.",
   },
   {
     question: "What payment terms do you offer?",
@@ -29,7 +29,7 @@ export const FAQS: FAQ[] = [
   {
     question: "What is your policy on defects, exchanges, or returns?",
     answer:
-      "Anything with a manufacturing defect — stitching, finishing, or a colour or sizing error against the approved sample — is replaced at our cost. Wrong-size garments can be exchanged within 14 days of delivery, provided they're unworn and unwashed with tags intact. Because every garment is cut and embroidered to your school's specification, we can't take back correctly-made stock outside of that window.",
+      "Anything with a manufacturing defect — stitching, finishing, or a colour or sizing error against the approved sample — is replaced at our cost. Wrong-size garments can be exchanged within 14 days of delivery, provided they're unworn and unwashed with tags intact. Please contact us to arrange an exchange before sending anything back, so we can match it to your order. Because every garment is cut and embroidered to your school's specification, we can't take back correctly-made stock outside of that window.",
   },
   {
     question: "What size range do you cater to?",
