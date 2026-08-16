@@ -1,5 +1,12 @@
 // DEMONSTRATION CATALOGUE — PRICES ARE ILLUSTRATIVE, NOT REAL.
 //
+// The school named below is a REAL school, used at the client's instruction.
+// That makes the fake prices riskier than they were under a fictional name: a
+// parent who reaches this page could take them as this school's actual prices.
+// Mitigations in place — /shop is noindex/nofollow, and the on-page banner names
+// the school and states plainly that the prices are not theirs. Do not share the
+// URL with parents until real prices replace these.
+//
 // This exists so the shape of a store can be seen and used before committing to
 // Shopify or a custom build. It is Phase 1 of docs/online-store-roadmap.md: a
 // real catalogue with a real cart, checking out to WhatsApp instead of a payment
@@ -26,7 +33,7 @@ export type ShopItem = {
   note?: string;
 };
 
-export const DEMO_SCHOOL = "Example International School";
+export const DEMO_SCHOOL = "Navjyoti Public School";
 
 export const SIZES_STANDARD = ["XS", "S", "M", "L", "XL", "XXL"];
 export const SIZES_ONE = ["One size"];

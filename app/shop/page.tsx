@@ -36,14 +36,14 @@ export default function ShopPage() {
             className="-mt-8 rounded-2xl border-2 border-dashed border-crimson-500 bg-crimson-100/60 p-6"
           >
             <p className="font-display text-lg text-navy-900">
-              Demonstration only — prices are made up
+              Prototype — these are not {DEMO_SCHOOL}&apos;s prices
             </p>
             <p className="mt-2 text-sm leading-relaxed text-navy-800">
-              This page exists to show how parent ordering would work. The school
-              is fictional, every price is illustrative, and no stock is being
-              tracked. It is not connected to a payment gateway. Real prices,
-              real stock and a real school need to be in place before anything
-              like this goes live.
+              Every price on this page is a placeholder used to demonstrate how
+              parent ordering would work. They are not {DEMO_SCHOOL}&apos;s
+              actual prices, no stock is being tracked, and the page is not
+              connected to a payment gateway. Real prices and confirmed stock
+              must replace these before this page is shared with any parent.
             </p>
           </div>
         </Container>
