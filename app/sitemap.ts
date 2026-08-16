@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { SITE_URL, FOOTER_LINKS } from "@/lib/content/company";
 import { BLOG_POSTS } from "@/lib/content/blog";
 import { SUB_SECTORS } from "@/lib/content/sectors";
+import { PUBLISHED_SCHOOLS } from "@/lib/content/partner-schools";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const pages: MetadataRoute.Sitemap = FOOTER_LINKS.map((link) => ({
@@ -25,5 +26,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...pages, ...sectors, ...posts];
+  // Only schools that have agreed to be named appear here.
+  const schools: MetadataRoute.Sitemap = PUBLISHED_SCHOOLS.map((s) => ({
+    url: `${SITE_URL}/schools/${s.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.8,
+  }));
+
+  return [...pages, ...sectors, ...schools, ...posts];
 }

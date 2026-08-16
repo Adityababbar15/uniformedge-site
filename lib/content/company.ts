@@ -11,9 +11,9 @@ export const SITE_URL = "https://www.uniformedge.co.in";
 // URLs indexed against canonicals pointing somewhere else — painful to unwind later.
 export const SITE_INDEXABLE = false;
 
-// Top nav is capped at eight: adding Sectors as a tenth item overflowed the header
-// at 1024px. Gallery and FAQs move to the footer — Gallery is reachable from
-// Products, FAQs from the footer and the contact flow.
+// Top nav is capped at eight — more than that overflows the header. The site now
+// serves two audiences, so "For Parents" earns a slot and Insights joins Gallery
+// and FAQs in the footer. All three stay in FOOTER_LINKS and the sitemap.
 export const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
@@ -21,7 +21,7 @@ export const NAV_LINKS = [
   { href: "/products", label: "Products" },
   { href: "/manufacturing", label: "Manufacturing" },
   { href: "/school-programs", label: "Programs" },
-  { href: "/blog", label: "Insights" },
+  { href: "/parents", label: "For Parents" },
   { href: "/contact", label: "Contact" },
 ] as const;
 
@@ -34,6 +34,7 @@ export const FOOTER_LINKS = [
   { href: "/products", label: "Products" },
   { href: "/manufacturing", label: "Manufacturing" },
   { href: "/school-programs", label: "Programs" },
+  { href: "/parents", label: "For Parents" },
   { href: "/gallery", label: "Gallery" },
   { href: "/blog", label: "Insights" },
   { href: "/faqs", label: "FAQs" },
