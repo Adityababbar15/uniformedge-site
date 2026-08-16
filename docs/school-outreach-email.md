@@ -32,13 +32,19 @@ in the subject, anything with an exclamation mark.
 >
 > We manufacture school uniforms from our own facility in Delhi, and have been
 > clothing the city's students since 1995. The part that usually interests
-> schools most is what we take away rather than what we make: once we're
-> appointed, parents order from us directly. {{School}} holds no stock, handles
-> no uniform money, and doesn't field complaints about fit.
+> schools most is what we take away rather than what we make.
+>
+> Once we're appointed, we deal with parents directly. They order from us over
+> WhatsApp or come to our store to be fitted — it doesn't route through your
+> office. That means {{School}} needs no uniform room, no distribution days, no
+> cash desk and no stock cupboard. No staff time lost to sizing queries in
+> August, and no cupboard of last year's blazers taking up space.
 >
 > You keep control of what matters — colours matched to your actual palette
 > rather than the nearest shade, your crest digitised properly rather than
 > approximated, and physical samples approved before anything is cut.
+>
+> There's more on how it works here: https://www.uniformedge.co.in
 >
 > Would a short call be useful? Or if it's easier, tell me the one garment your
 > parents complain about most and I'll send a sample of ours to compare.
@@ -55,7 +61,32 @@ in the subject, anything with an exclamation mark.
   price. Relief is the differentiated pitch and the one you actually deliver.
 - **The ask is tiny.** "Send me the garment you get complaints about" is easier
   to say yes to than a meeting, and the reply tells you their pain point.
-- **Under 180 words.** A principal reads this on a phone between classes.
+- **Under 200 words.** A principal reads this on a phone between classes.
+- **The space/time/effort claim is framed around the school, not us.** See the
+  warning below — this is the one paragraph that can get you into trouble.
+
+---
+
+## Two things this email gets wrong if you send it today
+
+**1. The link goes nowhere yet.** `uniformedge.co.in` still resolves to registrar
+parking, and the Vercel deployment is set to noindex. A principal who clicks and
+lands on a parked page will not click a second time. **Point DNS before this
+email goes out**, or remove the line.
+
+**2. Do not say "everything is online".** There is no online store. Parents order
+by WhatsApp, by phone, in store, or through the school — that is not e-commerce,
+and a principal who repeats "it's all online" to parents who then have to visit a
+shop will hold you to it.
+
+What *is* true, and is what the paragraph above claims: the **school's**
+involvement drops to nearly nothing. No uniform room, no distribution day, no
+cash handling, no stock. That is a genuine saving of space, staff time and
+effort — and it is defensible because it describes their side, not a capability
+we have not built.
+
+Say "we deal with parents directly, mostly remotely." Do not say "our business is
+fully online."
 
 ---
 
@@ -121,4 +152,5 @@ gets filtered, and then your quotes and invoices stop arriving too.
 - [ ] Decide who signs — the email needs a real name
 - [ ] Confirm the reply inbox is monitored daily
 - [ ] Send one to yourself first and read it on a phone
-- [ ] Check the site is live before pointing anyone at it
+- [ ] **Confirm https://www.uniformedge.co.in actually loads the site** — the
+      email links to it
