@@ -88,6 +88,9 @@ export default function ProductsPage() {
             <Button href={CATALOGUE_PDF} variant="ghost" external>
               Download the Catalogue (PDF)
             </Button>
+            <Button href="/school-programs" variant="ghost">
+              School Programmes
+            </Button>
           </div>
         </Container>
       </section>

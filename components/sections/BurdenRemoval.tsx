@@ -66,10 +66,17 @@ export function BurdenRemoval() {
           <Button href="/contact" variant="secondary">
             Talk to us about your school
           </Button>
-          <p className="text-sm leading-relaxed text-ivory-100/60">
-            You keep control of the specification. We take the operations.
-          </p>
+          <Button
+            href="/school-programs"
+            variant="ghost"
+            className="border-ivory-50/25 text-ivory-50 hover:border-ivory-50/60"
+          >
+            See how programmes work
+          </Button>
         </AnimatedSection>
+        <p className="mt-4 text-sm leading-relaxed text-ivory-100/60">
+          You keep control of the specification. We take the operations.
+        </p>
       </Container>
     </section>
   );

@@ -11,16 +11,20 @@ export const SITE_URL = "https://www.uniformedge.co.in";
 // URLs indexed against canonicals pointing somewhere else — painful to unwind later.
 export const SITE_INDEXABLE = false;
 
-// Top nav is capped at eight — more than that overflows the header. The site now
-// serves two audiences, so "For Parents" earns a slot and Insights joins Gallery
-// and FAQs in the footer. All three stay in FOOTER_LINKS and the sitemap.
+// Top nav is capped at eight — more than that overflows the header.
+//
+// Insights is in and Programs is out: Insights serves every audience and every
+// article is an entry point from search, whereas Programs is school-specific on
+// a site now covering five sectors and parents. Programs is not orphaned — it is
+// linked from the school pitch on the homepage and from Products, as well as the
+// footer. Gallery, FAQs and Programs all remain in FOOTER_LINKS and the sitemap.
 export const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/sectors", label: "Sectors" },
   { href: "/products", label: "Products" },
   { href: "/manufacturing", label: "Manufacturing" },
-  { href: "/school-programs", label: "Programs" },
+  { href: "/blog", label: "Insights" },
   { href: "/parents", label: "For Parents" },
   { href: "/contact", label: "Contact" },
 ] as const;
