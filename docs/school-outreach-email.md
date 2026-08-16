@@ -1,0 +1,124 @@
+# School outreach email
+
+Merge fields available from `gurugram-school-emails.csv`: `{{School}}`, `{{Locality}}`
+(derive from the address column).
+
+**Every claim below is verifiable.** No certifications, no named client schools, no
+invented statistics — if a principal asks you to back something up, you can.
+
+---
+
+## Subject lines
+
+Test two or three. Avoid anything that reads like a mailshot.
+
+1. `Uniforms for {{School}}`
+2. `{{School}} uniforms — taking the admin off your office`
+3. `A question about {{School}}'s uniform supplier`
+
+**Avoid:** "Best uniform manufacturer in Delhi!", anything with "Dear Sir/Madam"
+in the subject, anything with an exclamation mark.
+
+---
+
+## Email 1 — the opener
+
+> **Subject:** Uniforms for {{School}}
+>
+> Dear Principal,
+>
+> Most schools inherit their uniform supplier the way they inherit a photocopier
+> contract — whoever was there first tends to stay.
+>
+> We manufacture school uniforms from our own facility in Delhi, and have been
+> clothing the city's students since 1995. The part that usually interests
+> schools most is what we take away rather than what we make: once we're
+> appointed, parents order from us directly. {{School}} holds no stock, handles
+> no uniform money, and doesn't field complaints about fit.
+>
+> You keep control of what matters — colours matched to your actual palette
+> rather than the nearest shade, your crest digitised properly rather than
+> approximated, and physical samples approved before anything is cut.
+>
+> Would a short call be useful? Or if it's easier, tell me the one garment your
+> parents complain about most and I'll send a sample of ours to compare.
+>
+> [NAME]
+> UniformEdge
+> +91 99533 99534 · info@uniformedge.co.in
+
+**Why it is shaped this way**
+
+- **Opens with their problem, not our credentials.** The photocopier line is
+  from your own catalogue and it lands because it is true.
+- **Leads with operational relief.** Every competitor opens with quality or
+  price. Relief is the differentiated pitch and the one you actually deliver.
+- **The ask is tiny.** "Send me the garment you get complaints about" is easier
+  to say yes to than a meeting, and the reply tells you their pain point.
+- **Under 180 words.** A principal reads this on a phone between classes.
+
+---
+
+## Email 2 — follow-up (send 6–8 days later, same thread)
+
+> Dear Principal,
+>
+> Following up briefly in case this got buried.
+>
+> If you're already happy with your current supplier, do say and I'll leave it
+> there. If there's a recurring annoyance — colours drifting between reorders,
+> sizes running out mid-term, parents chasing the office — that's usually where
+> we're worth a conversation.
+>
+> Happy to send samples either way.
+>
+> [NAME] · UniformEdge · +91 99533 99534
+
+Giving them an easy way out raises reply rates and keeps you out of spam
+complaints. **Do not send a third email.**
+
+---
+
+## Variant — when you have a nearby reference
+
+Only once that school has agreed to be named.
+
+> We already supply [SCHOOL], about [X] minutes from you — happy to put you in
+> touch with them directly rather than have you take my word for it.
+
+Strongest line available to you, and worth the permission conversation.
+
+---
+
+## What to personalise beyond the merge field
+
+Ninety seconds per email on the top 30 schools will outperform 200 generic sends.
+
+- **Their locality** — "we already deliver in {{Locality}}"
+- **Something from their site** — a house system, a recent event, their colours
+- **Their board or size** if it shapes the uniform
+
+---
+
+## Sending rules
+
+| | |
+|---|---|
+| Volume | **20–30/day maximum**, ramping up over two weeks |
+| From | A dedicated address, not `info@`, so a reputation hit doesn't break your main inbox |
+| Format | Plain text. No logo banners, no images, no tracking pixels |
+| Timing | Tue–Thu, 10am–12pm. Avoid exam and admission season |
+| Reply-to | A monitored inbox. A reply that sits three days is a lost lead |
+
+Send in small batches from a warmed address. A cold domain blasting 200 emails
+gets filtered, and then your quotes and invoices stop arriving too.
+
+---
+
+## Before sending
+
+- [ ] Remove the 5 dead-domain rows flagged in the CSV
+- [ ] Decide who signs — the email needs a real name
+- [ ] Confirm the reply inbox is monitored daily
+- [ ] Send one to yourself first and read it on a phone
+- [ ] Check the site is live before pointing anyone at it
