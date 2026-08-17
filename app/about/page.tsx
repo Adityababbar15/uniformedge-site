@@ -4,12 +4,13 @@ import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { AnimatedSection } from "@/components/motion/AnimatedSection";
 import { CTABand } from "@/components/sections/CTABand";
-import { COMPANY } from "@/lib/content/company";
+import { COMPANY, SITE_URL } from "@/lib/content/company";
 
 export const metadata: Metadata = {
   title: "About Us",
   description:
     "The story behind UniformEdge — a Delhi tailoring heritage dating back to 1995, and our approach to manufacturing school uniforms today.",
+  alternates: { canonical: `${SITE_URL}/about/` },
 };
 
 export default function AboutPage() {

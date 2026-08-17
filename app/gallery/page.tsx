@@ -7,11 +7,13 @@ import { AIPlaceholderBanner } from "@/components/gallery/AIPlaceholderBanner";
 import { ImageGrid } from "@/components/gallery/ImageGrid";
 import { CTABand } from "@/components/sections/CTABand";
 import { CONTEXT_IMAGES } from "@/lib/content/gallery";
+import { SITE_URL } from "@/lib/content/company";
 
 export const metadata: Metadata = {
   title: "Gallery",
   description:
     "A visual look at UniformEdge uniform styles across schools, corporate, healthcare, hospitality and industrial sectors.",
+  alternates: { canonical: `${SITE_URL}/gallery/` },
 };
 
 export default function GalleryPage() {

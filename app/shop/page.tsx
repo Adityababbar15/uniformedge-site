@@ -4,6 +4,7 @@ import { Container } from "@/components/ui/Container";
 import { CartProvider } from "@/components/shop/CartProvider";
 import { ProductCard } from "@/components/shop/ProductCard";
 import { CartSummary } from "@/components/shop/CartSummary";
+import { SITE_URL } from "@/lib/content/company";
 import {
   DEMO_CATALOGUE,
   DEMO_SCHOOL,
@@ -18,6 +19,7 @@ export const metadata: Metadata = {
   // Never index the prototype, even after the rest of the site becomes
   // indexable. Sample prices in search results would be worse than no listing.
   robots: { index: false, follow: false },
+  alternates: { canonical: `${SITE_URL}/shop/` },
 };
 
 export default function ShopPage() {

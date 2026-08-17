@@ -9,6 +9,7 @@ import { CTABand } from "@/components/sections/CTABand";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { AnimatedSection } from "@/components/motion/AnimatedSection";
 import { PRODUCT_CATEGORIES } from "@/lib/content/products";
+import { SITE_URL } from "@/lib/content/company";
 import {
   CATALOGUE_ITEMS,
   COLOUR_SWATCHES,
@@ -21,6 +22,7 @@ export const metadata: Metadata = {
   title: "Products",
   description:
     "Explore UniformEdge's school uniform categories — shirts, blazers, sportswear, senior formal wear, and more, manufactured in Delhi.",
+  alternates: { canonical: `${SITE_URL}/products/` },
 };
 
 export default function ProductsPage() {

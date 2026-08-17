@@ -3,12 +3,13 @@ import { PageHero } from "@/components/sections/PageHero";
 import { Container } from "@/components/ui/Container";
 import { ContactForm } from "@/components/forms/ContactForm";
 import { AnimatedSection } from "@/components/motion/AnimatedSection";
-import { COMPANY } from "@/lib/content/company";
+import { COMPANY, SITE_URL } from "@/lib/content/company";
 
 export const metadata: Metadata = {
   title: "Contact",
   description:
     "Get in touch with UniformEdge to discuss school uniform requirements, samples, and quotes.",
+  alternates: { canonical: `${SITE_URL}/contact/` },
 };
 
 export default function ContactPage() {

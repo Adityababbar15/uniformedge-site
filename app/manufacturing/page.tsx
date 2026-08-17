@@ -5,13 +5,14 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { AnimatedGrid, AnimatedGridItem } from "@/components/motion/AnimatedGrid";
 import { AnimatedSection } from "@/components/motion/AnimatedSection";
 import { CTABand } from "@/components/sections/CTABand";
-import { COMPANY } from "@/lib/content/company";
+import { COMPANY, SITE_URL } from "@/lib/content/company";
 import { QUALITY_CHECKS, FABRIC_TYPES } from "@/lib/content/catalogue";
 
 export const metadata: Metadata = {
   title: "Manufacturing",
   description:
     "How UniformEdge manufactures school uniforms — from our own Delhi facility to trusted outsourced partners for peak-season volumes.",
+  alternates: { canonical: `${SITE_URL}/manufacturing/` },
 };
 
 const PROCESS_STEPS = [

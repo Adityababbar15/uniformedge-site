@@ -6,6 +6,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { AnimatedGrid, AnimatedGridItem } from "@/components/motion/AnimatedGrid";
 import { AnimatedSection } from "@/components/motion/AnimatedSection";
 import { CTABand } from "@/components/sections/CTABand";
+import { SITE_URL } from "@/lib/content/company";
 import {
   PROGRAM_TIERS,
   ORDERING_STEPS,
@@ -16,6 +17,7 @@ export const metadata: Metadata = {
   title: "School Programs & Bulk Orders",
   description:
     "School uniform programs for single schools, recurring reorders, and multi-branch groups — including GeM tender-eligible supply.",
+  alternates: { canonical: `${SITE_URL}/school-programs/` },
 };
 
 export default function SchoolProgramsPage() {

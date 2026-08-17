@@ -6,11 +6,13 @@ import { Container } from "@/components/ui/Container";
 import { AnimatedGrid, AnimatedGridItem } from "@/components/motion/AnimatedGrid";
 import { CTABand } from "@/components/sections/CTABand";
 import { BLOG_POSTS } from "@/lib/content/blog";
+import { SITE_URL } from "@/lib/content/company";
 
 export const metadata: Metadata = {
   title: "Insights",
   description:
     "Practical guidance for school management and procurement teams on uniform quality, supplier selection, and procurement planning.",
+  alternates: { canonical: `${SITE_URL}/blog/` },
 };
 
 const dateFormat = new Intl.DateTimeFormat("en-IN", {

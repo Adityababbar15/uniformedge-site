@@ -29,7 +29,9 @@ export const metadata: Metadata = {
   },
   description:
     "UniformEdge manufactures school, corporate, healthcare, hospitality and industrial uniforms in Delhi, India — in-house tailoring, exact colour matching, and partnerships built on trust.",
-  alternates: { canonical: "/" },
+  // No canonical here on purpose. A layout-level relative canonical resolves
+  // to the homepage for every page that does not override it, which tells
+  // Google those pages are duplicates of "/". Each page sets its own.
   openGraph: {
     title: "UniformEdge | School & Corporate Uniform Manufacturer, Delhi",
     description:
