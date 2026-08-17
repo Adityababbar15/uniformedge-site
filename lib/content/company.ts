@@ -3,13 +3,11 @@
 // or search engines will index URLs that redirect.
 export const SITE_URL = "https://www.uniformedge.co.in";
 
-// FLIP TO true ONLY once SITE_URL actually resolves to this site.
-//
-// While false the site sends noindex and robots.txt disallows everything. That is
-// deliberate: the site is currently served from a *.vercel.app host while SITE_URL
-// points at uniformedge.co.in. Letting Google crawl in that state gets the vercel.app
-// URLs indexed against canonicals pointing somewhere else — painful to unwind later.
-export const SITE_INDEXABLE = false;
+// Live and indexable since 17 Aug 2026. SITE_URL resolves to this site on
+// Cloudflare, the apex 301s to www, and canonicals agree with the served host —
+// so crawling is now safe. Set back to false only if the site moves hosts again
+// and there is a window where SITE_URL does not point at what is serving.
+export const SITE_INDEXABLE = true;
 
 // Top nav is capped at eight — more than that overflows the header.
 //
