@@ -29,9 +29,6 @@ in the subject, anything with an exclamation mark.
 >
 > Good morning,
 >
-> Apologies if this has reached the wrong desk — if uniforms aren't yours, I'd be
-> grateful if you could point me to whoever handles them, or forward this on.
->
 > Most schools inherit their uniform supplier the way they inherit a photocopier
 > contract — whoever was there first tends to stay.
 >
@@ -54,8 +51,8 @@ in the subject, anything with an exclamation mark.
 > Would a short call be useful? Or if it's easier, tell me the one garment your
 > parents complain about most and I'll send a sample of ours to compare.
 >
-> And if I should be speaking to someone else entirely, just send me their name
-> and I'll take it from there.
+> If uniforms sit with someone else at {{School}}, pass their name along or
+> forward this on — either is a help.
 >
 > [NAME]
 > UniformEdge
@@ -72,11 +69,13 @@ in the subject, anything with an exclamation mark.
 - **Under 200 words.** A principal reads this on a phone between classes.
 - **The space/time/effort claim is framed around the school, not us.** See the
   warning below — this is the one paragraph that can get you into trouble.
-- **It opens by admitting it may be the wrong desk.** Most of these addresses are
-  whatever the school registered with CBSE, so a redirect ask is not a
-  formality — it is the most likely useful outcome of the first send. It also
-  reads as courteous rather than as a mailshot, and a forward from inside the
-  school carries far more weight than a cold email.
+- **The redirect ask sits at the close, not the open.** Most of these addresses
+  are whatever the school registered with CBSE, so being pointed at the right
+  person is the most likely useful outcome of a first send — and a forward from
+  inside the school carries far more weight than a cold email. But it belongs at
+  the end: opening a cold email with an apology concedes ground before you have
+  said anything worth reading. Lead with their problem, ask for the handoff once
+  you have earned the line.
 
 ---
 
@@ -143,9 +142,9 @@ with CBSE. The `likely_recipient` column is inferred from the text before the
 firstname.lastname Gmail is probably a person who may no longer be there.
 
 Confirming them properly would mean visiting 220 school websites, and most do not
-publish a departmental address anyway. That is why the email opens by asking to
-be redirected: it converts the uncertainty into a useful reply instead of a dead
-send.
+publish a departmental address anyway. That is why the email closes by asking to be
+redirected: it converts the uncertainty into a useful reply instead of a dead
+send, without opening on the back foot.
 
 ---
 
