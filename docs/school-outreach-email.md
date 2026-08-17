@@ -15,6 +15,8 @@ Test two or three. Avoid anything that reads like a mailshot.
 1. `Uniforms for {{School}}`
 2. `{{School}} uniforms — taking the admin off your office`
 3. `A question about {{School}}'s uniform supplier`
+4. `Who handles uniforms at {{School}}?` — pairs with the redirect ask and works
+   well on generic `info@` addresses
 
 **Avoid:** "Best uniform manufacturer in Delhi!", anything with "Dear Sir/Madam"
 in the subject, anything with an exclamation mark.
@@ -25,7 +27,10 @@ in the subject, anything with an exclamation mark.
 
 > **Subject:** Uniforms for {{School}}
 >
-> Dear Principal,
+> Good morning,
+>
+> Apologies if this has reached the wrong desk — if uniforms aren't yours, I'd be
+> grateful if you could point me to whoever handles them, or forward this on.
 >
 > Most schools inherit their uniform supplier the way they inherit a photocopier
 > contract — whoever was there first tends to stay.
@@ -49,6 +54,9 @@ in the subject, anything with an exclamation mark.
 > Would a short call be useful? Or if it's easier, tell me the one garment your
 > parents complain about most and I'll send a sample of ours to compare.
 >
+> And if I should be speaking to someone else entirely, just send me their name
+> and I'll take it from there.
+>
 > [NAME]
 > UniformEdge
 > +91 99533 99534 · info@uniformedge.co.in
@@ -64,6 +72,11 @@ in the subject, anything with an exclamation mark.
 - **Under 200 words.** A principal reads this on a phone between classes.
 - **The space/time/effort claim is framed around the school, not us.** See the
   warning below — this is the one paragraph that can get you into trouble.
+- **It opens by admitting it may be the wrong desk.** Most of these addresses are
+  whatever the school registered with CBSE, so a redirect ask is not a
+  formality — it is the most likely useful outcome of the first send. It also
+  reads as courteous rather than as a mailshot, and a forward from inside the
+  school carries far more weight than a cold email.
 
 ---
 
@@ -121,6 +134,41 @@ Strongest line available to you, and worth the permission conversation.
 
 ---
 
+## Caveat on the recipient column — read this
+
+**I could not verify which department any address belongs to, and I did not try
+to make them procurement addresses.** They are whatever each school registered
+with CBSE. The `likely_recipient` column is inferred from the text before the
+`@` — `info@` is probably an office, `principal@` probably the head, a
+firstname.lastname Gmail is probably a person who may no longer be there.
+
+Confirming them properly would mean visiting 220 school websites, and most do not
+publish a departmental address anyway. That is why the email opens by asking to
+be redirected: it converts the uncertainty into a useful reply instead of a dead
+send.
+
+---
+
+## Who these addresses actually reach
+
+The CSV has a `likely_recipient` column, inferred from the part before the `@`.
+**It is a guess, not verified** — see the caveat below.
+
+| Bucket | Count | How to treat it |
+|---|---|---|
+| Office / front desk | 55 | Best first batch. A shared mailbox someone is paid to read, and forwarding is normal |
+| Principal / leadership | 37 | Goes straight to a decision-maker. Keep it short |
+| Unclear | 70 | Send with the redirect ask doing the work |
+| Looks personal | 58 | Send last. Highest chance of being a former staff member |
+
+**Nobody here has a "procurement department."** These are schools, not hospitals
+or corporates — uniform supplier choice is almost always a principal or
+management decision. Optimising for a purchasing desk would aim at the wrong
+person. The office mailbox and the principal are the two right targets, and both
+are well represented.
+
+---
+
 ## What to personalise beyond the merge field
 
 Ninety seconds per email on the top 30 schools will outperform 200 generic sends.
@@ -149,6 +197,7 @@ gets filtered, and then your quotes and invoices stop arriving too.
 ## Before sending
 
 - [ ] Remove the 5 dead-domain rows flagged in the CSV
+- [ ] Sort by `likely_recipient` and send buckets 2 and 3 first
 - [ ] Decide who signs — the email needs a real name
 - [ ] Confirm the reply inbox is monitored daily
 - [ ] Send one to yourself first and read it on a phone
