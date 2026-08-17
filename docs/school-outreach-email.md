@@ -23,7 +23,7 @@ in the subject, anything with an exclamation mark.
 
 ---
 
-## Email 1 — the opener
+## Email 1 — the opener (FINAL)
 
 > **Subject:** Uniforms for {{School}}
 >
@@ -33,18 +33,22 @@ in the subject, anything with an exclamation mark.
 > contract — whoever was there first tends to stay.
 >
 > We manufacture school uniforms from our own facility in Delhi, and have been
-> clothing the city's students since 1995. The part that usually interests
-> schools most is what we take away rather than what we make.
+> clothing the city's students since 1995. What usually interests schools most is
+> what we take away rather than what we make.
 >
-> Once we're appointed, we deal with parents directly. They order from us over
-> WhatsApp or come to our store to be fitted — it doesn't route through your
-> office. That means {{School}} needs no uniform room, no distribution days, no
-> cash desk and no stock cupboard. No staff time lost to sizing queries in
-> August, and no cupboard of last year's blazers taking up space.
+> Once we're appointed, we deal with parents directly. They order their child's
+> uniform from us and it is delivered to their home, with our team on WhatsApp if
+> they need help with sizing or a replacement mid-term. We are also rolling out an
+> online ordering page for each school we supply, so parents can order without
+> having to call anyone.
 >
-> You keep control of what matters — colours matched to your actual palette
-> rather than the nearest shade, your crest digitised properly rather than
-> approximated, and physical samples approved before anything is cut.
+> None of it routes through your office. {{School}} needs no uniform room, no
+> distribution days, no cash desk and no stock cupboard — and no staff time lost
+> to sizing queries in August.
+>
+> You keep control of what matters — colours matched to your actual palette rather
+> than the nearest shade, your crest digitised properly rather than approximated,
+> and physical samples approved before anything is cut.
 >
 > There's more on how it works here: https://www.uniformedge.co.in
 >
@@ -102,41 +106,24 @@ fully online."
 
 ---
 
-## Optional paragraph — online store and home delivery
+## Claims in this email — what backs each one
 
-**DO NOT USE YET.** Both claims below are currently false or unverified. The
-wording is written and ready; switch it on once each is true.
+| Claim | Status |
+|---|---|
+| Own facility in Delhi, since 1995 | Verified — company records |
+| Parents order direct, not via the school | Verified — this is the model |
+| Delivered to the parent's home | **Per client instruction. No charge or timeframe stated, deliberately** |
+| WhatsApp for sizing help and replacements | Verified — support channel, not the checkout |
+| Online ordering page "rolling out" | Forward-looking. `/shop` exists as a prototype and the site already says the parent portal is in development. Consistent — but do not upgrade this to "live" until it is |
+| Colour matched, crest digitised, samples before cutting | Verified — catalogue |
 
-### If the online store is live
+**No delivery charge or timeframe appears anywhere**, at the client's instruction.
+Do not add one to a reply without checking what is actually offered — a figure
+given verbally in a first call is the one a school will hold you to.
 
-Requires `/shop` shipped with real prices and confirmed stock — see
-`lib/content/shop-demo.ts`. Today it is a noindex prototype with invented prices
-and no payment gateway.
-
-> Parents order from their school's own page on our site — they pick the garment
-> and size, and it comes to them. No queueing at a counter on a Saturday, and no
-> forms through your office.
-
-### If home delivery is offered
-
-Requires a confirmed charge, timeframe and coverage area.
-
-> Everything is delivered to the parent's address, usually within [X] working
-> days, for a flat [₹X] anywhere in Delhi NCR.
-
-### Why these are held back
-
-A principal who is told "there's an online store with home delivery" will repeat
-it to parents. If a parent then has to visit the shop for a fitting, or waits on
-a delivery that was never offered, the promise breaks in the first week of the
-relationship — at exactly the moment the school is deciding whether we were the
-right choice. It is a worse outcome than a plainer email.
-
-What can be said today, and already is: parents deal with us directly rather than
-through the school, by WhatsApp or in store.
-
-**To switch these on, I need:** real Navjyoti prices and stock list, and the
-delivery charge, timeframe and coverage.
+WhatsApp is positioned as **ordering support**, not as the ordering mechanism.
+That distinction matters: "message us to order" makes it sound manual, while
+"we're on WhatsApp if you need help" reads as service on top of a real process.
 
 ---
 
