@@ -1,0 +1,23 @@
+{
+  // Without this file, `wrangler deploy` auto-detects "Next.js", assumes a
+  // server-rendered app, and runs the OpenNext adapter to build a Worker. That
+  // fails here — this site is output: "export", so there is no .next/standalone
+  // for OpenNext to bundle. Declaring assets explicitly stops the guessing.
+  //
+  // There is deliberately no "main" script: this is an assets-only deployment.
+  // Cloudflare serves the exported files directly, which is all the site needs —
+  // no route handlers, middleware or server actions.
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "uniformedge-site",
+  "compatibility_date": "2026-08-17",
+  "assets": {
+    // Matches the Next static export target. Keep in sync with next.config.ts.
+    "directory": "./out",
+    // Serve the exported 404.html for unknown paths rather than a bare Cloudflare
+    // error. trailingSlash: true means directories already resolve to index.html.
+    "not_found_handling": "404-page"
+  },
+  "observability": {
+    "enabled": true
+  }
+}
