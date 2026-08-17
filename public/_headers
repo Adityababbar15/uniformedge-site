@@ -1,0 +1,28 @@
+# Cloudflare Pages headers.
+#
+# These previously lived in next.config.ts headers(), which Next ignores under
+# output: "export" — there is no server to apply them. Cloudflare reads this file
+# at the edge instead. Keep the two in sync mentally: next.config.ts has a note
+# pointing here.
+#
+# HSTS is intentionally absent — Cloudflare applies it, and duplicating it here
+# risks a conflicting max-age.
+
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Content-Security-Policy: frame-ancestors 'self'
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
+
+# Photography and brand assets are content-stable; any change ships under a new
+# filename, so these can cache hard.
+/images/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Next's fingerprinted build output is immutable by construction.
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/uniformedge-catalogue.pdf
+  Cache-Control: public, max-age=86400

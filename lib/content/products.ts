@@ -16,7 +16,7 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
       "Everyday formal wear — crisp shirts and tailored trousers built for classroom and playground alike.",
     images: [
       "/images/product/boys-white-shirt-grey-trousers-desk.webp",
-      "/images/gallery/uniform-look-01.png",
+      "/images/gallery/uniform-look-01.webp",
     ],
   },
   {
@@ -28,9 +28,9 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
       "/images/product/navy-pullover-cardigan-knitwear.webp",
       "/images/product/navy-blazer-single-student-detail.webp",
       "/images/campus/winter-uniform-layering-morning-courtyard.webp",
-      "/images/gallery/uniform-look-02.png",
-      "/images/gallery/uniform-look-03.png",
-      "/images/gallery/uniform-look-05.png",
+      "/images/gallery/uniform-look-02.webp",
+      "/images/gallery/uniform-look-03.webp",
+      "/images/gallery/uniform-look-05.webp",
     ],
   },
   {
@@ -42,10 +42,10 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
       "/images/product/girls-collection-three-ages-courtyard.webp",
       "/images/product/primary-girl-box-pleated-pinafore.webp",
       "/images/product/girls-blouse-pleated-skirt-courtyard.webp",
-      "/images/gallery/uniform-look-04.png",
-      "/images/gallery/uniform-look-06.png",
-      "/images/gallery/uniform-look-07.png",
-      "/images/gallery/uniform-look-15.png",
+      "/images/gallery/uniform-look-04.webp",
+      "/images/gallery/uniform-look-06.webp",
+      "/images/gallery/uniform-look-07.webp",
+      "/images/gallery/uniform-look-15.webp",
     ],
   },
   {
@@ -57,9 +57,9 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
       "/images/product/house-tshirts-four-colours-sports-ground.webp",
       "/images/campus/school-sportswear-basketball-court-action.webp",
       "/images/product/navy-tracksuit-sports-ground-standing.webp",
-      "/images/gallery/uniform-look-09.png",
-      "/images/gallery/uniform-look-11.png",
-      "/images/gallery/uniform-look-12.png",
+      "/images/gallery/uniform-look-09.webp",
+      "/images/gallery/uniform-look-11.webp",
+      "/images/gallery/uniform-look-12.webp",
     ],
   },
   {
@@ -70,8 +70,8 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
     images: [
       "/images/product/senior-charcoal-blazer-staircase.webp",
       "/images/campus/senior-summer-shirt-tie-corridor.webp",
-      "/images/gallery/uniform-look-13.png",
-      "/images/gallery/uniform-look-14.png",
+      "/images/gallery/uniform-look-13.webp",
+      "/images/gallery/uniform-look-14.webp",
     ],
   },
   {
@@ -81,7 +81,7 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
       "Kurta and salwar sets for cultural days, festivals, and special school occasions.",
     images: [
       "/images/campus/salwar-kameez-kurta-festive-assembly.webp",
-      "/images/gallery/uniform-look-08.png",
+      "/images/gallery/uniform-look-08.webp",
     ],
   },
   {

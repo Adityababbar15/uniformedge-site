@@ -4,6 +4,10 @@ import { BLOG_POSTS } from "@/lib/content/blog";
 import { SUB_SECTORS } from "@/lib/content/sectors";
 import { PUBLISHED_SCHOOLS } from "@/lib/content/partner-schools";
 
+// output: "export" requires route handlers to be explicitly static —
+// without this the build fails collecting page data.
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const pages: MetadataRoute.Sitemap = FOOTER_LINKS.map((link) => ({
     url: `${SITE_URL}${link.href === "/" ? "" : link.href}`,

@@ -11,8 +11,9 @@
 //   2. fill in the garment list from what we actually hold for them
 //   3. if they allow it, add a crest to public/images/schools/
 //
-// The route is /schools/[slug] and only renders published entries. Unpublished
-// entries 404, so a half-finished entry cannot leak.
+// The /schools/[slug] route is currently NOT in app/ — static export cannot build
+// a dynamic route with zero params, and nothing is published. The page component
+// is preserved at docs/templates/school-page.tsx.txt with restore instructions.
 
 export type PartnerSchool = {
   slug: string;

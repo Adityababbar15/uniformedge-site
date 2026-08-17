@@ -1,51 +1,29 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Static HTML export for Cloudflare Pages. The site has no server-side code —
+  // no route handlers, middleware, server actions or revalidation — so nothing is
+  // lost. The contact form posts to Formspree from the browser and the shop cart
+  // is client-side.
+  output: "export",
+
+  // Required by output: "export" — the Next image optimiser is a server feature.
+  // Safe here because every image in public/images is already a sized WebP; the
+  // gallery PNGs that previously depended on optimisation were converted
+  // (25MB -> 567KB), so nothing is being served oversized.
+  images: { unoptimized: true },
+
+  // Emit /about/index.html rather than /about.html, which is what Cloudflare
+  // Pages expects for clean URLs without redirect rules.
+  trailingSlash: true,
+
   // Local network testing from a phone on the same Wi-Fi.
   allowedDevOrigins: ["192.168.1.9"],
 
-  async headers() {
-    return [
-      {
-        // Baseline hardening. HSTS is already applied by the host, so it is not
-        // duplicated here.
-        source: "/:path*",
-        headers: [
-          // Stop MIME sniffing turning an upload or asset into executable content.
-          { key: "X-Content-Type-Options", value: "nosniff" },
-          // Block framing (clickjacking). frame-ancestors is the modern form;
-          // X-Frame-Options covers older browsers that ignore CSP.
-          { key: "X-Frame-Options", value: "SAMEORIGIN" },
-          { key: "Content-Security-Policy", value: "frame-ancestors 'self'" },
-          // Send the origin cross-site, never the full path.
-          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
-          // The site needs none of these; deny by default.
-          {
-            key: "Permissions-Policy",
-            value: "camera=(), microphone=(), geolocation=(), interest-cohort=()",
-          },
-        ],
-      },
-      {
-        // Files in /public are served with max-age=0 by default, so the logo and
-        // photography revalidate on every page load. Their contents are stable and
-        // any change ships under a new filename, so cache them hard.
-        source: "/images/:path*",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
-          },
-        ],
-      },
-      {
-        source: "/uniformedge-catalogue.pdf",
-        headers: [
-          { key: "Cache-Control", value: "public, max-age=86400" },
-        ],
-      },
-    ];
-  },
+  // NOTE: headers() is deliberately absent. Next ignores it under
+  // output: "export" — there is no server to set them. The security and cache
+  // headers now live in public/_headers, which Cloudflare Pages reads. Adding
+  // them back here would silently do nothing.
 };
 
 export default nextConfig;

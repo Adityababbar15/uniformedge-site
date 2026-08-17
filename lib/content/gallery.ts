@@ -11,7 +11,7 @@ export type GalleryImage = {
 export const STUDIO_IMAGES: GalleryImage[] = Array.from({ length: 15 }, (_, i) => {
   const n = String(i + 1).padStart(2, "0");
   return {
-    src: `/images/gallery/uniform-look-${n}.png`,
+    src: `/images/gallery/uniform-look-${n}.webp`,
     alt: `AI-generated placeholder image of a uniform look, pending real photoshoot (${n} of 15)`,
   };
 });

@@ -146,3 +146,20 @@ export default async function SchoolPage({
     </>
   );
 }
+
+/* ---------------------------------------------------------------------------
+ * HOW TO RESTORE THIS ROUTE
+ *
+ * Removed from app/ because output: "export" cannot build a dynamic route whose
+ * generateStaticParams() returns an empty array — and PUBLISHED_SCHOOLS is empty
+ * until a school agrees in writing to be named.
+ *
+ * When the first school is published:
+ *   1. set published: true for it in lib/content/partner-schools.ts
+ *   2. mkdir -p "app/schools/[slug]"
+ *   3. copy this file to app/schools/[slug]/page.tsx (drop this comment block)
+ *   4. npm run build — it will generate one page per published school
+ *
+ * /parents already links to PUBLISHED_SCHOOLS behind a length check, so that
+ * page needs no change.
+ * ------------------------------------------------------------------------- */
