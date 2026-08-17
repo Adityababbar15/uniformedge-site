@@ -16,11 +16,6 @@
 //   2. set DISPLAY_CLIENT_IDENTITIES to true
 //   3. restore the crest grid in components/sections/ClientProof.tsx and
 //      app/gallery/page.tsx
-//
-// Unresolved before re-enabling: three separate entries (Indraprastha
-// International / World / Global) currently share one crest file. Either they are
-// one group and should be a single entry, or two of them are showing the wrong
-// crest.
 export const DISPLAY_CLIENT_IDENTITIES = false;
 
 export type Client = {
@@ -32,21 +27,6 @@ export type Client = {
 // Only names explicitly approved for public use. Logos are included only where
 // a genuine, verified crest file exists — everyone else is name-only, no fabricated logo.
 export const CLIENTS: Client[] = [
-  {
-    name: "Indraprastha International School",
-    logo: "/images/clients/indraprastha-crest.jpg",
-    category: "school",
-  },
-  {
-    name: "Indraprastha World School",
-    logo: "/images/clients/indraprastha-crest.jpg",
-    category: "school",
-  },
-  {
-    name: "Indraprastha Global School",
-    logo: "/images/clients/indraprastha-crest.jpg",
-    category: "school",
-  },
   {
     name: "Dwarka International School",
     logo: "/images/clients/dwarka-international-crest.png",
