@@ -102,6 +102,44 @@ fully online."
 
 ---
 
+## Optional paragraph — online store and home delivery
+
+**DO NOT USE YET.** Both claims below are currently false or unverified. The
+wording is written and ready; switch it on once each is true.
+
+### If the online store is live
+
+Requires `/shop` shipped with real prices and confirmed stock — see
+`lib/content/shop-demo.ts`. Today it is a noindex prototype with invented prices
+and no payment gateway.
+
+> Parents order from their school's own page on our site — they pick the garment
+> and size, and it comes to them. No queueing at a counter on a Saturday, and no
+> forms through your office.
+
+### If home delivery is offered
+
+Requires a confirmed charge, timeframe and coverage area.
+
+> Everything is delivered to the parent's address, usually within [X] working
+> days, for a flat [₹X] anywhere in Delhi NCR.
+
+### Why these are held back
+
+A principal who is told "there's an online store with home delivery" will repeat
+it to parents. If a parent then has to visit the shop for a fitting, or waits on
+a delivery that was never offered, the promise breaks in the first week of the
+relationship — at exactly the moment the school is deciding whether we were the
+right choice. It is a worse outcome than a plainer email.
+
+What can be said today, and already is: parents deal with us directly rather than
+through the school, by WhatsApp or in store.
+
+**To switch these on, I need:** real Navjyoti prices and stock list, and the
+delivery charge, timeframe and coverage.
+
+---
+
 ## Email 2 — follow-up (send 6–8 days later, same thread)
 
 > Dear Principal,
