@@ -64,6 +64,21 @@ export default function ManufacturingPage() {
         </Container>
       </section>
 
+      <section className="border-t border-navy-900/10 py-20 sm:py-24">
+        <Container className="max-w-3xl">
+          <SectionHeading
+            eyebrow="Waste"
+            title={COMPANY.manufacturing.sustainability.heading}
+          />
+          <p className="mt-6 text-base leading-relaxed text-ink-700">
+            {COMPANY.manufacturing.sustainability.body}
+          </p>
+          <p className="mt-5 rounded-xl bg-ivory-100/70 px-5 py-4 text-sm leading-relaxed text-ink-500">
+            {COMPANY.manufacturing.sustainability.caveat}
+          </p>
+        </Container>
+      </section>
+
       <section className="bg-ivory-100/60 py-20 sm:py-24">
         <Container>
           <SectionHeading

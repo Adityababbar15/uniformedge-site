@@ -115,6 +115,25 @@ export const COMPANY = {
       "UniformEdge operates its own manufacturing facility in Delhi, giving us direct control over cutting, stitching, and quality checks.",
     outsourcing:
       "For specialised requirements and peak-season volumes, we also work with trusted outsourced production partners — without compromising on our quality checks.",
+    /**
+     * ONE confirmed practice: offcuts from cutting are reused as packaging
+     * material. Client-confirmed 18 Aug 2026.
+     *
+     * Deliberately modest. A competitor site claims an "Official Sustainability
+     * Partner" badge it invented, and another pairs recycling with OEKO-TEX and
+     * cornstarch packaging claims. We state the one thing that is true and stop.
+     *
+     * DO NOT add without confirmation: zero-waste or landfill claims, recycled
+     * fabric content, biodegradable or compostable packaging, carbon figures, or
+     * any certification. If the practice expands — measured waste diverted,
+     * recycled-content fabric — add it here as fact, not as positioning.
+     */
+    sustainability: {
+      heading: "What happens to our offcuts",
+      body: "Cutting a uniform order leaves fabric behind. Rather than discard it, we reuse our offcuts as packaging material for the garments we send out — so the waste from one order protects the next one in transit.",
+      caveat:
+        "That is the extent of what we claim today. We hold no environmental certification, and we would rather name one practice we actually follow than publish a sustainability policy we do not yet live up to.",
+    },
   },
 } as const;
 
