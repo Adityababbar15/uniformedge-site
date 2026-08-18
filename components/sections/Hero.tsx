@@ -12,7 +12,7 @@ export function Hero() {
       <Container className="relative z-10 py-16 sm:py-20 lg:py-32">
         <div className="lg:max-w-xl">
           <p className="mb-5 text-xs font-semibold uppercase tracking-[0.25em] text-crimson-400">
-            {COMPANY.city} &middot; Since 1995
+            {COMPANY.city} &middot; Tailoring roots since 1995
           </p>
           <h1 className="font-display text-4xl leading-[1.1] text-ivory-50 sm:text-5xl lg:text-6xl">
             {COMPANY.tagline}
