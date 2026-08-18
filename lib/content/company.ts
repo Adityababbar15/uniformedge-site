@@ -59,7 +59,7 @@ export const COMPANY = {
     growth:
       "In 2017, the business grew into a multi-product store in Dwarka, expanding its reach across Delhi's school community.",
     relationshipNote:
-      "UniformEdge is a related but distinct entity to Neeraj School Uniforms, carrying that same tailoring heritage forward.",
+      "UniformEdge and Neeraj School Uniforms are separate businesses in the same family. Neeraj continues to trade; UniformEdge carries the same tailoring heritage forward into its own manufacturing.",
     /**
      * The same three facts as a timeline. Prose buries a 30-year history in a
      * paragraph; a dated sequence makes it scannable, which is what a school
@@ -80,9 +80,9 @@ export const COMPANY = {
         body: "The business grows into a multi-product store in Dwarka, serving schools across west and south-west Delhi.",
       },
       {
-        year: "Today",
+        year: "2026",
         title: "UniformEdge",
-        body: "A related but distinct entity, carrying the same tailoring heritage into in-house manufacturing for schools, corporate, healthcare, hospitality and industrial clients.",
+        body: "A separate business in the same family, carrying the tailoring heritage into in-house manufacturing for schools, corporate, healthcare, hospitality and industrial clients.",
       },
     ],
   },
