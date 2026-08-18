@@ -72,12 +72,17 @@ const organizationSchema = {
   slogan: COMPANY.tagline,
   description:
     "UniformEdge manufactures school, corporate, healthcare, hospitality and industrial uniforms from its own facility in Delhi, India.",
-  // UniformEdge's OWN founding year, not 1995. 1995 is when Neeraj School
-  // Uniforms was founded — a separate family business that still trades today.
-  // Claiming 1995 here would be a machine-readable assertion a company-register
-  // lookup could contradict. The 1995 heritage is stated in prose instead, where
-  // it can be framed accurately as roots rather than as trading history.
-  foundingDate: "2026",
+  // foundingDate intentionally omitted.
+  //
+  // UniformEdge was established in 2026; the 1995 date belongs to Neeraj School
+  // Uniforms, a separate family business that still trades. Publishing 2026 as
+  // structured data risks it surfacing in a knowledge panel next to competitors
+  // claiming sixty years, and the field carries no ranking benefit.
+  //
+  // This conceals nothing: the site states the 1995 roots, that Neeraj is a
+  // separate business, and that Neeraj still trades. It simply does not
+  // volunteer the year in machine-readable form. If a knowledge panel or a
+  // verification process later needs it, the value is "2026".
   telephone: COMPANY.phone,
   email: COMPANY.email,
   address: {
