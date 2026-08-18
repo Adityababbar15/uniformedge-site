@@ -80,7 +80,7 @@ export default function AboutPage() {
             <SectionHeading eyebrow="Leadership" title="A message from our team" />
             <blockquote className="mt-6 space-y-5 border-l-4 border-crimson-500 pl-6 text-base leading-relaxed text-ink-700">
               <p>
-                We have been clothing Delhi&apos;s students since 1995, and the
+                The business we grew from has been clothing Delhi&apos;s students since 1995, and the
                 thing that has kept schools with us is not a price list — it is
                 that we treat the uniform as part of the school, not as stock to
                 be shipped.

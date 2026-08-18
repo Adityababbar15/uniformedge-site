@@ -72,7 +72,11 @@ const organizationSchema = {
   slogan: COMPANY.tagline,
   description:
     "UniformEdge manufactures school, corporate, healthcare, hospitality and industrial uniforms from its own facility in Delhi, India.",
-  foundingDate: "1995",
+  // foundingDate deliberately omitted. 1995 is when Neeraj School Uniforms was
+  // founded — a related but SEPARATE business that still trades today — not when
+  // UniformEdge was established. Asserting it here told Google that UniformEdge
+  // has traded since 1995, which a company-register lookup would contradict.
+  // Restore this with UniformEdge's own incorporation year once confirmed.
   telephone: COMPANY.phone,
   email: COMPANY.email,
   address: {

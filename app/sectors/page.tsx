@@ -23,7 +23,7 @@ export default function SectorsPage() {
       <PageHero
         eyebrow="Sectors"
         title="One cutting floor, five very different jobs"
-        description="Schools have been our core since 1995. The same manufacturing discipline now dresses offices, hospitals, kitchens and factories."
+        description="Schools are our core sector, and the one our tailoring roots come from. The same manufacturing discipline now dresses offices, hospitals, kitchens and factories."
       />
 
       <section className="py-16 sm:py-20">

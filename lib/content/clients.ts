@@ -58,7 +58,7 @@ export const CLIENT_PROOF = [
     // not schools alone. Keep the label as "clients" — narrowing it to
     // schools would overstate the school figure.
     label: "50+ clients",
-    detail: "Organisations across Delhi NCR, supplied since 1995",
+    detail: "Organisations across Delhi NCR",
   },
   {
     label: "Schools",

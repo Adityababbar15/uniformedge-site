@@ -14,7 +14,7 @@ export function SectorsBand() {
         <SectionHeading
           eyebrow="Sectors"
           title="Who we manufacture for"
-          description="Schools since 1995, and — from the same facility and the same quality checks — offices, hospitals, kitchens and industrial sites."
+          description="Schools first, and — from the same facility and the same quality checks — offices, hospitals, kitchens and industrial sites."
         />
 
         <AnimatedGrid className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">

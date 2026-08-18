@@ -44,7 +44,7 @@ export const SECTORS: Sector[] = [
     eyebrow: "Schools",
     title: "School uniforms, tailored per school",
     summary:
-      "Our founding business since 1995 — full uniform programmes for schools across Delhi, from KG through senior years.",
+      "Our founding sector, and the one our tailoring roots come from — full uniform programmes for schools across Delhi, from KG through senior years.",
     metaTitle: "School Uniform Manufacturer, Delhi",
     metaDescription:
       "Full school uniform programmes manufactured in Delhi — crest-accurate embroidery, exact colour matching, and a standing reorder programme.",

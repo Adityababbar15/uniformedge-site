@@ -18,7 +18,7 @@ export function Hero() {
             {COMPANY.tagline}
           </h1>
           <p className="mt-6 max-w-lg text-base leading-relaxed text-ivory-100/75 sm:text-lg">
-            School uniforms have been our core since 1995. From the same Delhi
+            School uniforms are our core, on tailoring roots going back to 1995. From the same Delhi
             facility we also manufacture corporate, healthcare, hospitality and
             industrial uniforms — for organisations that expect tailoring
             quality, colour consistency, and a partner who stands behind every

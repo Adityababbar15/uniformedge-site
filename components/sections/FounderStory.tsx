@@ -29,7 +29,7 @@ export function FounderStory() {
             <dl className="grid grid-cols-2 gap-8">
               <div>
                 <dt className="text-xs font-semibold uppercase tracking-wide text-ink-500">
-                  Founded
+                  Tailoring roots
                 </dt>
                 <dd className="mt-2 font-display text-3xl text-navy-900">1995</dd>
               </div>

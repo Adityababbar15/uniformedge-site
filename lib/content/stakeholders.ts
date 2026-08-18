@@ -56,7 +56,7 @@ export const STAKEHOLDERS: Stakeholder[] = [
     concern:
       "You need to know what uniforms will cost families next year and the year after, and you need a supplier who will still be there when the academic cycle turns.",
     response:
-      "We quote per garment, in writing, and agree any change before the cycle starts rather than during it. We have been manufacturing for Delhi schools since 1995.",
+      "We quote per garment, in writing, and agree any change before the cycle starts rather than during it. We manufacture in our own facility, on tailoring roots that go back to 1995.",
     points: [
       "Written per-garment pricing you can put in front of the committee",
       "Any revision is agreed before the academic year, not applied mid-cycle",
