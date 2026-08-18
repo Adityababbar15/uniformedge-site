@@ -60,6 +60,31 @@ export const COMPANY = {
       "In 2017, the business grew into a multi-product store in Dwarka, expanding its reach across Delhi's school community.",
     relationshipNote:
       "UniformEdge is a related but distinct entity to Neeraj School Uniforms, carrying that same tailoring heritage forward.",
+    /**
+     * The same three facts as a timeline. Prose buries a 30-year history in a
+     * paragraph; a dated sequence makes it scannable, which is what a school
+     * comparing suppliers actually does.
+     *
+     * Every entry restates something already approved above — no new claims.
+     * Add a milestone here only when it is a fact, not a round number.
+     */
+    timeline: [
+      {
+        year: "1995",
+        title: "Neeraj School Uniforms",
+        body: "Ramesh C Verma opens a small uniform shop in Subhash Nagar, Delhi, stitching for neighbourhood schools.",
+      },
+      {
+        year: "2017",
+        title: "Dwarka store",
+        body: "The business grows into a multi-product store in Dwarka, serving schools across west and south-west Delhi.",
+      },
+      {
+        year: "Today",
+        title: "UniformEdge",
+        body: "A related but distinct entity, carrying the same tailoring heritage into in-house manufacturing for schools, corporate, healthcare, hospitality and industrial clients.",
+      },
+    ],
   },
   // Derived from the "About us" and "Why custom" pages of uniform_catalogue.pdf —
   // a restatement of positioning the business has already published, not new claims.

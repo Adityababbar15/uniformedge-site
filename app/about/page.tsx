@@ -4,6 +4,7 @@ import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { AnimatedSection } from "@/components/motion/AnimatedSection";
 import { CTABand } from "@/components/sections/CTABand";
+import { HeritageTimeline } from "@/components/sections/HeritageTimeline";
 import { COMPANY, SITE_URL } from "@/lib/content/company";
 
 export const metadata: Metadata = {
@@ -30,6 +31,10 @@ export default function AboutPage() {
               <p>{COMPANY.foundingStory.origin}</p>
               <p>{COMPANY.foundingStory.growth}</p>
               <p>{COMPANY.foundingStory.relationshipNote}</p>
+            </div>
+
+            <div className="mt-12">
+              <HeritageTimeline />
             </div>
           </AnimatedSection>
 
