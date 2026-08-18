@@ -3,6 +3,8 @@ import { PageHero } from "@/components/sections/PageHero";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { StakeholderSections } from "@/components/sections/StakeholderSections";
+import { ComparisonTable } from "@/components/sections/ComparisonTable";
 import { AnimatedGrid, AnimatedGridItem } from "@/components/motion/AnimatedGrid";
 import { AnimatedSection } from "@/components/motion/AnimatedSection";
 import { CTABand } from "@/components/sections/CTABand";
@@ -81,6 +83,32 @@ export default function SchoolProgramsPage() {
               branches.
             </p>
           </AnimatedSection>
+        </Container>
+      </section>
+
+      <section className="border-t border-navy-900/10 py-20 sm:py-24">
+        <Container>
+          <SectionHeading
+            eyebrow="Who this answers to"
+            title="Four people evaluate a uniform supplier"
+            description="A uniform decision is rarely made by one person. Here is what the program means for each of them — including where we mark our own limits."
+          />
+          <div className="mt-12">
+            <StakeholderSections />
+          </div>
+        </Container>
+      </section>
+
+      <section className="bg-ivory-100/60 py-20 sm:py-24">
+        <Container>
+          <SectionHeading
+            eyebrow="What changes"
+            title="Compared with the arrangement most schools have now"
+            description="Not a price comparison — we don't know what you pay today. This is about where the operational work sits."
+          />
+          <div className="mt-12">
+            <ComparisonTable />
+          </div>
         </Container>
       </section>
 

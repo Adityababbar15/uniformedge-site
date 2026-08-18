@@ -15,12 +15,36 @@
 // a dynamic route with zero params, and nothing is published. The page component
 // is preserved at docs/templates/school-page.tsx.txt with restore instructions.
 
+/**
+ * Cities we group the school directory by, in display order. Competitors group
+ * their parent-facing store the same way (Gurgaon / Faridabad / Delhi / Noida /
+ * outstation) because a parent scans for their own city first.
+ *
+ * "Other" is the catch-all so a school outside Delhi NCR never blocks a launch.
+ */
+export const CITIES = [
+  "Delhi",
+  "Gurugram",
+  "Noida",
+  "Faridabad",
+  "Ghaziabad",
+  "Other",
+] as const;
+
+export type City = (typeof CITIES)[number];
+
 export type PartnerSchool = {
   slug: string;
   /** Exact registered name, as the school writes it. */
   name: string;
   /** Where the school is, to disambiguate similarly-named schools. */
   locality: string;
+  /**
+   * Grouping bucket for the /schools directory. Must be one of CITIES — a
+   * free-string city would silently create a one-school group with a typo'd
+   * heading, so the union type makes that a build error instead.
+   */
+  city: City;
   published: boolean;
   /** Short line for the page hero. */
   summary?: string;
@@ -37,6 +61,7 @@ export const PARTNER_SCHOOLS: PartnerSchool[] = [
     slug: "example-school",
     name: "Example International School",
     locality: "Dwarka, New Delhi",
+    city: "Delhi",
     published: false,
     summary:
       "Full uniform range held in stock — summer, winter, sports and accessories.",
@@ -58,3 +83,21 @@ export const PUBLISHED_SCHOOLS = PARTNER_SCHOOLS.filter((s) => s.published);
 export function getPartnerSchool(slug: string) {
   return PUBLISHED_SCHOOLS.find((s) => s.slug === slug);
 }
+
+/**
+ * Published schools bucketed by city, in CITIES order, with empty cities
+ * dropped. Drives the /schools directory.
+ */
+export function schoolsByCity(): { city: City; schools: PartnerSchool[] }[] {
+  return CITIES.map((city) => ({
+    city,
+    schools: PUBLISHED_SCHOOLS.filter((s) => s.city === city),
+  })).filter((group) => group.schools.length > 0);
+}
+
+/**
+ * Whether the directory has anything to show. Nav and sitemap gate on this, so
+ * publishing the first school is a one-line change here and nowhere else — the
+ * page appears in navigation and the sitemap automatically.
+ */
+export const HAS_PUBLISHED_SCHOOLS = PUBLISHED_SCHOOLS.length > 0;

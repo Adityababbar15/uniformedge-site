@@ -26,7 +26,21 @@ export const SHOP_IS_DEMO = true;
 export type ShopItem = {
   sku: string;
   name: string;
-  category: "Summer" | "Winter" | "Sports" | "Accessories";
+  category:
+    | "Summer"
+    | "Winter"
+    | "Sports"
+    | "Accessories"
+    | "Footwear"
+    | "Bags"
+    | "Stationery";
+  /**
+   * True where we have NOT confirmed we actually sell this. Ancillary lines
+   * (footwear, bags, stationery) are scaffolding — the structure is proven,
+   * the sourcing decision is not made. Renders a visible "not confirmed" chip
+   * so nobody mistakes the scaffolding for a range we stock.
+   */
+  unconfirmedRange?: boolean;
   /** Illustrative rupee price per unit. */
   price: number;
   sizes: string[];
@@ -116,6 +130,46 @@ export const DEMO_CATALOGUE: ShopItem[] = [
     price: 150,
     sizes: ["XS", "S", "M", "L"],
   },
+  // --- ANCILLARY SCAFFOLDING BELOW ---
+  // Structure only. Every item is unconfirmedRange: true and priced at 0 so no
+  // fake rupee figure can be read off the page. Replace price, name and note
+  // with the real range once sourcing is decided, then drop the flag.
+  {
+    sku: "AC-SHOE-01",
+    name: "School shoes — black",
+    category: "Footwear",
+    price: 0,
+    sizes: ["UK 10", "UK 11", "UK 12", "UK 13", "UK 1", "UK 2", "UK 3", "UK 4", "UK 5"],
+    note: "Range and pricing not yet confirmed",
+    unconfirmedRange: true,
+  },
+  {
+    sku: "AC-SHOE-02",
+    name: "Sports shoes — white",
+    category: "Footwear",
+    price: 0,
+    sizes: ["UK 10", "UK 11", "UK 12", "UK 13", "UK 1", "UK 2", "UK 3", "UK 4", "UK 5"],
+    note: "Range and pricing not yet confirmed",
+    unconfirmedRange: true,
+  },
+  {
+    sku: "AC-BAG-01",
+    name: "School bag",
+    category: "Bags",
+    price: 0,
+    sizes: SIZES_ONE,
+    note: "Range and pricing not yet confirmed",
+    unconfirmedRange: true,
+  },
+  {
+    sku: "AC-STN-01",
+    name: "Stationery set",
+    category: "Stationery",
+    price: 0,
+    sizes: SIZES_ONE,
+    note: "Range and pricing not yet confirmed",
+    unconfirmedRange: true,
+  },
 ];
 
 export const SHOP_CATEGORIES = [
@@ -123,7 +177,17 @@ export const SHOP_CATEGORIES = [
   "Winter",
   "Sports",
   "Accessories",
+  "Footwear",
+  "Bags",
+  "Stationery",
 ] as const;
+
+// Categories we have NOT confirmed we sell. The market leader carries shoes,
+// bags and stationery alongside uniforms — a parent buying a shirt buys shoes
+// from someone, and the basket roughly doubles. That is a sourcing decision,
+// not a website decision, so these render behind an explicit warning until
+// UniformEdge confirms the range.
+export const UNCONFIRMED_CATEGORIES = ["Footwear", "Bags", "Stationery"] as const;
 
 export function formatRupees(paise: number) {
   return `₹${paise.toLocaleString("en-IN")}`;

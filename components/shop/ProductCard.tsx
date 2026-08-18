@@ -27,9 +27,15 @@ export function ProductCard({ item }: { item: ShopItem }) {
           </h3>
           <p className="mt-1 font-mono text-[11px] text-ink-500">{item.sku}</p>
         </div>
-        <p className="font-display shrink-0 text-lg text-navy-900">
-          {formatRupees(item.price)}
-        </p>
+        {item.unconfirmedRange ? (
+          <span className="shrink-0 rounded-full bg-ivory-100 px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-ink-500">
+            Not yet available
+          </span>
+        ) : (
+          <p className="font-display shrink-0 text-lg text-navy-900">
+            {formatRupees(item.price)}
+          </p>
+        )}
       </div>
 
       {item.note && (
@@ -82,9 +88,14 @@ export function ProductCard({ item }: { item: ShopItem }) {
       <button
         type="button"
         onClick={handleAdd}
-        className="mt-4 w-full rounded-full bg-navy-900 px-5 py-2.5 text-sm font-medium text-ivory-50 transition-colors hover:bg-navy-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-crimson-500"
+        disabled={item.unconfirmedRange}
+        className="mt-4 w-full rounded-full bg-navy-900 px-5 py-2.5 text-sm font-medium text-ivory-50 transition-colors hover:bg-navy-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-crimson-500 disabled:cursor-not-allowed disabled:bg-ink-500/40 disabled:hover:bg-ink-500/40"
       >
-        {added ? "Added ✓" : "Add to order"}
+        {item.unconfirmedRange
+          ? "Not yet available"
+          : added
+            ? "Added ✓"
+            : "Add to order"}
       </button>
       <p aria-live="polite" className="sr-only">
         {added ? `${item.name}, size ${size}, added to your order` : ""}
