@@ -1,0 +1,88 @@
+/* A4 print sheet. Chrome headless --print-to-pdf honours @page and the mm units
+   below, so one .page element == one PDF page with no manual pagination. */
+@page { size: A4; margin: 0; }
+
+/* This route lives inside the site's root layout, so the header, footer, skip
+   link and WhatsApp button render into the PDF — the footer was appearing as a
+   21st page. Hide the site chrome and strip body padding so the catalogue is
+   the only thing printed. */
+body:has(.cat) > header,
+body:has(.cat) > footer,
+body:has(.cat) > a[href="#main-content"],
+body:has(.cat) > a[href*="wa.me"],
+body:has(.cat) > next-route-announcer,
+body:has(.cat) > div:last-child:not(:has(.cat)) { display: none !important; }
+body:has(.cat) { background: #fff !important; display: block !important; }
+body:has(.cat) > main { flex: none !important; }
+
+.cat { --navy: #0f2a4d; --navy-deep: #071a30; --crimson: #d32f2f;
+       --ink: #2b3138; --ink-soft: #6b7280; --ivory: #fbf9f4; --line: rgba(15,42,77,.14);
+       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+       color: var(--ink); background: #fff; }
+.cat * { box-sizing: border-box; }
+
+.page { position: relative; width: 210mm; height: 296.5mm; padding: 18mm 16mm 14mm;
+        page-break-after: always; break-after: page; overflow: hidden; background: #fff; }
+.page:last-child { page-break-after: auto; }
+
+.rule { display:flex; justify-content:space-between; align-items:center;
+        font-size: 7.5pt; letter-spacing:.22em; text-transform:uppercase;
+        color: var(--ink-soft); border-bottom:1px solid var(--line);
+        padding-bottom:3mm; margin-bottom:8mm; }
+.folio { position:absolute; left:16mm; right:16mm; bottom:8mm;
+         display:flex; justify-content:space-between;
+         font-size:7.5pt; letter-spacing:.18em; text-transform:uppercase; color:var(--ink-soft); }
+
+h1,h2,h3 { font-family: Georgia, "Times New Roman", serif; font-weight:600; color:var(--navy); margin:0; }
+h1 { font-size: 30pt; line-height:1.12; }
+h2 { font-size: 21pt; line-height:1.18; }
+h3 { font-size: 12pt; line-height:1.25; }
+p { font-size:9.5pt; line-height:1.6; margin:0 0 3.5mm; }
+.lede { font-size:11pt; line-height:1.55; color:var(--ink); }
+.muted { color: var(--ink-soft); }
+.small { font-size:8pt; line-height:1.5; }
+
+.cover { background: var(--navy-deep); color:#fff; padding:0; }
+.cover-inner { height:100%; display:flex; flex-direction:column; justify-content:space-between; padding:24mm 18mm; }
+.cover h1 { color:#fff; font-size:38pt; }
+.cover .kicker { font-size:8.5pt; letter-spacing:.3em; text-transform:uppercase; color:#e8b9b9; }
+.wordmark { font-family:Georgia,serif; font-size:22pt; color:#fff; }
+.wordmark span { color: var(--crimson); font-style:italic; }
+
+.grid2 { display:grid; grid-template-columns:1fr 1fr; gap:7mm; }
+.grid3 { display:grid; grid-template-columns:repeat(3,1fr); gap:6mm; }
+.grid4 { display:grid; grid-template-columns:repeat(4,1fr); gap:5mm; }
+.card { border:1px solid var(--line); border-radius:3mm; padding:5mm; }
+.card h3 { margin-bottom:2mm; }
+.card p { margin:0; font-size:8.5pt; }
+
+figure { margin:0; }
+figure img { width:100%; height:100%; object-fit:cover; display:block; border-radius:2mm; }
+.fig-tall { height:118mm; }
+.fig-half { height:78mm; }
+.fig-third { height:62mm; }
+figcaption { font-size:7.5pt; color:var(--ink-soft); margin-top:2mm; line-height:1.4; }
+
+table { width:100%; border-collapse:collapse; font-size:8.5pt; }
+th,td { text-align:left; padding:2.6mm 2mm; border-bottom:1px solid var(--line); vertical-align:top; }
+thead th { background:var(--ivory); color:var(--navy); font-weight:700;
+           font-size:7.5pt; letter-spacing:.1em; text-transform:uppercase; }
+td.sku { font-family:"SFMono-Regular",Menlo,monospace; font-size:7.5pt; color:var(--ink-soft); }
+
+.swatch { display:flex; gap:3mm; align-items:center; }
+.chip { width:11mm; height:11mm; border-radius:2mm; border:1px solid var(--line); flex:none; }
+
+ol.steps { list-style:none; margin:0; padding:0; }
+ol.steps li { display:flex; gap:5mm; padding:3.5mm 0; border-bottom:1px solid var(--line); }
+ol.steps .n { font-family:Georgia,serif; font-size:15pt; color:var(--crimson); width:11mm; flex:none; }
+
+.toc { list-style:none; margin:0; padding:0; }
+.toc li { display:flex; justify-content:space-between; gap:4mm;
+          padding:3mm 0; border-bottom:1px solid var(--line); font-size:10pt; }
+.toc .t { color:var(--navy); }
+
+.note { background:var(--ivory); border-left:2px solid var(--crimson);
+        padding:4mm 5mm; font-size:8pt; line-height:1.55; color:var(--ink-soft); }
+
+.contact-line { font-size:12pt; line-height:1.9; color:#fff; }
+.contact-line strong { color:#fff; font-weight:400; }
