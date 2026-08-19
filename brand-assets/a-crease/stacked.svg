@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 176" width="260" height="176" role="img" aria-label="UniformEdge stacked">
+<!-- UniformEdge logo. Wordmark is live text for concept review; convert to outlines before release. Icon geometry is final vector. -->
+<g transform="translate(98,10)"><mask id="ma-a-crease-s">
+      <rect width="64" height="64" fill="#fff"/>
+      <path d="M43.5 9.5 L56.5 9.5 L56.5 22.5 Z" fill="#000"/>
+    </mask>
+    <path d="M14 10 V34 A18 18 0 0 0 50 34 V10" fill="none" stroke="#0f1b2d"
+          stroke-width="12" mask="url(#ma-a-crease-s)"/>
+    <path d="M44 10 L56 10 L56 22 Z" fill="#b8935f"/></g>
+<text x="130" y="128" font-family='&quot;Avenir Next&quot;, Avenir, Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif' font-size="38" text-anchor="middle" letter-spacing="-0.46"><tspan font-weight="400" fill="#0f1b2d">Uniform</tspan><tspan font-weight="700" fill="#0f1b2d">Edge</tspan></text>
+<text x="130" y="154" font-family='&quot;Avenir Next&quot;, Avenir, Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif' font-size="10" font-weight="600" fill="#b8935f" text-anchor="middle" letter-spacing="3.4">SCHOOL UNIFORMS</text>
+</svg>

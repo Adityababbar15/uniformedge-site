@@ -10,7 +10,7 @@ export function Footer() {
     <footer className="border-t border-navy-900/10 bg-navy-950 text-ivory-100">
       <Container className="grid grid-cols-1 gap-10 py-16 sm:grid-cols-2 lg:grid-cols-4">
         <div>
-          <Logo variant="white" className="h-7 w-auto" />
+          <Logo tone="white" className="h-7 w-auto" />
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-ivory-100/70">
             School, corporate, healthcare, hospitality and industrial uniforms,
             manufactured in Delhi with a tailoring heritage going back to 1995.

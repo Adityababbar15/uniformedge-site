@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="UniformEdge icon, white">
+<!-- UniformEdge logo. Wordmark is live text for concept review; convert to outlines before release. Icon geometry is final vector. -->
+<mask id="ma-a-crease-iw">
+      <rect width="64" height="64" fill="#fff"/>
+      <path d="M43.5 9.5 L56.5 9.5 L56.5 22.5 Z" fill="#000"/>
+    </mask>
+    <path d="M14 10 V34 A18 18 0 0 0 50 34 V10" fill="none" stroke="#ffffff"
+          stroke-width="12" mask="url(#ma-a-crease-iw)"/>
+    <path d="M44 10 L56 10 L56 22 Z" fill="#ffffff"/>
+</svg>

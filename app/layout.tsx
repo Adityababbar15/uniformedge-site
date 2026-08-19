@@ -23,6 +23,18 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
+  // From the master logo package. favicon-mark drops the E deliberately — at
+  // 16-32px the three arms fill in and the letter stops reading.
+  icons: {
+    icon: [
+      { url: "/images/brand/logo/uniformedge-favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/images/brand/logo/uniformedge-favicon-16.png", sizes: "16x16", type: "image/png" },
+      { url: "/images/brand/logo/uniformedge-favicon-mark.svg", type: "image/svg+xml" },
+    ],
+    apple: [
+      { url: "/images/brand/logo/uniformedge-apple-touch-180.png", sizes: "180x180" },
+    ],
+  },
   title: {
     default: "UniformEdge | School & Corporate Uniform Manufacturer, Delhi",
     template: "%s | UniformEdge",

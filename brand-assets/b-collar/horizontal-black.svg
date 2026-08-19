@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 96" width="400" height="96" role="img" aria-label="UniformEdge, black">
+<!-- UniformEdge logo. Wordmark is live text for concept review; convert to outlines before release. Icon geometry is final vector. -->
+<g transform="translate(8,16)"><path d="M8 12 L30 34 L30 57 L8 35 Z" fill="#000000"/>
+    <path d="M56 17 L34 34 L34 52 L56 35 Z" fill="#000000"/></g>
+<text x="92" y="62" font-family='&quot;Avenir Next&quot;, Avenir, Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif' font-size="44" text-anchor="start" letter-spacing="-0.53"><tspan font-weight="400" fill="#000000">Uniform</tspan><tspan font-weight="700" fill="#000000">Edge</tspan></text>
+</svg>

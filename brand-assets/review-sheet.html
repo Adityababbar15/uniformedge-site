@@ -1,0 +1,380 @@
+<title>UniformEdge — Logo Concepts, Round 1</title>
+<style>
+:root {
+  --ground: #fbf8f3;
+  --panel: #ffffff;
+  --ink: #0f1b2d;
+  --ink-soft: #59606b;
+  --ink-faint: #8b9099;
+  --rule: #e2dccf;
+  --brass: #9c7638;
+  --swatch: #0f1b2d;
+  --shadow: 0 1px 2px rgba(15, 27, 45, .06), 0 12px 32px -20px rgba(15, 27, 45, .28);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ground: #0b1119;
+    --panel: #121a25;
+    --ink: #e8e3d8;
+    --ink-soft: #9aa3b0;
+    --ink-faint: #6b747f;
+    --rule: #24303f;
+    --brass: #cba876;
+    --swatch: #060a10;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 12px 32px -20px rgba(0, 0, 0, .8);
+  }
+}
+:root[data-theme="dark"] {
+  --ground: #0b1119; --panel: #121a25; --ink: #e8e3d8; --ink-soft: #9aa3b0;
+  --ink-faint: #6b747f; --rule: #24303f; --brass: #cba876; --swatch: #060a10;
+  --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 12px 32px -20px rgba(0, 0, 0, .8);
+}
+:root[data-theme="light"] {
+  --ground: #fbf8f3; --panel: #ffffff; --ink: #0f1b2d; --ink-soft: #59606b;
+  --ink-faint: #8b9099; --rule: #e2dccf; --brass: #9c7638; --swatch: #0f1b2d;
+  --shadow: 0 1px 2px rgba(15, 27, 45, .06), 0 12px 32px -20px rgba(15, 27, 45, .28);
+}
+
+body {
+  background: var(--ground);
+  color: var(--ink);
+  font-family: ui-sans-serif, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 1080px; margin: 0 auto; padding: 56px 24px 96px; }
+
+.label {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 11px; letter-spacing: .13em; text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+/* ---- masthead: a garment spec-sheet header ---- */
+.masthead { border-top: 2px solid var(--ink); padding-top: 18px; }
+.masthead h1 {
+  font-size: clamp(30px, 5.4vw, 50px); line-height: 1.04; font-weight: 800;
+  letter-spacing: -.028em; text-wrap: balance; margin: 10px 0 14px;
+}
+.masthead p { max-width: 62ch; color: var(--ink-soft); font-size: 17px; }
+.meta {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 14px 28px; margin-top: 30px; padding: 18px 0;
+  border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+}
+.meta div { display: flex; flex-direction: column; gap: 3px; }
+.meta b { font-weight: 600; font-size: 14px; font-variant-numeric: tabular-nums; }
+
+/* ---- concepts ---- */
+.concept { margin-top: 64px; }
+.concept-head {
+  display: flex; align-items: baseline; gap: 14px;
+  border-bottom: 1px solid var(--rule); padding-bottom: 12px;
+}
+.mark-no {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 13px; font-weight: 600; color: var(--brass);
+  border: 1px solid var(--brass); border-radius: 2px; padding: 1px 7px;
+}
+.concept-head h2 { font-size: 25px; font-weight: 700; letter-spacing: -.02em; }
+
+.stage {
+  background: var(--panel); border: 1px solid var(--rule); border-radius: 3px;
+  box-shadow: var(--shadow); margin-top: 22px; padding: 44px 40px;
+  display: flex; flex-wrap: wrap; align-items: center; gap: 48px;
+  justify-content: space-between;
+}
+.stage svg { max-width: 100%; height: auto; }
+.stage figure { display: flex; flex-direction: column; gap: 14px; }
+
+.notes {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 26px; margin-top: 26px;
+}
+.notes h3 { font-size: 12px; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--ink-faint); font-weight: 600; margin-bottom: 6px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+.notes p { font-size: 15px; color: var(--ink-soft); }
+.notes .watch { border-left: 2px solid var(--brass); padding-left: 14px; }
+
+/* ---- proof strip: the states that decide whether a mark survives ---- */
+.proofs {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(132px, 1fr));
+  gap: 1px; margin-top: 26px; background: var(--rule);
+  border: 1px solid var(--rule); border-radius: 3px; overflow: hidden;
+}
+.proof {
+  background: var(--panel); padding: 20px 14px 14px;
+  display: flex; flex-direction: column; align-items: center; gap: 14px;
+  text-align: center; min-height: 132px; justify-content: space-between;
+}
+.proof .cell { display: flex; align-items: center; justify-content: center; flex: 1; }
+.proof.on-dark { background: var(--swatch); }
+.proof.on-dark .label { color: #7d8798; }
+.proof.paper { background: #ffffff; }
+.proof.paper .label { color: #8b9099; }
+
+/* ---- spec ---- */
+.spec { margin-top: 76px; border-top: 2px solid var(--ink); padding-top: 20px; }
+.spec h2 { font-size: 25px; font-weight: 700; letter-spacing: -.02em; }
+.grid3 {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px; margin-top: 28px;
+}
+.card { border: 1px solid var(--rule); border-radius: 3px; padding: 20px; background: var(--panel); }
+.card h3 { font-size: 12px; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 12px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--ink-faint); font-weight: 600; }
+.card li { font-size: 15px; color: var(--ink-soft); margin-left: 17px; padding-left: 3px; }
+.card li + li { margin-top: 7px; }
+.card li::marker { color: var(--brass); }
+
+.chips { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
+.chip { display: flex; flex-direction: column; gap: 7px; }
+.chip i {
+  display: block; width: 74px; height: 46px; border-radius: 2px;
+  border: 1px solid var(--rule);
+}
+.chip code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 11px; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+
+table { border-collapse: collapse; width: 100%; margin-top: 8px; font-size: 15px; }
+th, td { text-align: left; padding: 9px 12px 9px 0; border-bottom: 1px solid var(--rule); }
+th { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px;
+  letter-spacing: .1em; text-transform: uppercase; color: var(--ink-faint); font-weight: 600; }
+td { color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+td:first-child { color: var(--ink); }
+.scroll { overflow-x: auto; }
+
+footer { margin-top: 72px; border-top: 1px solid var(--rule); padding-top: 18px;
+  color: var(--ink-faint); font-size: 14px; }
+footer p + p { margin-top: 8px; }
+em { font-style: italic; }
+</style>
+<div class="wrap">
+<header class="masthead">
+  <span class="label">Round 1 of 3 · Concept review</span>
+  <h1>Three ways to put an edge on a uniform.</h1>
+  <p>Each concept below is one idea carried through a wordmark, a standalone icon, and the
+  states that actually decide whether a uniform logo survives: 16&nbsp;px in a browser tab,
+  one thread colour on a shirt pocket, and reversed out on a navy carton. Pick a direction —
+  not a finished file — and the next round refines it.</p>
+  <div class="meta">
+    <div><span class="label">Client</span><b>UniformEdge</b></div>
+    <div><span class="label">Category</span><b>School uniforms, India</b></div>
+    <div><span class="label">Base</span><b>Navy #0F1B2D</b></div>
+    <div><span class="label">Accent</span><b>Brass #B8935F</b></div>
+    <div><span class="label">Rounds left</span><b>2 after this</b></div>
+  </div>
+</header>
+
+<section class="concept">
+  <div class="concept-head"><span class="mark-no">A</span><h2>Pressed Crease</h2></div>
+  <div class="stage">
+    <figure><svg viewBox="0 0 400 96" width="340" role="img" aria-label="UniformEdge logo"><g transform="translate(8,16)"><mask id="ma-a-crease-horizontal-sheet">
+      <rect width="64" height="64" fill="#fff"/>
+      <path d="M43.5 9.5 L56.5 9.5 L56.5 22.5 Z" fill="#000"/>
+    </mask>
+    <path d="M14 10 V34 A18 18 0 0 0 50 34 V10" fill="none" stroke="var(--ink)"
+          stroke-width="12" mask="url(#ma-a-crease-horizontal-sheet)"/>
+    <path d="M44 10 L56 10 L56 22 Z" fill="var(--brass)"/></g><text x="92" y="62" font-family='&quot;Avenir Next&quot;, Avenir, Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif' font-size="44" text-anchor="start" letter-spacing="-0.53"><tspan font-weight="400" fill="var(--ink)">Uniform</tspan><tspan font-weight="700" fill="var(--ink)">Edge</tspan></text></svg><figcaption class="label">Primary lockup, horizontal</figcaption></figure>
+    <figure><svg viewBox="0 0 260 176" width="170" role="img" aria-label="UniformEdge logo, stacked"><g transform="translate(98,10)"><mask id="ma-a-crease-stacked-sheet">
+      <rect width="64" height="64" fill="#fff"/>
+      <path d="M43.5 9.5 L56.5 9.5 L56.5 22.5 Z" fill="#000"/>
+    </mask>
+    <path d="M14 10 V34 A18 18 0 0 0 50 34 V10" fill="none" stroke="var(--ink)"
+          stroke-width="12" mask="url(#ma-a-crease-stacked-sheet)"/>
+    <path d="M44 10 L56 10 L56 22 Z" fill="var(--brass)"/></g><text x="130" y="128" font-family='&quot;Avenir Next&quot;, Avenir, Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif' font-size="38" text-anchor="middle" letter-spacing="-0.46"><tspan font-weight="400" fill="var(--ink)">Uniform</tspan><tspan font-weight="700" fill="var(--ink)">Edge</tspan></text><text x="130" y="154" font-family='&quot;Avenir Next&quot;, Avenir, Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif' font-size="10" font-weight="600" fill="var(--brass)" text-anchor="middle" letter-spacing="3.4">SCHOOL UNIFORMS</text></svg><figcaption class="label">Stacked</figcaption></figure>
+  </div>
+  <div class="proofs">
+  <div class="proof"><div class="cell"><svg viewBox="0 0 64 64" width="46" height="46" aria-hidden="true"><mask id="ma-a-crease-p1">
+      <rect width="64" height="64" fill="#fff"/>
+      <path d="M43.5 9.5 L56.5 9.5 L56.5 22.5 Z" fill="#000"/>
+    </mask>
+    <path d="M14 10 V34 A18 18 0 0 0 50 34 V10" fill="none" stroke="var(--ink)"
+          stroke-width="12" mask="url(#ma-a-crease-p1)"/>
+    <path d="M44 10 L56 10 L56 22 Z" fill="var(--brass)"/></svg></div><span class="label">Icon 46px</span></div>
+  <div class="proof"><div class="cell"><svg viewBox="0 0 64 64" width="24" height="24" aria-hidden="true"><mask id="ma-a-crease-p2">
+      <rect width="64" height="64" fill="#fff"/>
+      <path d="M43.5 9.5 L56.5 9.5 L56.5 22.5 Z" fill="#000"/>
+    </mask>
+    <path d="M14 10 V34 A18 18 0 0 0 50 34 V10" fill="none" stroke="var(--ink)"
+          stroke-width="12" mask="url(#ma-a-crease-p2)"/>
+    <path d="M44 10 L56 10 L56 22 Z" fill="var(--brass)"/></svg></div><span class="label">Icon 24px</span></div>
+  <div class="proof"><div class="cell"><svg viewBox="0 0 64 64" width="16" height="16" aria-hidden="true"><mask id="ma-a-crease-p3">
+      <rect width="64" height="64" fill="#fff"/>
+      <path d="M43.5 9.5 L56.5 9.5 L56.5 22.5 Z" fill="#000"/>
+    </mask>
+    <path d="M14 10 V34 A18 18 0 0 0 50 34 V10" fill="none" stroke="var(--ink)"
+          stroke-width="12" mask="url(#ma-a-crease-p3)"/>
+    <path d="M44 10 L56 10 L56 22 Z" fill="var(--brass)"/></svg></div><span class="label">Favicon 16px</span></div>
+  <div class="proof paper"><div class="cell"><svg viewBox="0 0 64 64" width="40" height="40" aria-hidden="true"><mask id="ma-a-crease-p4">
+      <rect width="64" height="64" fill="#fff"/>
+      <path d="M43.5 9.5 L56.5 9.5 L56.5 22.5 Z" fill="#000"/>
+    </mask>
+    <path d="M14 10 V34 A18 18 0 0 0 50 34 V10" fill="none" stroke="#000000"
+          stroke-width="12" mask="url(#ma-a-crease-p4)"/>
+    <path d="M44 10 L56 10 L56 22 Z" fill="#000000"/></svg></div><span class="label">1-colour black</span></div>
+  <div class="proof on-dark"><div class="cell"><svg viewBox="0 0 64 64" width="40" height="40" aria-hidden="true"><mask id="ma-a-crease-p5">
+      <rect width="64" height="64" fill="#fff"/>
+      <path d="M43.5 9.5 L56.5 9.5 L56.5 22.5 Z" fill="#000"/>
+    </mask>
+    <path d="M14 10 V34 A18 18 0 0 0 50 34 V10" fill="none" stroke="#ffffff"
+          stroke-width="12" mask="url(#ma-a-crease-p5)"/>
+    <path d="M44 10 L56 10 L56 22 Z" fill="#ffffff"/></svg></div><span class="label">1-colour white</span></div>
+  <div class="proof on-dark"><div class="cell"><svg viewBox="0 0 64 64" width="22" height="22" aria-hidden="true"><mask id="ma-a-crease-p6">
+      <rect width="64" height="64" fill="#fff"/>
+      <path d="M43.5 9.5 L56.5 9.5 L56.5 22.5 Z" fill="#000"/>
+    </mask>
+    <path d="M14 10 V34 A18 18 0 0 0 50 34 V10" fill="none" stroke="#ffffff"
+          stroke-width="12" mask="url(#ma-a-crease-p6)"/>
+    <path d="M44 10 L56 10 L56 22 Z" fill="#cba876"/></svg></div><span class="label">Tag, 2cm scale</span></div>
+</div>
+  <div class="notes">
+    <div><h3>The idea</h3><p>A geometric U — the first letter of the name — cut by a 45° chamfer, the way a pressed crease catches light down a trouser leg. The cut <em>is</em> the edge.</p></div>
+    <div><h3>Why it works</h3><p>Most ownable of the three. The chamfer is a device that can repeat across the brand: page corners in the catalogue, the corner of a woven label, a section divider.</p></div>
+    <div class="watch"><h3>Watch out for</h3><p>The brass sliver is the smallest element in the set. Below about 14&nbsp;px it reads as a colour flick rather than a cut — acceptable, but it means the favicon leans on the U, not the crease.</p></div>
+  </div>
+</section><section class="concept">
+  <div class="concept-head"><span class="mark-no">B</span><h2>Notched Collar</h2></div>
+  <div class="stage">
+    <figure><svg viewBox="0 0 400 96" width="340" role="img" aria-label="UniformEdge logo"><g transform="translate(8,16)"><path d="M8 12 L30 34 L30 57 L8 35 Z" fill="var(--ink)"/>
+    <path d="M56 17 L34 34 L34 52 L56 35 Z" fill="var(--brass)"/></g><text x="92" y="62" font-family='&quot;Avenir Next&quot;, Avenir, Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif' font-size="44" text-anchor="start" letter-spacing="-0.53"><tspan font-weight="400" fill="var(--ink)">Uniform</tspan><tspan font-weight="700" fill="var(--ink)">Edge</tspan></text></svg><figcaption class="label">Primary lockup, horizontal</figcaption></figure>
+    <figure><svg viewBox="0 0 260 176" width="170" role="img" aria-label="UniformEdge logo, stacked"><g transform="translate(98,10)"><path d="M8 12 L30 34 L30 57 L8 35 Z" fill="var(--ink)"/>
+    <path d="M56 17 L34 34 L34 52 L56 35 Z" fill="var(--brass)"/></g><text x="130" y="128" font-family='&quot;Avenir Next&quot;, Avenir, Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif' font-size="38" text-anchor="middle" letter-spacing="-0.46"><tspan font-weight="400" fill="var(--ink)">Uniform</tspan><tspan font-weight="700" fill="var(--ink)">Edge</tspan></text><text x="130" y="154" font-family='&quot;Avenir Next&quot;, Avenir, Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif' font-size="10" font-weight="600" fill="var(--brass)" text-anchor="middle" letter-spacing="3.4">SCHOOL UNIFORMS</text></svg><figcaption class="label">Stacked</figcaption></figure>
+  </div>
+  <div class="proofs">
+  <div class="proof"><div class="cell"><svg viewBox="0 0 64 64" width="46" height="46" aria-hidden="true"><path d="M8 12 L30 34 L30 57 L8 35 Z" fill="var(--ink)"/>
+    <path d="M56 17 L34 34 L34 52 L56 35 Z" fill="var(--brass)"/></svg></div><span class="label">Icon 46px</span></div>
+  <div class="proof"><div class="cell"><svg viewBox="0 0 64 64" width="24" height="24" aria-hidden="true"><path d="M8 12 L30 34 L30 57 L8 35 Z" fill="var(--ink)"/>
+    <path d="M56 17 L34 34 L34 52 L56 35 Z" fill="var(--brass)"/></svg></div><span class="label">Icon 24px</span></div>
+  <div class="proof"><div class="cell"><svg viewBox="0 0 64 64" width="16" height="16" aria-hidden="true"><path d="M8 12 L30 34 L30 57 L8 35 Z" fill="var(--ink)"/>
+    <path d="M56 17 L34 34 L34 52 L56 35 Z" fill="var(--brass)"/></svg></div><span class="label">Favicon 16px</span></div>
+  <div class="proof paper"><div class="cell"><svg viewBox="0 0 64 64" width="40" height="40" aria-hidden="true"><path d="M8 12 L30 34 L30 57 L8 35 Z" fill="#000000"/>
+    <path d="M56 17 L34 34 L34 52 L56 35 Z" fill="#000000"/></svg></div><span class="label">1-colour black</span></div>
+  <div class="proof on-dark"><div class="cell"><svg viewBox="0 0 64 64" width="40" height="40" aria-hidden="true"><path d="M8 12 L30 34 L30 57 L8 35 Z" fill="#ffffff"/>
+    <path d="M56 17 L34 34 L34 52 L56 35 Z" fill="#ffffff"/></svg></div><span class="label">1-colour white</span></div>
+  <div class="proof on-dark"><div class="cell"><svg viewBox="0 0 64 64" width="22" height="22" aria-hidden="true"><path d="M8 12 L30 34 L30 57 L8 35 Z" fill="#ffffff"/>
+    <path d="M56 17 L34 34 L34 52 L56 35 Z" fill="#cba876"/></svg></div><span class="label">Tag, 2cm scale</span></div>
+</div>
+  <div class="notes">
+    <div><h3>The idea</h3><p>Two lapel planes falling away from a tailored notch, deliberately asymmetric — the way a placket overlaps rather than meeting flush.</p></div>
+    <div><h3>Why it works</h3><p>Fastest to read as <em>garment</em> at a glance, and the strongest shape at small sizes. Embroiders in two flat fills with no thin strokes at all.</p></div>
+    <div class="watch"><h3>Watch out for</h3><p>The nearest to a shape other brands already use — a chevron is common. The asymmetry and the notch gap are what keep it distinct, so neither can be tidied up later without losing the idea.</p></div>
+  </div>
+</section><section class="concept">
+  <div class="concept-head"><span class="mark-no">C</span><h2>Notched E</h2></div>
+  <div class="stage">
+    <figure><svg viewBox="0 0 400 96" width="340" role="img" aria-label="UniformEdge logo"><g transform="translate(8,16)"><rect x="12" y="10" width="10" height="44" fill="var(--ink)"/>
+    <rect x="12" y="10" width="40" height="10" fill="var(--ink)"/>
+    <rect x="12" y="44" width="40" height="10" fill="var(--ink)"/>
+    <path d="M12 27 H46 L38 37 H12 Z" fill="var(--brass)"/></g><text x="92" y="62" font-family='&quot;Avenir Next&quot;, Avenir, Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif' font-size="44" text-anchor="start" letter-spacing="-0.53"><tspan font-weight="400" fill="var(--ink)">Uniform</tspan><tspan font-weight="700" fill="var(--ink)">Edge</tspan></text></svg><figcaption class="label">Primary lockup, horizontal</figcaption></figure>
+    <figure><svg viewBox="0 0 260 176" width="170" role="img" aria-label="UniformEdge logo, stacked"><g transform="translate(98,10)"><rect x="12" y="10" width="10" height="44" fill="var(--ink)"/>
+    <rect x="12" y="10" width="40" height="10" fill="var(--ink)"/>
+    <rect x="12" y="44" width="40" height="10" fill="var(--ink)"/>
+    <path d="M12 27 H46 L38 37 H12 Z" fill="var(--brass)"/></g><text x="130" y="128" font-family='&quot;Avenir Next&quot;, Avenir, Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif' font-size="38" text-anchor="middle" letter-spacing="-0.46"><tspan font-weight="400" fill="var(--ink)">Uniform</tspan><tspan font-weight="700" fill="var(--ink)">Edge</tspan></text><text x="130" y="154" font-family='&quot;Avenir Next&quot;, Avenir, Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif' font-size="10" font-weight="600" fill="var(--brass)" text-anchor="middle" letter-spacing="3.4">SCHOOL UNIFORMS</text></svg><figcaption class="label">Stacked</figcaption></figure>
+  </div>
+  <div class="proofs">
+  <div class="proof"><div class="cell"><svg viewBox="0 0 64 64" width="46" height="46" aria-hidden="true"><rect x="12" y="10" width="10" height="44" fill="var(--ink)"/>
+    <rect x="12" y="10" width="40" height="10" fill="var(--ink)"/>
+    <rect x="12" y="44" width="40" height="10" fill="var(--ink)"/>
+    <path d="M12 27 H46 L38 37 H12 Z" fill="var(--brass)"/></svg></div><span class="label">Icon 46px</span></div>
+  <div class="proof"><div class="cell"><svg viewBox="0 0 64 64" width="24" height="24" aria-hidden="true"><rect x="12" y="10" width="10" height="44" fill="var(--ink)"/>
+    <rect x="12" y="10" width="40" height="10" fill="var(--ink)"/>
+    <rect x="12" y="44" width="40" height="10" fill="var(--ink)"/>
+    <path d="M12 27 H46 L38 37 H12 Z" fill="var(--brass)"/></svg></div><span class="label">Icon 24px</span></div>
+  <div class="proof"><div class="cell"><svg viewBox="0 0 64 64" width="16" height="16" aria-hidden="true"><rect x="12" y="10" width="10" height="44" fill="var(--ink)"/>
+    <rect x="12" y="10" width="40" height="10" fill="var(--ink)"/>
+    <rect x="12" y="44" width="40" height="10" fill="var(--ink)"/>
+    <path d="M12 27 H46 L38 37 H12 Z" fill="var(--brass)"/></svg></div><span class="label">Favicon 16px</span></div>
+  <div class="proof paper"><div class="cell"><svg viewBox="0 0 64 64" width="40" height="40" aria-hidden="true"><rect x="12" y="10" width="10" height="44" fill="#000000"/>
+    <rect x="12" y="10" width="40" height="10" fill="#000000"/>
+    <rect x="12" y="44" width="40" height="10" fill="#000000"/>
+    <path d="M12 27 H46 L38 37 H12 Z" fill="#000000"/></svg></div><span class="label">1-colour black</span></div>
+  <div class="proof on-dark"><div class="cell"><svg viewBox="0 0 64 64" width="40" height="40" aria-hidden="true"><rect x="12" y="10" width="10" height="44" fill="#ffffff"/>
+    <rect x="12" y="10" width="40" height="10" fill="#ffffff"/>
+    <rect x="12" y="44" width="40" height="10" fill="#ffffff"/>
+    <path d="M12 27 H46 L38 37 H12 Z" fill="#ffffff"/></svg></div><span class="label">1-colour white</span></div>
+  <div class="proof on-dark"><div class="cell"><svg viewBox="0 0 64 64" width="22" height="22" aria-hidden="true"><rect x="12" y="10" width="10" height="44" fill="#ffffff"/>
+    <rect x="12" y="10" width="40" height="10" fill="#ffffff"/>
+    <rect x="12" y="44" width="40" height="10" fill="#ffffff"/>
+    <path d="M12 27 H46 L38 37 H12 Z" fill="#cba876"/></svg></div><span class="label">Tag, 2cm scale</span></div>
+</div>
+  <div class="notes">
+    <div><h3>The idea</h3><p>A bold geometric E for <em>Edge</em>, with a tailored notch cut into the centre arm — one detail doing all the work.</p></div>
+    <div><h3>Why it works</h3><p>The clearest link between mark and name, and the most institutional of the three. Holds up at 16&nbsp;px better than either alternative.</p></div>
+    <div class="watch"><h3>Watch out for</h3><p>A single letter is a weaker standalone asset than a shape: on a garment tag with no wordmark beside it, an E alone may not recall the brand.</p></div>
+  </div>
+</section>
+
+<section class="spec">
+  <span class="label">Applies to whichever concept you pick</span>
+  <h2>Usage, once a direction is chosen</h2>
+  <div class="grid3">
+    <div class="card">
+      <h3>Minimum sizes</h3>
+      <div class="scroll"><table>
+        <tr><th>Use</th><th>Floor</th></tr>
+        <tr><td>Icon, screen</td><td>16 px</td></tr>
+        <tr><td>Icon, embroidery</td><td>18 mm</td></tr>
+        <tr><td>Horizontal lockup</td><td>32 mm wide</td></tr>
+        <tr><td>Stacked lockup</td><td>24 mm wide</td></tr>
+      </table></div>
+    </div>
+    <div class="card">
+      <h3>Clear space</h3>
+      <ul>
+        <li>Keep clear space equal to the height of the icon on all four sides.</li>
+        <li>On the catalogue cover, double it — the mark should not compete with the cover image.</li>
+        <li>Nothing enters that space: no rules, no page numbers, no school crests.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Don'ts</h3>
+      <ul>
+        <li>Don't recolour the accent per school. One brass, everywhere.</li>
+        <li>Don't outline, emboss, or add a drop shadow for embroidery — send the digitiser flat vectors.</li>
+        <li>Don't stretch the stacked version to fill a footer; use the horizontal one.</li>
+        <li>Don't set the wordmark in a substitute font when the logo file is inconvenient.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="grid3">
+    <div class="card">
+      <h3>Palette</h3>
+      <div class="chips">
+        <div class="chip"><i style="background:#0f1b2d"></i><code>#0F1B2D</code></div>
+        <div class="chip"><i style="background:#b8935f"></i><code>#B8935F</code></div>
+        <div class="chip"><i style="background:#fbf8f3"></i><code>#FBF8F3</code></div>
+      </div>
+      <p style="font-size:14px;color:var(--ink-soft);margin-top:14px">
+        Taken from the live site, so the logo lands on a palette that already exists rather than
+        forcing a rebuild. Brass is the warm gold from the brief; red and teal can be swatched in
+        round 2 if you want to compare.</p>
+    </div>
+    <div class="card">
+      <h3>Distinctness</h3>
+      <p style="font-size:15px;color:var(--ink-soft)">
+        None of the three uses a graduation cap, crest, needle, or child silhouette. All three are
+        geometric rather than script-based, which keeps clear distance from “The Edge” in Bengaluru —
+        a wordmark-only, no-icon brand. Worth a formal trademark search before final files.</p>
+    </div>
+    <div class="card">
+      <h3>Still open</h3>
+      <ul>
+        <li>Concept choice, and any cross-pollination between the three.</li>
+        <li>Wordmark typeface. Shown in Avenir Next; the release files need a licensed face, outlined.</li>
+        <li>Dates and budget — section 11 of the brief is still blank.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Vector source: <code>09-logo/</code> — one folder per concept, each with horizontal, stacked,
+  icon, and single-colour black and white SVGs.</p>
+  <p>The wordmark is live text in these files so it can be re-set during review. It gets converted
+  to outlines — and PNG, PDF and AI exports get cut — once a direction is locked.</p>
+</footer>
+</div>
