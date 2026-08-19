@@ -15,7 +15,7 @@ import {
   COLOUR_SWATCHES,
   FABRIC_TYPES,
   SIZE_CHART,
-  CATALOGUE_PDF,
+  CATALOGUE_PDF_SCHOOLS,
 } from "@/lib/content/catalogue";
 
 export const metadata: Metadata = {
@@ -87,8 +87,8 @@ export default function ProductsPage() {
             <Button href="/contact" variant="primary">
               Request a Quote for Your School
             </Button>
-            <Button href={CATALOGUE_PDF} variant="ghost" external>
-              Download the Catalogue (PDF)
+            <Button href={CATALOGUE_PDF_SCHOOLS} variant="ghost" external>
+              Download the School Catalogue (PDF)
             </Button>
             <Button href="/school-programs" variant="ghost">
               School Programmes

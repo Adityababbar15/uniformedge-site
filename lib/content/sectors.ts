@@ -25,6 +25,14 @@ export type Sector = {
   garments: { name: string; detail: string }[];
   considerations: { title: string; body: string }[];
   fabricNote: string;
+  /**
+   * How the programme is actually run for this sector — the operational answer,
+   * not the garment list. A buyer comparing suppliers wants to know who carries
+   * the work, not only what is stitched.
+   */
+  delivery: { title: string; body: string }[];
+  /** How the uniform carries the client's own identity rather than a generic look. */
+  identity: string;
   /** Set once sector photography lands; cards fall back gracefully until then.
    *  See docs/sector-image-brief.md for the prompts these come from. */
   image?: string;
@@ -66,6 +74,14 @@ export const SECTORS: Sector[] = [
     ],
     fabricNote:
       "Pure cotton for warm-climate daily wear, poly-cotton where wrinkle resistance and fast drying matter, terry cotton for trousers and skirts that need structure.",
+    identity:
+      "A uniform is the most-worn piece of a school's identity — more visible over a year than any prospectus. We build it from the school's own reference points: the crest digitised into an embroidery file rather than approximated, and colours matched to the palette in the branding guide rather than the nearest shade on the shelf. The result reads as that school's uniform, not a generic one with a badge added.",
+    delivery: [
+      { title: "Specified once, then repeatable", body: "We agree the full wardrobe — summer, winter, sports, accessories — as one written specification, with your approval on a physical sample. Every later order is produced against that same document, so nothing drifts." },
+      { title: "Parents order directly from us", body: "The school holds no stock, handles no uniform money and fields no sizing calls. Ordering, exchanges and delivery run between us and the parent." },
+      { title: "Sizing settled before production", body: "For a first bulk order we run an on-site measurement drive, so students are fitted before anything is cut rather than exchanged afterwards." },
+      { title: "Reorders without re-sourcing", body: "Mid-year joiners and growth spurts are standing reorders against the existing specification — no fresh vendor search each term." },
+    ],
     image: "/images/campus/students-corridor-between-periods.webp",
     imageAlt:
       "Senior students in grey and white school uniforms walking along a school corridor",
@@ -97,6 +113,7 @@ export const SECTORS: Sector[] = [
       { name: "Polo shirts & T-shirts", detail: "Smart-casual and event wear, embroidered or printed" },
       { name: "Jackets & outerwear", detail: "Softshells and windcheaters for field and site teams" },
       { name: "Ties, scarves & accessories", detail: "Colour-matched finishing pieces that tie the look together" },
+      { name: "Custom-branded T-shirts & hoodies", detail: "Your logo embroidered or printed — event, campaign, offsite and new-team kit, on a quick turnaround" },
     ],
     considerations: [
       { title: "Consistency across branches", body: "Garments for every location produced in a single batch per colourway, so one branch's uniform matches another's." },
@@ -106,6 +123,14 @@ export const SECTORS: Sector[] = [
     ],
     fabricNote:
       "Poly-cotton and blended suiting for shirts and formal wear — wrinkle resistance and colour retention matter most where garments are worn daily and laundered often.",
+    identity:
+      "A corporate uniform is signage that walks around. We manufacture against your brand palette rather than a nearest-match shade, and apply your logo from a single approved artwork file — so a shirt made for a new joiner in month eighteen still sits beside the original intake without reading as a different colour or a slightly different mark.",
+    delivery: [
+      { title: "One specification across every branch", body: "Each colourway is produced in a single batch wherever possible, so one location's uniform matches another's rather than arriving a half-shade apart." },
+      { title: "Role tiers that read as one family", body: "Front-office, back-office and field teams get different garments built from the same palette and detailing — visibly distinct, visibly related." },
+      { title: "Top-ups on the same spec", body: "New joiners are dressed from the approved specification without re-quoting or re-sampling, so onboarding is not held up by uniform lead times." },
+      { title: "Custom-branded apparel, quick turnaround", body: "T-shirts, hoodies and shirts carrying your logo — for events, campaigns, offsites and new-team kit — produced on a short turnaround alongside the main programme. Exact timelines are confirmed at quote, against artwork and quantity." },
+    ],
     image: "/images/sectors/corporate-office-team.webp",
     imageAlt:
       "Corporate staff in matching light-blue shirts and navy blazers in an office reception",
@@ -145,6 +170,14 @@ export const SECTORS: Sector[] = [
     ],
     fabricNote:
       "Poly-cotton blends for scrubs and tunics, where shape and colour survive repeated hot washing better than pure cotton. Specific finishes — fluid-resistant or antimicrobial — are specified to your requirement rather than assumed.",
+    identity:
+      "In a hospital or diagnostic centre the uniform is wayfinding as much as clothing: a patient reads department and seniority from colour before they read a name badge. We hold those colours exactly across departments and across reorders, so the coding a facility designs still means the same thing two years later.",
+    delivery: [
+      { title: "Colour coding held across departments", body: "Each department's colourway is fixed in the specification and matched at production, so scrubs ordered a year apart still group correctly on a ward." },
+      { title: "Built for the laundry cycle", body: "Garments are specified for repeated high-temperature washing — the failure here is colour loss and seam wear long before it is style." },
+      { title: "Sized for shift work", body: "Staff are measured rather than assumed, and we hold the size grade so replacements fit the same person the same way." },
+      { title: "Replacement stock without delay", body: "Standing reorders for new staff and worn-out garments, produced against the approved specification." },
+    ],
     image: "/images/sectors/healthcare-staff-corridor.webp",
     imageAlt:
       "Healthcare staff in teal scrubs and a white lab coat walking a hospital corridor",
@@ -184,6 +217,14 @@ export const SECTORS: Sector[] = [
     ],
     fabricNote:
       "Heavier poly-cotton for chef wear, where durability and stain tolerance lead. Lighter blends front-of-house, where appearance and drape lead. Garments intended for food-handling areas are specified to your operating requirements.",
+    identity:
+      "Front-of-house uniform is the first thing a guest reads about a property, usually before anyone speaks. We work from your interior palette and brand marks rather than a hospitality catalogue's defaults, so the floor team looks like part of the room they are standing in.",
+    delivery: [
+      { title: "Matched to the property, not a catalogue", body: "Colours taken from your interior and brand references, so the service uniform and the room it works in belong to each other." },
+      { title: "Separate specs for kitchen and floor", body: "Kitchen and front-of-house face different demands — heat, staining, movement, presentation — and are specified separately while staying one visual family." },
+      { title: "Built for heavy rotation", body: "Hospitality garments are laundered constantly. Fabric and construction are chosen for that cycle rather than for showroom appearance." },
+      { title: "Fast replacement", body: "Single-garment reorders against the approved specification, so a damaged jacket does not leave a section short." },
+    ],
     image: "/images/sectors/hospitality-kitchen-pass.webp",
     imageAlt:
       "Chefs in white coats handing a plated dish to a server in waistcoat and apron at the kitchen pass",
@@ -223,6 +264,14 @@ export const SECTORS: Sector[] = [
     ],
     fabricNote:
       "Heavier cotton and poly-cotton drills for durability and abrasion resistance. Specialist protective finishes — flame-resistant or chemical-resistant — are sourced and specified against your stated requirement, not offered as a blanket claim.",
+    identity:
+      "Workwear is the least likely uniform to be treated as branding and one of the most visible — on a site, in a yard, in front of a client's own customers. We carry your marks onto durable workwear properly, applied so they survive the same laundering the garment does.",
+    delivery: [
+      { title: "Specified against the actual work", body: "Garments chosen for what the job does to them — abrasion, heat, oil, weather — rather than from a general workwear range." },
+      { title: "Consistent across shifts and sites", body: "One specification covers every site, so staff and contractors across locations read as one organisation." },
+      { title: "Branding that survives the wash", body: "Logos applied by a method suited to industrial laundering, not a finish that lifts after a season." },
+      { title: "Replacement without downtime", body: "Standing reorders so worn or damaged kit is replaced against the approved specification quickly." },
+    ],
     image: "/images/sectors/industrial-warehouse-team.webp",
     imageAlt:
       "Industrial workers in navy coveralls and high-visibility vests in a warehouse",

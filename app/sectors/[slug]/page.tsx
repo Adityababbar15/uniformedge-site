@@ -11,7 +11,10 @@ import { AnimatedGrid, AnimatedGridItem } from "@/components/motion/AnimatedGrid
 import { CTABand } from "@/components/sections/CTABand";
 import { SUB_SECTORS, getSector } from "@/lib/content/sectors";
 import { SITE_URL } from "@/lib/content/company";
-import { CATALOGUE_PDF } from "@/lib/content/catalogue";
+import {
+  CATALOGUE_PDF_SCHOOLS,
+  CATALOGUE_PDF_BUSINESS,
+} from "@/lib/content/catalogue";
 
 export function generateStaticParams() {
   return SUB_SECTORS.map((s) => ({ slug: s.slug }));
@@ -108,7 +111,44 @@ export default async function SectorPage({
         </Container>
       </section>
 
-      <section className="py-16 sm:py-20">
+      <section className="border-t border-navy-900/10 py-16 sm:py-20">
+        <Container className="max-w-3xl">
+          <SectionHeading
+            eyebrow="Your identity"
+            title="A uniform that looks like it belongs to you"
+          />
+          <AnimatedSection className="mt-6">
+            <p className="text-base leading-relaxed text-ink-700">
+              {sector.identity}
+            </p>
+          </AnimatedSection>
+
+          <div className="mt-14">
+            <SectionHeading
+              eyebrow="How the programme runs"
+              title="Organised so the work sits with us"
+              description="Uniform is rarely anyone's main job on your side. This is how we keep it off your desk."
+            />
+            <AnimatedSection className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2">
+              {sector.delivery.map((d) => (
+                <div
+                  key={d.title}
+                  className="rounded-2xl border border-navy-900/10 bg-white p-6"
+                >
+                  <h3 className="font-display text-lg text-navy-900">
+                    {d.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-ink-700">
+                    {d.body}
+                  </p>
+                </div>
+              ))}
+            </AnimatedSection>
+          </div>
+        </Container>
+      </section>
+
+      <section className="bg-ivory-100/60 py-16 sm:py-20">
         <Container className="max-w-3xl">
           <SectionHeading
             eyebrow="What matters here"
@@ -145,8 +185,14 @@ export default async function SectorPage({
             <Button href="/contact" variant="primary">
               Request a Quote
             </Button>
-            <Button href={CATALOGUE_PDF} variant="ghost" external>
-              Download the Catalogue (PDF)
+            <Button
+              href={sector.isCore ? CATALOGUE_PDF_SCHOOLS : CATALOGUE_PDF_BUSINESS}
+              variant="ghost"
+              external
+            >
+              {sector.isCore
+                ? "Download the School Catalogue (PDF)"
+                : "Download the Business Catalogue (PDF)"}
             </Button>
           </AnimatedSection>
           <p className="mt-3 text-xs leading-relaxed text-ink-500">

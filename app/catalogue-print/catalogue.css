@@ -92,3 +92,42 @@ ol.steps .n { font-family:Georgia,serif; font-size:15pt; color:var(--crimson); w
 .rule-mark { height: 5mm; width: auto; opacity: .75; }
 .cover-wordmark { width: 62mm; height: auto; display: block; }
 .toc-logo { width: 46mm; height: auto; display: block; }
+
+/* --- Sector page additions ------------------------------------------------ */
+.fig-sector { height: 56mm; }
+
+/* The identity paragraph is the emotional line on a sector page — set larger and
+   in the display face so it reads as a statement rather than more body copy. */
+.identity { font-family: Georgia, "Times New Roman", serif; font-size: 10.5pt;
+            line-height: 1.5; color: var(--navy); margin: 5mm 0 0;
+            padding-left: 5mm; border-left: 2px solid var(--crimson); }
+
+.runs { background: var(--ivory); border-radius: 2.5mm; padding: 3.5mm 4mm; }
+.runs h3 { color: var(--navy); }
+
+/* --- Warmth pass ---------------------------------------------------------- */
+/* The first draft was correct but cold: white pages, hairline rules, no colour
+   beyond the crimson accent. These soften it without touching the content. */
+.page { background: #fffefb; }
+.rule { border-bottom-color: rgba(15,42,77,.10); }
+
+/* A quiet tinted band behind each page heading so a reader's eye lands. */
+h2 { position: relative; }
+h2::after { content: ""; display: block; width: 14mm; height: 1.2mm;
+            background: var(--crimson); border-radius: 1mm; margin-top: 3mm; }
+.cover h1::after, .cover h2::after { display: none; }
+
+.card { background: #fff; box-shadow: 0 0.4mm 1.2mm rgba(15,42,77,.05); }
+.card h3 { color: var(--navy); }
+
+thead th { background: #f3efe6; }
+tbody tr:nth-child(even) td { background: rgba(15,42,77,.022); }
+
+.note { border-radius: 0 2.5mm 2.5mm 0; }
+
+figure img { box-shadow: 0 0.6mm 2mm rgba(7,26,48,.10); }
+
+/* Covers: a soft crimson wash so they feel designed rather than flat navy. */
+.cover { background:
+  radial-gradient(120% 90% at 88% 8%, rgba(229,57,53,.30) 0%, rgba(229,57,53,0) 55%),
+  var(--navy-deep); }
