@@ -23,9 +23,13 @@ const JOBS = [
       "navy-tracksuit-sports-ground-standing",
       "navy-pullover-cardigan-knitwear",
      ].map((n) => ({ src: `public/images/product/${n}.webp`, out: `${n}.jpg`, w: 900 })),
-  ...readdirSync("public/images/sectors")
+  // Sector images are not all in one folder — the schools sector uses a campus
+  // shot. Convert both folders so no sector page can reference a missing JPEG.
+  ...["sectors", "campus"].flatMap((dir) =>
+    readdirSync(`public/images/${dir}`)
       .filter((f) => f.endsWith(".webp"))
-      .map((f) => ({ src: `public/images/sectors/${f}`, out: f.replace(".webp", ".jpg"), w: 900 })),
+      .map((f) => ({ src: `public/images/${dir}/${f}`, out: f.replace(".webp", ".jpg"), w: 900 })),
+  ),
   ...readdirSync("public/images/gallery")
       .filter((f) => f.endsWith(".webp"))
       .map((f) => ({ src: `public/images/gallery/${f}`, out: f.replace(".webp", ".jpg"), w: 700 })),

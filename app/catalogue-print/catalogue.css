@@ -86,3 +86,9 @@ ol.steps .n { font-family:Georgia,serif; font-size:15pt; color:var(--crimson); w
 
 .contact-line { font-size:12pt; line-height:1.9; color:#fff; }
 .contact-line strong { color:#fff; font-weight:400; }
+
+/* Brand marks. Sized in mm so they print at a predictable physical size rather
+   than inheriting the SVG's own viewBox dimensions. */
+.rule-mark { height: 5mm; width: auto; opacity: .75; }
+.cover-wordmark { width: 62mm; height: auto; display: block; }
+.toc-logo { width: 46mm; height: auto; display: block; }

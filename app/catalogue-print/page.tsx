@@ -33,11 +33,25 @@ export const metadata: Metadata = {
 
 const YEAR = 2026;
 
+/**
+ * Map a site image path to its print-optimised JPEG, whatever folder it is in.
+ *
+ * A hardcoded "/sectors/" -> "/print/" swap silently produced
+ * /images/campus/students-corridor-between-periods.jpg — a 404 — so the schools
+ * sector page printed with no photograph. Matching on the filename instead means
+ * a sector can move folders without breaking the catalogue.
+ */
+function printSrc(src: string): string {
+  const file = src.split("/").pop()!.replace(/\.webp$/, ".jpg");
+  return `/images/print/${file}`;
+}
+
 function Rule({ label }: { label: string }) {
   return (
     <div className="rule">
       <span>{label}</span>
-      <span>UE</span>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src="/images/brand/black-icon.svg" alt="" className="rule-mark" />
     </div>
   );
 }
@@ -73,12 +87,15 @@ export default function CataloguePrintPage() {
             </h1>
           </div>
           <div>
-            <p className="wordmark">
-              Uniform<span>Edge</span>
-            </p>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/brand/wordmark-white.svg"
+              alt="UniformEdge"
+              className="cover-wordmark"
+            />
             <p
               className="kicker"
-              style={{ marginTop: "3mm", color: "rgba(255,255,255,.62)" }}
+              style={{ marginTop: "4mm", color: "rgba(255,255,255,.62)" }}
             >
               Schools · Corporate · Healthcare · Hospitality · Industrial
             </p>
@@ -113,7 +130,13 @@ export default function CataloguePrintPage() {
       {/* 3 — Contents */}
       <section className="page">
         <Rule label="Contents" />
-        <h2>What&apos;s inside</h2>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/images/brand/black-logo.svg"
+          alt="UniformEdge"
+          className="toc-logo"
+        />
+        <h2 style={{ marginTop: "6mm" }}>What&apos;s inside</h2>
         <ul className="toc" style={{ marginTop: "8mm" }}>
           {[
             ["About us", "02"],
@@ -200,9 +223,7 @@ export default function CataloguePrintPage() {
                 <figure className="fig-half" style={{ marginBottom: "5mm" }}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src={sec.image
-                      .replace("/sectors/", "/print/")
-                      .replace(".webp", ".jpg")}
+                    src={printSrc(sec.image)}
                     alt=""
                   />
                 </figure>
@@ -271,7 +292,7 @@ export default function CataloguePrintPage() {
                     uncompressed and quintuples the PDF size. */}
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src={im.src.replace("/gallery/", "/print/").replace(".webp", ".jpg")}
+                  src={printSrc(im.src)}
                   alt=""
                 />
               </figure>
@@ -455,9 +476,13 @@ export default function CataloguePrintPage() {
               {COMPANY.address.locality}, {COMPANY.address.city}{" "}
               {COMPANY.address.postalCode}
             </p>
-            <p className="wordmark" style={{ marginTop: "9mm" }}>
-              Uniform<span>Edge</span>
-            </p>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/brand/wordmark-white.svg"
+              alt="UniformEdge"
+              className="cover-wordmark"
+              style={{ marginTop: "9mm" }}
+            />
             <p className="small" style={{ color: "rgba(255,255,255,.45)", marginTop: "2mm" }}>
               © {YEAR} UniformEdge. Product imagery in this catalogue is
               AI-generated placeholder work pending our photoshoot.
