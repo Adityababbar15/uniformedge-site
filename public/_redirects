@@ -1,0 +1,7 @@
+# The three generated catalogue editions were replaced by the 2026 rebuild.
+# Anyone holding an old link — a cached page, a bookmark, or a URL already sent
+# to a school — would otherwise hit a 404. 301 so the new file inherits any
+# link equity the old paths picked up.
+/uniformedge-catalogue.pdf           /uniformedge-catalogue-2026.pdf  301
+/uniformedge-catalogue-schools.pdf   /uniformedge-catalogue-2026.pdf  301
+/uniformedge-catalogue-business.pdf  /uniformedge-catalogue-2026.pdf  301
