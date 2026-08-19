@@ -3,7 +3,6 @@ import "./catalogue.css";
 import { COMPANY, SITE_URL } from "@/lib/content/company";
 import {
   CATALOGUE_ITEMS,
-  COLOUR_SWATCHES,
   FABRIC_TYPES,
   SIZE_CHART,
   PROGRAM_TIERS,
@@ -11,6 +10,7 @@ import {
 } from "@/lib/content/catalogue";
 import { STUDIO_IMAGES, AI_PLACEHOLDER_NOTE } from "@/lib/content/gallery";
 import { BLOG_POSTS } from "@/lib/content/blog";
+import { SECTORS, SUB_SECTORS } from "@/lib/content/sectors";
 
 /**
  * PRINT SOURCE FOR THE PDF CATALOGUE — not a page for site visitors.
@@ -89,7 +89,7 @@ export default function CataloguePrintPage() {
       {/* 2 — About */}
       <section className="page">
         <Rule label="About us" />
-        <h2>Every uniform tells a school&apos;s story.</h2>
+        <h2>Every uniform tells an organisation&apos;s story.</h2>
         <div style={{ marginTop: "6mm", maxWidth: "135mm" }}>
           <p className="lede">{COMPANY.vision.statement}</p>
           {COMPANY.vision.body.map((b) => (
@@ -117,17 +117,17 @@ export default function CataloguePrintPage() {
         <ul className="toc" style={{ marginTop: "8mm" }}>
           {[
             ["About us", "02"],
-            ["Boys' uniform", "04"],
-            ["Girls' uniform", "05"],
-            ["Blazers & winter wear", "06"],
-            ["Sports & PE kit", "07"],
-            ["Accessories", "08"],
-            ["Fabric & colour swatches", "09"],
-            ["Full product list", "10"],
+            ["Sectors we supply", "04"],
+            ["School uniforms", "05"],
+            ["Corporate uniforms", "06"],
+            ["Healthcare uniforms", "07"],
+            ["Hospitality uniforms", "08"],
+            ["Industrial uniforms", "09"],
+            ["School programme product list", "10"],
             ["Uniform styles gallery", "11–13"],
             ["Fabric & quality", "14"],
             ["Size guide", "15"],
-            ["School programs", "16"],
+            ["Programmes & pricing", "16"],
             ["How ordering works", "17"],
             ["Further reading", "18"],
             ["Get in touch", "19"],
@@ -141,88 +141,97 @@ export default function CataloguePrintPage() {
         <Folio n={3} />
       </section>
 
-      {/* 4–8 — Category pages */}
-      {[
-        { label: "Boys' uniform", cat: "Boys", img: "/images/print/boys-white-shirt-grey-trousers-desk.jpg" },
-        { label: "Girls' uniform", cat: "Girls", img: "/images/print/girls-blouse-pleated-skirt-courtyard.jpg" },
-        { label: "Blazers & winter wear", cat: "Winter wear", img: "/images/print/senior-charcoal-blazer-staircase.jpg" },
-        { label: "Sports & PE kit", cat: "Sports", img: "/images/print/navy-tracksuit-sports-ground-standing.jpg" },
-        { label: "Accessories", cat: "Accessories", img: "/images/print/navy-pullover-cardigan-knitwear.jpg" },
-      ].map((s, i) => (
-        <section className="page" key={s.cat}>
-          <Rule label={s.label} />
-          <div className="grid2" style={{ gap: "8mm" }}>
-            <div>
-              <h2>{s.label}</h2>
-              <p className="muted" style={{ marginTop: "4mm" }}>
-                Every garment is manufactured to your specification — colours
-                matched to your palette, crest digitised and stitched, sizing
-                calibrated to your students.
+      {/* 4 — Sectors overview */}
+      <section className="page">
+        <Rule label="Sectors" />
+        <h2>Five sectors, one facility</h2>
+        <p className="muted" style={{ marginTop: "4mm", maxWidth: "145mm" }}>
+          Schools are our core, and the sector our tailoring roots come from. The
+          same cutting floor, colour matching and quality checks now dress
+          offices, hospitals, kitchens and industrial sites.
+        </p>
+        <div className="grid2" style={{ marginTop: "8mm", gap: "6mm" }}>
+          {SECTORS.map((sec) => (
+            <div className="card" key={sec.slug}>
+              <h3>{sec.name}</h3>
+              <p className="muted" style={{ marginTop: "2mm" }}>
+                {sec.summary}
               </p>
-              <table style={{ marginTop: "5mm" }}>
+            </div>
+          ))}
+        </div>
+        <div className="note" style={{ marginTop: "8mm" }}>
+          Every programme is quoted per client. Garment mix, order volume and
+          customisation scope all move the price, so we do not publish a rate
+          card we would have to qualify in every conversation.
+        </div>
+        <Folio n={4} />
+      </section>
+
+      {/* 5–9 — One page per sector */}
+      {SECTORS.map((sec, i) => (
+        <section className="page" key={sec.slug}>
+          <Rule label={sec.name} />
+          <div className="grid2" style={{ gap: "7mm" }}>
+            <div>
+              <h2 style={{ fontSize: "18pt" }}>{sec.title}</h2>
+              <p className="muted" style={{ marginTop: "3mm" }}>
+                {sec.intro[0]}
+              </p>
+              <table style={{ marginTop: "4mm" }}>
                 <thead>
                   <tr>
-                    <th>Item</th>
-                    <th>Fabric</th>
-                    <th>Sizes</th>
+                    <th>Garment</th>
+                    <th>Detail</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {cat(s.cat).map((it) => (
-                    <tr key={it.sku}>
-                      <td>{it.item}</td>
-                      <td className="muted">{it.fabric}</td>
-                      <td className="muted">{it.sizes}</td>
+                  {sec.garments.map((g) => (
+                    <tr key={g.name}>
+                      <td style={{ color: "var(--navy)" }}>{g.name}</td>
+                      <td className="muted">{g.detail}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
-            <figure className="fig-tall">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={s.img} alt="" />
-            </figure>
+            <div>
+              {sec.image && (
+                <figure className="fig-half" style={{ marginBottom: "5mm" }}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={sec.image
+                      .replace("/sectors/", "/print/")
+                      .replace(".webp", ".jpg")}
+                    alt=""
+                  />
+                </figure>
+              )}
+              {sec.considerations.slice(0, 3).map((c) => (
+                <div key={c.title} style={{ marginBottom: "3.5mm" }}>
+                  <h3 style={{ fontSize: "10pt" }}>{c.title}</h3>
+                  <p className="small muted" style={{ margin: "1mm 0 0" }}>
+                    {c.body}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
-          <Folio n={4 + i} />
+          <div className="note" style={{ marginTop: "5mm" }}>
+            {sec.fabricNote}
+          </div>
+          <Folio n={5 + i} />
         </section>
       ))}
-
-      {/* 9 — Swatches */}
-      <section className="page">
-        <Rule label="Fabric & colour" />
-        <h2>Fabric &amp; colour swatches</h2>
-        <p className="muted" style={{ marginTop: "4mm", maxWidth: "140mm" }}>
-          A sample of the colourways available. Every colour is matched to your
-          school&apos;s exact palette from a physical swatch or Pantone reference
-          before production starts.
-        </p>
-        <div className="grid4" style={{ marginTop: "7mm" }}>
-          {COLOUR_SWATCHES.map((sw) => (
-            <div className="swatch" key={sw.code}>
-              <span className="chip" style={{ background: sw.hex }} />
-              <span>
-                <span style={{ display: "block", fontSize: "8.5pt", color: "var(--navy)" }}>
-                  {sw.name}
-                </span>
-                <span className="small muted">
-                  {sw.fabric} · {sw.code}
-                </span>
-              </span>
-            </div>
-          ))}
-        </div>
-        <div className="note" style={{ marginTop: "9mm" }}>
-          Printed and on-screen colours are indicative only. Production colour is
-          matched against your school&apos;s physical swatch or Pantone reference,
-          and you approve a physical sample before bulk cutting.
-        </div>
-        <Folio n={9} />
-      </section>
 
       {/* 10 — Full product list */}
       <section className="page">
         <Rule label="Full product list" />
-        <h2>Every item in the program</h2>
+        <h2>School programme — full product list</h2>
+        <p className="muted" style={{ marginTop: "3mm", maxWidth: "145mm" }}>
+          SKUs for the school programme. Corporate, healthcare, hospitality and
+          industrial ranges are specified per client and quoted from your brief.
+        </p>
         <table style={{ marginTop: "6mm" }}>
           <thead>
             <tr>
@@ -280,7 +289,7 @@ export default function CataloguePrintPage() {
       {/* 14 — Fabric & quality */}
       <section className="page">
         <Rule label="Fabric & quality" />
-        <h2>Built to survive a school year</h2>
+        <h2>Built to survive daily wear</h2>
         <div className="grid3" style={{ marginTop: "7mm" }}>
           {FABRIC_TYPES.map((f) => (
             <div className="card" key={f.name}>

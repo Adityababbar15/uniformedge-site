@@ -23,6 +23,9 @@ const JOBS = [
       "navy-tracksuit-sports-ground-standing",
       "navy-pullover-cardigan-knitwear",
      ].map((n) => ({ src: `public/images/product/${n}.webp`, out: `${n}.jpg`, w: 900 })),
+  ...readdirSync("public/images/sectors")
+      .filter((f) => f.endsWith(".webp"))
+      .map((f) => ({ src: `public/images/sectors/${f}`, out: f.replace(".webp", ".jpg"), w: 900 })),
   ...readdirSync("public/images/gallery")
       .filter((f) => f.endsWith(".webp"))
       .map((f) => ({ src: `public/images/gallery/${f}`, out: f.replace(".webp", ".jpg"), w: 700 })),
