@@ -12,7 +12,7 @@ import { SITE_URL } from "@/lib/content/company";
 import {
   PROGRAM_TIERS,
   ORDERING_STEPS,
-  CATALOGUE_PDF_SCHOOLS,
+  CATALOGUE_PDF,
 } from "@/lib/content/catalogue";
 
 export const metadata: Metadata = {
@@ -144,8 +144,8 @@ export default function SchoolProgramsPage() {
           </AnimatedGrid>
 
           <div className="mt-14 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <Button href={CATALOGUE_PDF_SCHOOLS} variant="primary" external>
-              Download the School Catalogue (PDF)
+            <Button href={CATALOGUE_PDF} variant="primary" external>
+              Download the Catalogue (PDF)
             </Button>
             <Button href="/contact" variant="ghost">
               Speak to our team

@@ -12,8 +12,7 @@ import { CTABand } from "@/components/sections/CTABand";
 import { SUB_SECTORS, getSector } from "@/lib/content/sectors";
 import { SITE_URL } from "@/lib/content/company";
 import {
-  CATALOGUE_PDF_SCHOOLS,
-  CATALOGUE_PDF_BUSINESS,
+  CATALOGUE_PDF,
 } from "@/lib/content/catalogue";
 
 export function generateStaticParams() {
@@ -186,13 +185,11 @@ export default async function SectorPage({
               Request a Quote
             </Button>
             <Button
-              href={sector.isCore ? CATALOGUE_PDF_SCHOOLS : CATALOGUE_PDF_BUSINESS}
+              href={CATALOGUE_PDF}
               variant="ghost"
               external
             >
-              {sector.isCore
-                ? "Download the School Catalogue (PDF)"
-                : "Download the Business Catalogue (PDF)"}
+              "Download the Catalogue (PDF)"
             </Button>
           </AnimatedSection>
           <p className="mt-3 text-xs leading-relaxed text-ink-500">
