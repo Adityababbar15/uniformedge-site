@@ -95,8 +95,8 @@ export function CatalogueDoc({ variant = "full" }: { variant?: CatalogueVariant 
     "Contents",
     "Sectors we supply",
     ...shownSectors.map((x) => x.name),
-    ...(showSchoolDetail ? ["School programme product list"] : []),
     "How ordering works for you",
+    ...(showSchoolDetail ? ["School programme product list"] : []),
     "Uniform styles gallery",
     "Uniform styles gallery",
     "Fabric & quality",
@@ -340,7 +340,7 @@ export function CatalogueDoc({ variant = "full" }: { variant?: CatalogueVariant 
           <p className="identity">{sec.identity}</p>
 
           <div className="grid2" style={{ marginTop: "4mm", gap: "4mm" }}>
-            {sec.delivery.map((d) => (
+            {sec.delivery.slice(0, 2).map((d) => (
               <div className="runs" key={d.title}>
                 <h3 style={{ fontSize: "9pt" }}>{d.title}</h3>
                 <p className="small muted" style={{ margin: "1mm 0 0" }}>
@@ -358,40 +358,6 @@ export function CatalogueDoc({ variant = "full" }: { variant?: CatalogueVariant 
       ))}
 
       {/* 10 — Full product list */}
-      {showSchoolDetail && (
-        <section className="page">
-        <Rule label="Full product list" />
-        <h2>School programme — full product list</h2>
-        <p className="muted" style={{ marginTop: "3mm", maxWidth: "145mm" }}>
-          SKUs for the school programme. Corporate, healthcare, hospitality and
-          industrial ranges are specified per client and quoted from your brief.
-        </p>
-        <table style={{ marginTop: "6mm" }}>
-          <thead>
-            <tr>
-              <th>SKU</th>
-              <th>Item</th>
-              <th>Category</th>
-              <th>Fabric options</th>
-              <th>Sizes</th>
-            </tr>
-          </thead>
-          <tbody>
-            {CATALOGUE_ITEMS.map((it) => (
-              <tr key={it.sku}>
-                <td className="sku">{it.sku}</td>
-                <td>{it.item}</td>
-                <td className="muted">{it.category}</td>
-                <td className="muted">{it.fabric}</td>
-                <td className="muted">{it.sizes}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-          <Folio />
-      </section>
-      )}
-
       {/* Ordering model — the thing that actually differentiates us */}
       <section className="page">
         <Rule label="How ordering works for you" />
@@ -444,6 +410,40 @@ export function CatalogueDoc({ variant = "full" }: { variant?: CatalogueVariant 
         <Folio />
       </section>
 
+      {showSchoolDetail && (
+        <section className="page">
+        <Rule label="Full product list" />
+        <h2>School programme — full product list</h2>
+        <p className="muted" style={{ marginTop: "3mm", maxWidth: "145mm" }}>
+          SKUs for the school programme. Corporate, healthcare, hospitality and
+          industrial ranges are specified per client and quoted from your brief.
+        </p>
+        <table style={{ marginTop: "6mm" }}>
+          <thead>
+            <tr>
+              <th>SKU</th>
+              <th>Item</th>
+              <th>Category</th>
+              <th>Fabric options</th>
+              <th>Sizes</th>
+            </tr>
+          </thead>
+          <tbody>
+            {CATALOGUE_ITEMS.map((it) => (
+              <tr key={it.sku}>
+                <td className="sku">{it.sku}</td>
+                <td>{it.item}</td>
+                <td className="muted">{it.category}</td>
+                <td className="muted">{it.fabric}</td>
+                <td className="muted">{it.sizes}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+          <Folio />
+      </section>
+      )}
+
       {/* 11–13 — Gallery */}
       {galleryPages.map((imgs, gi) => (
         <section className="page" key={gi}>
@@ -494,6 +494,43 @@ export function CatalogueDoc({ variant = "full" }: { variant?: CatalogueVariant 
         <div className="note" style={{ marginTop: "5mm" }}>
           {COMPANY.manufacturing.sustainability.caveat}
         </div>
+
+        <h3 style={{ marginTop: "8mm", fontSize: "11pt" }}>
+          What we check before a garment ships
+        </h3>
+        <div className="grid2" style={{ marginTop: "4mm", gap: "4mm" }}>
+          {[
+            {
+              t: "Colour against your reference",
+              b: "Every production batch is checked against the physical swatch or Pantone reference on file — not against the previous batch, which is how colour drifts a shade at a time.",
+            },
+            {
+              t: "Crest and logo placement",
+              b: "Embroidery position and scale checked against the approved sample, so the mark sits identically on a size XS and a size XXL.",
+            },
+            {
+              t: "Seams, cuffs and fastenings",
+              b: "The points that fail first in daily wear: collar and cuff construction, waistband stitching, button and zip attachment.",
+            },
+            {
+              t: "Measurement against the size grade",
+              b: "Sampled from each production run, so a size M in the reorder matches the size M a parent already owns.",
+            },
+          ].map((x) => (
+            <div className="runs" key={x.t}>
+              <h3 style={{ fontSize: "9.5pt" }}>{x.t}</h3>
+              <p className="small muted" style={{ margin: "1.5mm 0 0" }}>
+                {x.b}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        <p className="identity" style={{ marginTop: "6mm" }}>
+          Fabric choice decides how a uniform looks in week one. Construction
+          decides how it looks in month nine — and that is the one a parent
+          remembers when the reorder form comes round.
+        </p>
           <Folio />
       </section>
 
@@ -554,11 +591,52 @@ export function CatalogueDoc({ variant = "full" }: { variant?: CatalogueVariant 
             </div>
           ))}
         </div>
-        <div className="note" style={{ marginTop: "9mm" }}>
+        <div className="note" style={{ marginTop: "7mm" }}>
           Exact pricing depends on garment mix, order volume and customisation
           scope — contact us for a program quote specific to your school. Any
           revision is agreed before the academic cycle begins, not during it.
         </div>
+
+        <h3 style={{ marginTop: "7mm", fontSize: "11pt" }}>
+          What moves the price
+        </h3>
+        <div className="grid2" style={{ marginTop: "4mm", gap: "4mm" }}>
+          {[
+            {
+              t: "Garment mix",
+              b: "A blazer-and-tie programme and a shirt-and-shorts programme are different orders. We quote the wardrobe you actually issue, not a standard bundle.",
+            },
+            {
+              t: "Volume per size",
+              b: "Cost follows the size spread as much as the headcount — a wide spread means more grades cut in smaller runs.",
+            },
+            {
+              t: "Customisation depth",
+              b: "Crest embroidery, house-colour piping and non-standard colourways each add process. A printed badge and a digitised embroidered crest are not the same job.",
+            },
+            {
+              t: "Fabric grade",
+              b: "Within each fabric type there is a range. We will show you the options against price rather than quoting one and assuming.",
+            },
+          ].map((x) => (
+            <div className="runs" key={x.t}>
+              <h3 style={{ fontSize: "9.5pt" }}>{x.t}</h3>
+              <p className="small muted" style={{ margin: "1.5mm 0 0" }}>
+                {x.b}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        <h3 style={{ marginTop: "7mm", fontSize: "11pt" }}>
+          Included in every programme, at no separate charge
+        </h3>
+        <p className="muted" style={{ marginTop: "3mm", maxWidth: "150mm" }}>
+          Crest digitisation into an embroidery-ready file · colour matching
+          against your physical swatch or Pantone reference · a physical sample
+          for approval before bulk cutting · an on-site measurement drive for a
+          first bulk order · a written specification you keep.
+        </p>
           <Folio />
       </section>
       )}

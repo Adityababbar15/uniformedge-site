@@ -213,3 +213,7 @@ tbody tr:nth-child(even) td { background: rgba(15,42,77,.035); }
 /* A crimson rule under the cover kicker gives the type something to sit on. */
 .cover .kicker { border-bottom: 1.2mm solid var(--crimson);
                  padding-bottom: 3mm; display: inline-block; }
+
+/* The folio is now a solid navy band, so content needs to clear it — the
+   fabric note on the sector pages was running right up against it. */
+.page { padding-bottom: 22mm; }
