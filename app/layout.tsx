@@ -87,8 +87,11 @@ const organizationSchema = {
   email: COMPANY.email,
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Delhi",
-    addressCountry: "IN",
+    streetAddress: COMPANY.address.street,
+    addressLocality: COMPANY.address.locality,
+    addressRegion: COMPANY.address.city,
+    postalCode: COMPANY.address.postalCode,
+    addressCountry: COMPANY.address.country,
   },
   areaServed: { "@type": "AdministrativeArea", name: "Delhi NCR" },
   contactPoint: {

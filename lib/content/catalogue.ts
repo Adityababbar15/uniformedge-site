@@ -133,7 +133,7 @@ export type ProgramTier = {
 export const PROGRAM_TIERS: ProgramTier[] = [
   {
     name: "Starter",
-    audience: "For single schools building their first custom uniform program.",
+    audience: "For single schools under 100 students, building their first custom uniform program.",
     features: ["Full customisation", "Standard production timeline", "Email support"],
   },
   {

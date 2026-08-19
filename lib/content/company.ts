@@ -50,6 +50,16 @@ export const COMPANY = {
   city: "Delhi, India",
   phone: "+91 99533 99534",
   phoneHref: "tel:+919953399534",
+  address: {
+    street: "Plot No. 2, Basement, Sector-12A",
+    locality: "Dwarka",
+    city: "New Delhi",
+    postalCode: "110075",
+    country: "IN",
+    /** Single-line form for the contact page and the catalogue back cover. */
+    oneLine:
+      "Plot No. 2, Basement, Sector-12A, Dwarka, New Delhi 110075",
+  },
   email: "info@uniformedge.co.in",
   whatsappNumber: "919953399534",
   foundingStory: {
@@ -142,10 +152,7 @@ export const COMPANY = {
 // Deferred by decision, not oversight — these two are no longer rendered anywhere:
 //   leadershipSignature — the About leadership message currently runs unsigned.
 //     To sign it, add the signature back below the <blockquote> in app/about/page.tsx.
-//   officeAddress — the Contact page shows city, phone and email only.
-//     To restore, re-add the "Office Address" <div> to the <dl> in app/contact/page.tsx.
 export const PLACEHOLDERS = {
   leadershipSignature: "[Leadership Name & Title Needed — who signs this message?]",
-  officeAddress: "[Office Address Needed]",
   yearsAsUniformEdge: "[Years Operating as UniformEdge — figure pending]",
 } as const;

@@ -30,9 +30,16 @@ export default function ContactPage() {
             <dl className="mt-6 space-y-5">
               <div>
                 <dt className="text-xs font-semibold uppercase tracking-wide text-ink-500">
-                  Location
+                  Office
                 </dt>
-                <dd className="mt-1 text-base text-ink-900">{COMPANY.city}</dd>
+                <dd className="mt-1 text-base not-italic text-ink-900">
+                  <address className="not-italic">
+                    {COMPANY.address.street}
+                    <br />
+                    {COMPANY.address.locality}, {COMPANY.address.city}{" "}
+                    {COMPANY.address.postalCode}
+                  </address>
+                </dd>
               </div>
               <div>
                 <dt className="text-xs font-semibold uppercase tracking-wide text-ink-500">
