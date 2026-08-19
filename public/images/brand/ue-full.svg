@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- Full UE monogram: complete U (icon stem extended to cap height) plus the
-     wordmark's complete three-arm E and its crimson slab. standalone-icon.svg
-     truncates both letters where they overlap. -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="10 -22 220 150"><path fill="#0F2A4D" d="M20 14h19v55c0 16 9 25 24 25s24-9 24-25V14h19v55c0 28-16 44-43 44S20 97 20 69z"/><g transform="translate(-430.59 -119.64) scale(0.8174)"><path fill="#0F2A4D" d="M673.47265625 285.0 698.873046875 163.310546875H789.1025390625L784.869140625 183.6474609375H719.7080078125L713.8974609375 211.2890625H776.900390625L772.6669921875 231.6259765625H709.6640625L702.02734375 264.6630859375H772.8330078125L768.5166015625 285.0Z "/><path fill="#E53935" d="M707 130.3H798L762.3 167.7H671.3Z"/></g></svg>
