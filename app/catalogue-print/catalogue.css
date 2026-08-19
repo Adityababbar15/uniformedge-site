@@ -144,7 +144,72 @@ figure img { box-shadow: 0 0.6mm 2mm rgba(7,26,48,.10); }
    whatever the photo is doing. */
 .cover { position: relative; overflow: hidden; }
 .cover-photo { position: absolute; inset: 0; width: 100%; height: 100%;
-               object-fit: cover; opacity: .30; }
+               object-fit: cover; object-position: 50% 32%; opacity: .30; }
 .cover-inner { position: relative; z-index: 1;
                background: linear-gradient(180deg,
                  rgba(7,26,48,.72) 0%, rgba(7,26,48,.45) 42%, rgba(7,26,48,.88) 100%); }
+
+/* ==========================================================================
+   DESIGN PASS 2 — the first version read as a Word document: near-white pages,
+   hairline rules, tiny accents, and pages that ran out of content two-thirds
+   down. This pass commits to the brand colours as areas rather than accents,
+   and fills the vertical space.
+   ========================================================================== */
+
+.cat { --sand: #f2ece0; --sand-deep: #e7dece; }
+
+/* Warmer paper. #fffefb was white in all but name. */
+.page { background: #fdfaf4; }
+
+/* Running header becomes a navy bar rather than a grey hairline: it anchors
+   the top of every page and carries the brand colour onto pages with no
+   photography. */
+.rule { background: var(--navy); color: rgba(255,255,255,.86);
+        border-bottom: none; margin: -18mm -16mm 8mm; padding: 5mm 16mm;
+        font-size: 7.5pt; letter-spacing: .24em; }
+.rule-mark { height: 6mm; opacity: 1; filter: brightness(0) invert(1); }
+
+/* Headings: larger, with a heavier crimson underscore. */
+h2 { font-size: 23pt; }
+h2::after { width: 20mm; height: 1.6mm; margin-top: 3.5mm; }
+
+/* Cards get warm fill and a crimson top edge instead of a grey outline. */
+.card { background: var(--sand); border: none; border-top: 1.2mm solid var(--crimson);
+        border-radius: 0 0 2.5mm 2.5mm; box-shadow: none; }
+
+/* Sector cards on the overview page carry a thumbnail. */
+.sector-card { display: flex; gap: 4mm; padding: 0; overflow: hidden;
+               border-top: none; border-left: 1.2mm solid var(--crimson);
+               border-radius: 0 2.5mm 2.5mm 0; align-items: stretch; }
+.sector-thumb { width: 26mm; flex: none; object-fit: cover; align-self: stretch; }
+.sector-card-body { padding: 4mm 4mm 4mm 0; }
+
+/* Process/delivery blocks: alternate warmth so a grid of four does not flatten. */
+.runs { background: #fff; border-left: 0.8mm solid var(--navy); border-radius: 0 2mm 2mm 0; }
+
+/* Tables: navy header, warmer stripe. */
+thead th { background: var(--navy); color: #fff; }
+tbody tr:nth-child(even) td { background: rgba(15,42,77,.035); }
+
+/* Pull-quote gets a sand ground so it reads as a designed element. */
+.identity { background: var(--sand); padding: 5mm 6mm; border-radius: 0 2.5mm 2.5mm 0; }
+
+/* Notes sit on the deeper sand. */
+.note { background: var(--sand-deep); }
+
+/* Folio becomes a navy band, closing the page and filling the foot. */
+.folio { left: 0; right: 0; bottom: 0; padding: 4mm 16mm;
+         background: var(--navy); color: rgba(255,255,255,.72); }
+
+/* Sector page photo fills its column rather than floating in white space. */
+.fig-sector { height: 72mm; }
+
+/* Cover: let the photograph actually be seen. 30% opacity under a heavy scrim
+   made it murky rather than atmospheric. */
+.cover-photo { opacity: .62; }
+.cover-inner { background: linear-gradient(180deg,
+                 rgba(7,26,48,.80) 0%, rgba(7,26,48,.34) 45%, rgba(7,26,48,.92) 100%); }
+.cover h1 { font-size: 40pt; }
+/* A crimson rule under the cover kicker gives the type something to sit on. */
+.cover .kicker { border-bottom: 1.2mm solid var(--crimson);
+                 padding-bottom: 3mm; display: inline-block; }

@@ -25,7 +25,7 @@ const JOBS = [
      ].map((n) => ({ src: `public/images/product/${n}.webp`, out: `${n}.jpg`, w: 900 })),
   // Sector images are not all in one folder — the schools sector uses a campus
   // shot. Convert both folders so no sector page can reference a missing JPEG.
-  ...["sectors", "campus"].flatMap((dir) =>
+  ...["sectors", "campus", "hero"].flatMap((dir) =>
     readdirSync(`public/images/${dir}`)
       .filter((f) => f.endsWith(".webp"))
       .map((f) => ({ src: `public/images/${dir}/${f}`, out: f.replace(".webp", ".jpg"), w: 900 })),

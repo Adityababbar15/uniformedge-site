@@ -130,7 +130,7 @@ export function CatalogueDoc({ variant = "full" }: { variant?: CatalogueVariant 
           src={printSrc(
             businessOnly
               ? "/images/sectors/corporate-office-team.webp"
-              : "/images/campus/school-gate-arrival-morning.webp",
+              : "/images/hero/school-assembly-uniform-cohesion-morning.webp",
           )}
           alt=""
         />
@@ -241,11 +241,17 @@ export function CatalogueDoc({ variant = "full" }: { variant?: CatalogueVariant 
         </p>
         <div className="grid2" style={{ marginTop: "8mm", gap: "6mm" }}>
           {SECTORS.map((sec) => (
-            <div className="card" key={sec.slug}>
-              <h3>{sec.name}</h3>
-              <p className="muted" style={{ marginTop: "2mm" }}>
-                {sec.summary}
-              </p>
+            <div className="card sector-card" key={sec.slug}>
+              {sec.image && (
+                /* eslint-disable-next-line @next/next/no-img-element */
+                <img className="sector-thumb" src={printSrc(sec.image)} alt="" />
+              )}
+              <div className="sector-card-body">
+                <h3>{sec.name}</h3>
+                <p className="muted" style={{ marginTop: "1.5mm" }}>
+                  {sec.summary}
+                </p>
+              </div>
             </div>
           ))}
         </div>
@@ -253,6 +259,33 @@ export function CatalogueDoc({ variant = "full" }: { variant?: CatalogueVariant 
           Every programme is quoted per client. Garment mix, order volume and
           customisation scope all move the price, so we do not publish a rate
           card we would have to qualify in every conversation.
+        </div>
+
+        <h3 style={{ marginTop: "8mm", fontSize: "11pt" }}>
+          Common to every programme
+        </h3>
+        <div className="grid3" style={{ marginTop: "4mm", gap: "5mm" }}>
+          {[
+            {
+              t: "Made in our own facility",
+              b: "Cutting, stitching and quality checks under our control in Delhi — not brokered out and hoped for.",
+            },
+            {
+              t: "Colour matched, not approximated",
+              b: "Matched from your physical swatch or Pantone reference, and held across reorders so later batches sit beside the first.",
+            },
+            {
+              t: "Sample approved before bulk",
+              b: "Nothing is cut at volume until you have held a physical sample and signed it off.",
+            },
+          ].map((x) => (
+            <div className="runs" key={x.t}>
+              <h3 style={{ fontSize: "9.5pt" }}>{x.t}</h3>
+              <p className="small muted" style={{ margin: "1.5mm 0 0" }}>
+                {x.b}
+              </p>
+            </div>
+          ))}
         </div>
           <Folio />
       </section>
@@ -294,7 +327,7 @@ export function CatalogueDoc({ variant = "full" }: { variant?: CatalogueVariant 
                   />
                 </figure>
               )}
-              {sec.considerations.slice(0, 2).map((c) => (
+              {sec.considerations.slice(0, 3).map((c) => (
                 <div key={c.title} style={{ marginBottom: "3.5mm" }}>
                   <h3 style={{ fontSize: "10pt" }}>{c.title}</h3>
                   <p className="small muted" style={{ margin: "1mm 0 0" }}>
