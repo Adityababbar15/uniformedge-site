@@ -4,7 +4,6 @@ import { PageHero } from "@/components/sections/PageHero";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { AnimatedGrid, AnimatedGridItem } from "@/components/motion/AnimatedGrid";
-import { AIPlaceholderBanner } from "@/components/gallery/AIPlaceholderBanner";
 import { CTABand } from "@/components/sections/CTABand";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { AnimatedSection } from "@/components/motion/AnimatedSection";
@@ -42,10 +41,6 @@ export default function ProductsPage() {
             description="Seven garment categories, each manufactured to your school's colours, crest and sizing."
           />
 
-          <div className="mt-8">
-            <AIPlaceholderBanner />
-          </div>
-
           <AnimatedGrid className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {PRODUCT_CATEGORIES.map((category) => (
               <AnimatedGridItem key={category.slug}>
@@ -55,14 +50,11 @@ export default function ProductsPage() {
                       <>
                         <Image
                           src={category.images[0]}
-                          alt={`AI-generated placeholder image representing the ${category.name} category, pending real photoshoot`}
+                          alt={`${category.name} — UniformEdge school uniform range`}
                           fill
                           sizes="(min-width: 1024px) 360px, 90vw"
                           className="object-cover"
                         />
-                        <span className="absolute left-3 top-3 rounded-full bg-navy-950/80 px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-crimson-300 backdrop-blur">
-                          AI Placeholder
-                        </span>
                       </>
                     ) : (
                       <div className="flex h-full items-center justify-center px-6 text-center text-sm text-ink-500">
@@ -237,9 +229,6 @@ export default function ProductsPage() {
                   sizes="(min-width: 768px) 720px, 92vw"
                   className="object-cover"
                 />
-                <span className="absolute left-3 top-3 rounded-full bg-navy-950/80 px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-crimson-300 backdrop-blur">
-                  AI Placeholder
-                </span>
               </div>
               <figcaption className="mt-3 text-sm leading-relaxed text-ink-500">
                 The same uniform program across primary, middle and senior sizing —

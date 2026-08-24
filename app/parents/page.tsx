@@ -7,7 +7,12 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { AnimatedSection } from "@/components/motion/AnimatedSection";
 import { AnimatedGrid, AnimatedGridItem } from "@/components/motion/AnimatedGrid";
 import { FAQAccordion } from "@/components/faqs/FAQAccordion";
-import { ORDER_ROUTES, PARENT_FAQS, parentWhatsAppLink } from "@/lib/content/parents";
+import {
+  ORDER_ROUTES,
+  PARENT_FAQS,
+  PARENT_DELIVERY,
+  parentWhatsAppLink,
+} from "@/lib/content/parents";
 import { PUBLISHED_SCHOOLS } from "@/lib/content/partner-schools";
 import { SITE_URL, COMPANY } from "@/lib/content/company";
 
@@ -61,6 +66,30 @@ export default function ParentsPage() {
               Call {COMPANY.phone}
             </Button>
           </AnimatedSection>
+        </Container>
+      </section>
+
+      <section className="border-t border-navy-900/10 py-16 sm:py-20">
+        <Container className="max-w-3xl">
+          <SectionHeading
+            eyebrow="Delivery"
+            title="What it costs and how long it takes"
+          />
+          <dl className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-3">
+            {PARENT_DELIVERY.map((row) => (
+              <div
+                key={row.label}
+                className="rounded-2xl border border-navy-900/10 bg-white p-6"
+              >
+                <dt className="text-xs font-semibold uppercase tracking-wide text-ink-500">
+                  {row.label}
+                </dt>
+                <dd className="mt-2 text-base leading-relaxed text-navy-900">
+                  {row.value}
+                </dd>
+              </div>
+            ))}
+          </dl>
         </Container>
       </section>
 

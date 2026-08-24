@@ -2,6 +2,7 @@
 
 import { useCart } from "./CartProvider";
 import { formatRupees, SHOP_IS_DEMO } from "@/lib/content/shop-demo";
+import { COMPANY } from "@/lib/content/company";
 
 export function CartSummary() {
   const { lines, itemCount, total, setQty, remove, clear, whatsappHref } =
@@ -79,7 +80,7 @@ export function CartSummary() {
         </p>
       </div>
       <p className="mt-2 text-xs leading-relaxed text-ink-500">
-        Delivery is not included. We&apos;ll confirm stock, final price and
+        Delivery is {COMPANY.delivery.charge}, added at confirmation. We&apos;ll confirm stock, final price and
         delivery when you send the order.
       </p>
 

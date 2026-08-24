@@ -17,6 +17,16 @@ export const FAQS: FAQ[] = [
       "We don't apply a fixed minimum order quantity. Each school programme is quoted on its own garment mix, volume, and customisation scope, so a smaller school ordering a full wardrobe and a larger school ordering two or three items are costed differently. Tell us your student strength and which garments you need, and we'll quote against that.",
   },
   {
+    question: "What does delivery cost, and how long does it take?",
+    answer:
+      "Delivery is ₹75–200 depending on where the order is going. Customised orders turn around in 1 day to 1 week. A school's first bulk programme runs to its own schedule — we work backwards from your term start and confirm the dates in writing before production is scheduled.",
+  },
+  {
+    question: "Can you make something that isn't in your listed range?",
+    answer:
+      "Yes. The ranges on our sector pages are what we supply as standard, not a boundary. If you need a garment we haven't listed, a fabric to your own specification, or a mix built around how your teams actually work, we make to brief — send us the requirement and we'll quote it.",
+  },
+  {
     question: "What is your typical lead time?",
     answer:
       "For a school's bulk programme, typically 4–6 weeks from approved sample to delivery. Where it falls in that range depends on the size of the order, how many garment types are involved, and whether your crest and colour references are already on file — a first programme sits at the longer end, a repeat order at the shorter. Peak season runs longer than the rest of the year, so schools on a standing programme get priority production slots ahead of it. We confirm a firm delivery date in writing at quotation, working backwards from your term start. This is the manufacturing lead time for a bulk order — parents reordering a single garment we already hold are not waiting weeks; see our For Parents page.",

@@ -50,6 +50,18 @@ export const COMPANY = {
   city: "Delhi, India",
   phone: "+91 99533 99534",
   phoneHref: "tel:+919953399534",
+  /**
+   * Delivery, client-confirmed 19 Aug 2026. Parents ask this first and the site
+   * previously had no answer, which is why the shop's cart could only say
+   * "delivery is not included".
+   */
+  delivery: {
+    chargeFrom: 75,
+    chargeTo: 200,
+    charge: "₹75–200 depending on location",
+    customTurnaround: "1 day to 1 week for customised orders",
+    note: "Delivery is charged at ₹75–200 depending on where the order is going. Customised orders turn around in 1 day to 1 week. Bulk school programmes run to their own schedule, agreed backwards from your term start.",
+  },
   address: {
     street: "Plot No. 2, Basement, Sector-12A",
     locality: "Dwarka",
@@ -147,12 +159,3 @@ export const COMPANY = {
   },
 } as const;
 
-// Explicit placeholders — do not fill with invented values. Replace only with confirmed facts.
-//
-// Deferred by decision, not oversight — these two are no longer rendered anywhere:
-//   leadershipSignature — the About leadership message currently runs unsigned.
-//     To sign it, add the signature back below the <blockquote> in app/about/page.tsx.
-export const PLACEHOLDERS = {
-  leadershipSignature: "[Leadership Name & Title Needed — who signs this message?]",
-  yearsAsUniformEdge: "[Years Operating as UniformEdge — figure pending]",
-} as const;

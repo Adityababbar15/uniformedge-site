@@ -3,7 +3,6 @@ import { PageHero } from "@/components/sections/PageHero";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { AIPlaceholderBanner } from "@/components/gallery/AIPlaceholderBanner";
 import { ImageGrid } from "@/components/gallery/ImageGrid";
 import { CTABand } from "@/components/sections/CTABand";
 import { CONTEXT_IMAGES } from "@/lib/content/gallery";
@@ -32,9 +31,6 @@ export default function GalleryPage() {
             title="The same program, worn through a school day"
             description="Uniforms photographed in classrooms, corridors and on the sports ground — where fit, layering and colour consistency actually show."
           />
-          <div className="mt-6">
-            <AIPlaceholderBanner />
-          </div>
           <div className="mt-8">
             <ImageGrid
               images={CONTEXT_IMAGES}

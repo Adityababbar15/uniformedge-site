@@ -9,7 +9,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { AnimatedSection } from "@/components/motion/AnimatedSection";
 import { AnimatedGrid, AnimatedGridItem } from "@/components/motion/AnimatedGrid";
 import { CTABand } from "@/components/sections/CTABand";
-import { SUB_SECTORS, getSector } from "@/lib/content/sectors";
+import { SUB_SECTORS, getSector , CUSTOM_CAPABILITY } from "@/lib/content/sectors";
 import { SITE_URL } from "@/lib/content/company";
 import {
   CATALOGUE_PDF,
@@ -70,9 +70,6 @@ export default async function SectorPage({
               sizes="(min-width: 1120px) 1120px, 92vw"
               className="object-cover"
             />
-            <span className="absolute left-3 top-3 rounded-full bg-navy-950/80 px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-crimson-300 backdrop-blur">
-              AI Placeholder
-            </span>
           </figure>
         </Container>
       )}
@@ -173,7 +170,16 @@ export default async function SectorPage({
             ))}
           </AnimatedSection>
 
-          <AnimatedSection className="mt-12 rounded-2xl border-l-4 border-crimson-500 bg-ivory-100/70 px-6 py-5">
+          <AnimatedSection className="mt-12 rounded-2xl border border-navy-900/10 bg-white px-6 py-5">
+            <h3 className="font-display text-lg text-navy-900">
+              Beyond the standard range
+            </h3>
+            <p className="mt-2 text-base leading-relaxed text-ink-700">
+              {CUSTOM_CAPABILITY}
+            </p>
+          </AnimatedSection>
+
+          <AnimatedSection className="mt-6 rounded-2xl border-l-4 border-crimson-500 bg-ivory-100/70 px-6 py-5">
             <h3 className="font-display text-lg text-navy-900">Fabric</h3>
             <p className="mt-2 text-base leading-relaxed text-navy-800">
               {sector.fabricNote}

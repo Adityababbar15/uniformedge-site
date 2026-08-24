@@ -12,6 +12,16 @@ export type OrderRoute = {
   detail: string;
 };
 
+/** Delivery terms, from COMPANY. Parents ask this before anything else. */
+export const PARENT_DELIVERY = [
+  { label: "Delivery charge", value: COMPANY.delivery.charge },
+  { label: "Customised orders", value: COMPANY.delivery.customTurnaround },
+  {
+    label: "School bulk programmes",
+    value: "Scheduled backwards from your school's term start",
+  },
+] as const;
+
 export const ORDER_ROUTES: OrderRoute[] = [
   {
     key: "whatsapp",

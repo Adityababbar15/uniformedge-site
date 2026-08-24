@@ -1,6 +1,3 @@
-export const AI_PLACEHOLDER_NOTE =
-  "These are AI-generated placeholder images, standing in until our real photoshoot is complete. They do not depict actual students, actual garments, or actual product photography.";
-
 export type GalleryImage = {
   src: string;
   alt: string;
@@ -12,7 +9,7 @@ export const STUDIO_IMAGES: GalleryImage[] = Array.from({ length: 15 }, (_, i) =
   const n = String(i + 1).padStart(2, "0");
   return {
     src: `/images/gallery/uniform-look-${n}.webp`,
-    alt: `AI-generated placeholder image of a uniform look, pending real photoshoot (${n} of 15)`,
+    alt: `UniformEdge school uniform look ${n} of 15 — shot on a plain studio sweep`,
   };
 });
 

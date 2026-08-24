@@ -1,16 +1,19 @@
-// DRAFT CONTENT — REVIEW BEFORE LAUNCH.
-//
-// The Schools entry is grounded in uniform_catalogue.pdf and lib/content/company.ts.
-// The other four sectors were drafted from standard industry practice, because no
-// UniformEdge material existed for them yet. They describe garment types and buying
-// considerations that are true of the sector generally — they do not assert what
-// UniformEdge specifically stocks, tests or certifies.
+// Client-confirmed 19 Aug 2026: everything described across these five sectors
+// is supplied, and customised requirements are taken on as well.
 //
 // Deliberately NOT claimed anywhere below: compliance with named safety standards
 // (EN ISO 20471 hi-vis, EN 11612 flame resistance, antimicrobial certification).
-// Those are testable claims a buyer can hold you to. Where a sector cares about them
-// the copy says the garment is specified to the buyer's requirement, which is honest
-// and still useful. Add real certifications here only once they exist on paper.
+// UniformEdge holds no certifications, confirmed by the client, so none are
+// asserted. Where a sector cares about them the copy says the garment is
+// specified to the buyer's requirement — which is what actually happens, and is
+// a promise that can be kept.
+
+/**
+ * Shown on every sector page. The garment lists are representative, not a
+ * boundary — customised requirements are quoted from a brief.
+ */
+export const CUSTOM_CAPABILITY =
+  "The ranges listed are what we supply as standard. If your requirement sits outside them — a garment we have not listed, a fabric to your own specification, or a mix built around how your teams actually work — we make to brief. Tell us what you need and we will quote it.";
 
 export type Sector = {
   slug: string;

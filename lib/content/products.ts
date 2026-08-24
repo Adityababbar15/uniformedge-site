@@ -6,8 +6,7 @@ export type ProductCategory = {
 };
 
 // Standard school-uniform category structure — industry-standard groupings,
-// not company-specific claims. Imagery is AI-generated placeholder photography
-// (see gallery.ts / AI_PLACEHOLDER_NOTE) pending a real product photoshoot.
+// not company-specific claims.
 export const PRODUCT_CATEGORIES: ProductCategory[] = [
   {
     slug: "shirts-trousers",

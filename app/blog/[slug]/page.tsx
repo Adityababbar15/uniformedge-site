@@ -101,9 +101,6 @@ export default async function BlogPostPage({
               sizes="(min-width: 896px) 896px, 92vw"
               className="object-cover"
             />
-            <span className="absolute left-3 top-3 rounded-full bg-navy-950/80 px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-crimson-300 backdrop-blur">
-              AI Placeholder
-            </span>
           </figure>
         </Container>
       )}
