@@ -9,8 +9,10 @@ import { COMPANY } from "@/lib/content/company";
  * the SVGs are the masters.
  *
  * Variant use, per the package's own spec:
- *   primary-lockup   default — site header, letterheads, invoices
- *   wordmark-only    where the icon already appears on the same surface
+ *   wordmark-only    DEFAULT — the full UniformEdge name, used everywhere the
+ *                    site shows a logo. The client asked for the name alone,
+ *                    without the UE monogram.
+ *   primary-lockup   available but unused on the site: UE monogram + name
  *   stacked          narrow columns and square placements
  *   icon             profile pictures and tags; fits an 80% circular safe zone
  *   favicon-mark     16–32px only; the E is dropped because it cannot survive
@@ -36,7 +38,7 @@ function src(variant: LogoVariant, tone: Tone) {
 }
 
 export function Logo({
-  variant = "primary-lockup",
+  variant = "wordmark-only",
   tone = "navy",
   className,
   priority,
@@ -56,28 +58,6 @@ export function Logo({
       width={w}
       height={h}
       loading={priority ? "eager" : "lazy"}
-      decoding="async"
-    />
-  );
-}
-
-/** Decorative icon. Hidden from assistive tech — it never carries meaning alone. */
-export function LogoIcon({
-  tone = "navy",
-  className,
-}: {
-  tone?: Tone;
-  className?: string;
-}) {
-  return (
-    // eslint-disable-next-line @next/next/no-img-element
-    <img
-      src={src("icon", tone)}
-      alt=""
-      aria-hidden="true"
-      className={className}
-      width={256}
-      height={256}
       decoding="async"
     />
   );
