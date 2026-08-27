@@ -32,9 +32,9 @@ in the subject, anything with an exclamation mark.
 > Most schools inherit their uniform supplier the way they inherit a photocopier
 > contract — whoever was there first tends to stay.
 >
-> We manufacture school uniforms from our own facility in Delhi, and have been
-> clothing the city's students since 1995. What usually interests schools most is
-> what we take away rather than what we make.
+> We manufacture school uniforms from our own facility in Delhi, on tailoring
+> roots that go back to 1995. What usually interests schools most is what we take
+> away rather than what we make.
 >
 > Once we're appointed, we deal with parents directly. They order their child's
 > uniform from us and it is delivered to their home, with our team on WhatsApp if
