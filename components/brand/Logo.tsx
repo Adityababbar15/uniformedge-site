@@ -33,6 +33,13 @@ type LogoVariant = keyof typeof DIMS;
 type Tone = "navy" | "white" | "black";
 
 function src(variant: LogoVariant, tone: Tone) {
+  // "white" maps to the on-dark artwork, not the package's -white file. That
+  // variant flattens the crimson accent to white too, so the mark loses its only
+  // colour on a navy ground where colour is perfectly available. -white is kept
+  // in the package for genuine single-colour reproduction, like embroidery.
+  if (tone === "white" && variant === "wordmark-only") {
+    return "/images/brand/logo/uniformedge-wordmark-only-on-dark.svg";
+  }
   const suffix = tone === "navy" ? "" : `-${tone}`;
   return `/images/brand/logo/uniformedge-${variant}${suffix}.svg`;
 }
