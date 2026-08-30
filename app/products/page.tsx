@@ -8,6 +8,11 @@ import { CTABand } from "@/components/sections/CTABand";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { AnimatedSection } from "@/components/motion/AnimatedSection";
 import { PRODUCT_CATEGORIES } from "@/lib/content/products";
+import {
+  ESSENTIALS,
+  ESSENTIALS_INTRO,
+  ESSENTIALS_CAVEAT,
+} from "@/lib/content/essentials";
 import { SITE_URL } from "@/lib/content/company";
 import {
   CATALOGUE_ITEMS,
@@ -235,6 +240,37 @@ export default function ProductsPage() {
                 cut and proportion adjusted per age group, colour and detailing held constant.
               </figcaption>
             </figure>
+          </AnimatedSection>
+        </Container>
+      </section>
+
+      <section className="border-t border-navy-900/10 py-20 sm:py-24">
+        <Container>
+          <SectionHeading
+            eyebrow="School essentials"
+            title="The rest of what a school issues"
+            description={ESSENTIALS_INTRO}
+          />
+
+          <AnimatedGrid className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {ESSENTIALS.map((item) => (
+              <AnimatedGridItem key={item.name}>
+                <div className="flex h-full flex-col rounded-2xl border border-navy-900/10 bg-white p-6">
+                  <h3 className="font-display text-lg text-navy-900">
+                    {item.name}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-ink-700">
+                    {item.detail}
+                  </p>
+                </div>
+              </AnimatedGridItem>
+            ))}
+          </AnimatedGrid>
+
+          <AnimatedSection className="mt-10 rounded-2xl border-l-4 border-crimson-500 bg-ivory-100/70 px-6 py-5">
+            <p className="text-sm leading-relaxed text-ink-700">
+              {ESSENTIALS_CAVEAT}
+            </p>
           </AnimatedSection>
         </Container>
       </section>
