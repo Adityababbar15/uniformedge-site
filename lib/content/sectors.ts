@@ -25,7 +25,8 @@ export type Sector = {
   metaTitle: string;
   metaDescription: string;
   intro: string[];
-  garments: { name: string; detail: string }[];
+  /** href: optional link to a dedicated page for that garment. */
+  garments: { name: string; detail: string; href?: string }[];
   considerations: { title: string; body: string }[];
   fabricNote: string;
   /**
@@ -40,8 +41,6 @@ export type Sector = {
    *  See docs/sector-image-brief.md for the prompts these come from. */
   image?: string;
   imageAlt?: string;
-  /** Optional pointer to a dedicated page for part of this sector's range. */
-  related?: { href: string; label: string; body: string };
   ctaTitle: string;
   ctaBody: string;
   /** Schools has its own established pages; the rest live under /sectors. */
@@ -118,7 +117,7 @@ export const SECTORS: Sector[] = [
       { name: "Polo shirts & T-shirts", detail: "Smart-casual and event wear, embroidered or printed" },
       { name: "Jackets & outerwear", detail: "Softshells and windcheaters for field and site teams" },
       { name: "Ties, scarves & accessories", detail: "Colour-matched finishing pieces that tie the look together" },
-      { name: "Custom-branded T-shirts & hoodies", detail: "Your logo embroidered or printed — event, campaign, offsite and new-team kit, on a quick turnaround" },
+      { name: "Custom-branded T-shirts & hoodies", detail: "Your logo embroidered or printed — event, campaign, offsite and new-team kit, on a quick turnaround", href: "/custom-t-shirts/" },
     ],
     considerations: [
       { title: "Consistency across branches", body: "Garments for every location produced in a single batch per colourway, so one branch's uniform matches another's." },
@@ -139,11 +138,6 @@ export const SECTORS: Sector[] = [
     image: "/images/sectors/corporate-office-team.webp",
     imageAlt:
       "Corporate staff in matching light-blue shirts and navy blazers in an office reception",
-    related: {
-      href: "/custom-t-shirts/",
-      label: "Personalised T-shirts",
-      body: "Logos, names, numbers or your own design on T-shirts for staff, events and offsites.",
-    },
     ctaTitle: "Dressing a corporate team?",
     ctaBody:
       "Send us your brand colours, headcount and the roles you need covered, and we'll come back with a garment mix and quote.",

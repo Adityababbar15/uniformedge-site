@@ -95,29 +95,30 @@ export default async function SectorPage({
           <AnimatedGrid className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {sector.garments.map((g) => (
               <AnimatedGridItem key={g.name}>
-                <div className="h-full rounded-2xl border border-navy-900/10 bg-white p-6">
-                  <h3 className="font-display text-lg text-navy-900">{g.name}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-ink-700">
-                    {g.detail}
-                  </p>
-                </div>
+                {g.href ? (
+                  <Link
+                    href={g.href}
+                    className="flex h-full flex-col rounded-2xl border border-navy-900/10 bg-white p-6 transition-colors hover:border-navy-900/30"
+                  >
+                    <h3 className="font-display text-lg text-navy-900">{g.name}</h3>
+                    <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-700">
+                      {g.detail}
+                    </p>
+                    <span className="mt-4 text-sm font-medium text-crimson-600">
+                      See personalisation options →
+                    </span>
+                  </Link>
+                ) : (
+                  <div className="h-full rounded-2xl border border-navy-900/10 bg-white p-6">
+                    <h3 className="font-display text-lg text-navy-900">{g.name}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-ink-700">
+                      {g.detail}
+                    </p>
+                  </div>
+                )}
               </AnimatedGridItem>
             ))}
           </AnimatedGrid>
-          {sector.related && (
-            <AnimatedSection className="mt-8">
-              <Link
-                href={sector.related.href}
-                className="flex flex-col gap-1 rounded-2xl border border-navy-900/10 bg-white p-6 transition-colors hover:border-navy-900/30 sm:flex-row sm:items-center sm:justify-between sm:gap-6"
-              >
-                <span>
-                  <span className="font-display text-lg text-navy-900">{sector.related.label}</span>
-                  <span className="mt-1 block text-sm leading-relaxed text-ink-700">{sector.related.body}</span>
-                </span>
-                <span className="text-sm font-medium text-crimson-600">See the range →</span>
-              </Link>
-            </AnimatedSection>
-          )}
         </Container>
       </section>
 
