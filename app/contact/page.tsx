@@ -6,9 +6,8 @@ import { AnimatedSection } from "@/components/motion/AnimatedSection";
 import { COMPANY, SITE_URL } from "@/lib/content/company";
 
 export const metadata: Metadata = {
-  title: "Contact",
-  description:
-    "Get in touch with UniformEdge to discuss school uniform requirements, samples, and quotes.",
+  title: "Contact — Uniform Shop in Dwarka, New Delhi",
+  description: `Visit or call UniformEdge at ${COMPANY.address.oneLine}, or get in touch about school uniform requirements, samples and quotes.`,
   alternates: { canonical: `${SITE_URL}/contact/` },
 };
 

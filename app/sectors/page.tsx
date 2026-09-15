@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   title: "Sectors We Serve",
   description:
     "UniformEdge manufactures uniforms for schools, corporate teams, healthcare, F&B and hospitality, and industrial sites — from our own facility in Delhi.",
-  alternates: { canonical: `${SITE_URL}/sectors` },
+  alternates: { canonical: `${SITE_URL}/sectors/` },
 };
 
 export default function SectorsPage() {

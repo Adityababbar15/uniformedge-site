@@ -18,7 +18,7 @@ import {
 export const metadata: Metadata = {
   title: "School Programs & Bulk Orders",
   description:
-    "School uniform programs for single schools, recurring reorders, and multi-branch groups — including GeM tender-eligible supply.",
+    "School uniform programs for Delhi NCR schools — single schools, recurring reorders, and multi-branch groups — including GeM tender-eligible supply.",
   alternates: { canonical: `${SITE_URL}/school-programs/` },
 };
 

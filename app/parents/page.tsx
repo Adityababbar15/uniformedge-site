@@ -17,10 +17,10 @@ import { PUBLISHED_SCHOOLS } from "@/lib/content/partner-schools";
 import { SITE_URL, COMPANY } from "@/lib/content/company";
 
 export const metadata: Metadata = {
-  title: "Buy Your School Uniform",
+  title: "Buy School Uniforms in Dwarka, Delhi",
   description:
-    "Order your child's school uniform from UniformEdge — on WhatsApp, in store, or through your school. Sizing help, exchanges, and mid-year replacements.",
-  alternates: { canonical: `${SITE_URL}/parents` },
+    "Order your child's school uniform from UniformEdge — on WhatsApp, at our shop in Dwarka, New Delhi, or through your school. Sizing help, exchanges, and mid-year replacements.",
+  alternates: { canonical: `${SITE_URL}/parents/` },
 };
 
 export default function ParentsPage() {

@@ -36,18 +36,18 @@ export const metadata: Metadata = {
     ],
   },
   title: {
-    default: "UniformEdge | School & Corporate Uniform Manufacturer, Delhi",
+    default: "UniformEdge | School & Corporate Uniform Manufacturer, Dwarka, Delhi",
     template: "%s | UniformEdge",
   },
   description:
-    "UniformEdge manufactures school, corporate, healthcare, hospitality and industrial uniforms in Delhi, India — in-house tailoring, exact colour matching, and partnerships built on trust.",
+    "UniformEdge manufactures school, corporate, healthcare, hospitality and industrial uniforms in Delhi, with a uniform shop in Dwarka, New Delhi, serving schools across Delhi NCR.",
   // No canonical here on purpose. A layout-level relative canonical resolves
   // to the homepage for every page that does not override it, which tells
   // Google those pages are duplicates of "/". Each page sets its own.
   openGraph: {
-    title: "UniformEdge | School & Corporate Uniform Manufacturer, Delhi",
+    title: "UniformEdge | School & Corporate Uniform Manufacturer, Dwarka, Delhi",
     description:
-      "UniformEdge manufactures school, corporate, healthcare, hospitality and industrial uniforms in Delhi, India — in-house tailoring, exact colour matching, and partnerships built on trust.",
+      "UniformEdge manufactures school, corporate, healthcare, hospitality and industrial uniforms in Delhi, with a uniform shop in Dwarka, New Delhi, serving schools across Delhi NCR.",
     siteName: "UniformEdge",
     locale: "en_IN",
     type: "website",
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "UniformEdge | School & Corporate Uniform Manufacturer, Delhi",
+    title: "UniformEdge | School & Corporate Uniform Manufacturer, Dwarka, Delhi",
     description:
       "Premium school uniforms manufactured in Delhi — crest-accurate embroidery, exact colour matching, and a standing reorder programme.",
     images: ["/images/og/og-default.jpg"],
@@ -78,7 +78,10 @@ export const metadata: Metadata = {
 // Only real, confirmed facts here — no invented ratings, awards or client counts.
 const organizationSchema = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  // ClothingStore (a LocalBusiness type) as well as Organization: the Dwarka shop
+  // is a physical store parents visit, and LocalBusiness is what Google uses to
+  // tie a site to a place in local results.
+  "@type": ["Organization", "ClothingStore"],
   name: COMPANY.name,
   url: SITE_URL,
   slogan: COMPANY.tagline,
@@ -105,7 +108,13 @@ const organizationSchema = {
     postalCode: COMPANY.address.postalCode,
     addressCountry: COMPANY.address.country,
   },
-  areaServed: { "@type": "AdministrativeArea", name: "Delhi NCR" },
+  hasMap: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+    `${COMPANY.name}, ${COMPANY.address.oneLine}`,
+  )}`,
+  areaServed: [
+    { "@type": "City", name: "New Delhi" },
+    { "@type": "AdministrativeArea", name: "Delhi NCR" },
+  ],
   contactPoint: {
     "@type": "ContactPoint",
     telephone: COMPANY.phone,
