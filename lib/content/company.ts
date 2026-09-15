@@ -36,6 +36,7 @@ export const FOOTER_LINKS = [
   { href: "/products", label: "Products" },
   { href: "/manufacturing", label: "Manufacturing" },
   { href: "/school-programs", label: "Programs" },
+  { href: "/custom-t-shirts", label: "Custom T-Shirts" },
   { href: "/parents", label: "For Parents" },
   { href: "/gallery", label: "Gallery" },
   { href: "/blog", label: "Insights" },

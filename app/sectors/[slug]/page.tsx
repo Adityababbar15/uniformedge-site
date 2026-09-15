@@ -104,6 +104,20 @@ export default async function SectorPage({
               </AnimatedGridItem>
             ))}
           </AnimatedGrid>
+          {sector.related && (
+            <AnimatedSection className="mt-8">
+              <Link
+                href={sector.related.href}
+                className="flex flex-col gap-1 rounded-2xl border border-navy-900/10 bg-white p-6 transition-colors hover:border-navy-900/30 sm:flex-row sm:items-center sm:justify-between sm:gap-6"
+              >
+                <span>
+                  <span className="font-display text-lg text-navy-900">{sector.related.label}</span>
+                  <span className="mt-1 block text-sm leading-relaxed text-ink-700">{sector.related.body}</span>
+                </span>
+                <span className="text-sm font-medium text-crimson-600">See the range →</span>
+              </Link>
+            </AnimatedSection>
+          )}
         </Container>
       </section>
 

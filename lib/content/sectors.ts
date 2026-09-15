@@ -40,6 +40,8 @@ export type Sector = {
    *  See docs/sector-image-brief.md for the prompts these come from. */
   image?: string;
   imageAlt?: string;
+  /** Optional pointer to a dedicated page for part of this sector's range. */
+  related?: { href: string; label: string; body: string };
   ctaTitle: string;
   ctaBody: string;
   /** Schools has its own established pages; the rest live under /sectors. */
@@ -137,6 +139,11 @@ export const SECTORS: Sector[] = [
     image: "/images/sectors/corporate-office-team.webp",
     imageAlt:
       "Corporate staff in matching light-blue shirts and navy blazers in an office reception",
+    related: {
+      href: "/custom-t-shirts/",
+      label: "Personalised T-shirts",
+      body: "Logos, names, numbers or your own design on T-shirts for staff, events and offsites.",
+    },
     ctaTitle: "Dressing a corporate team?",
     ctaBody:
       "Send us your brand colours, headcount and the roles you need covered, and we'll come back with a garment mix and quote.",
