@@ -151,7 +151,7 @@ export const PROGRAM_TIERS: ProgramTier[] = [
 // The 2026 sales catalogue — a single 26-page document covering all five
 // sectors, replacing the three editions this site used to generate.
 //
-// SOURCE LIVES OUTSIDE THIS REPO: ~/Desktop/Catalogue/claude-changes/
+// SOURCE LIVES OUTSIDE THIS REPO: ~/Desktop/UniformEdge Master/Catalogue/claude-changes/
 //   catalogue.html + catalogue.css are the editable source; ./build.sh
 //   regenerates the PDF with headless Chrome. Copy the output into public/
 //   after rebuilding — this repo holds the artefact, not the source.
