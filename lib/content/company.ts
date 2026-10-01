@@ -39,6 +39,7 @@ export const FOOTER_LINKS = [
   { href: "/custom-t-shirts", label: "Custom T-shirts" },
   { href: "/parents", label: "For parents" },
   { href: "/gallery", label: "Gallery" },
+  { href: "/downloads", label: "Downloads" },
   { href: "/blog", label: "Insights" },
   { href: "/faqs", label: "FAQs" },
   { href: "/contact", label: "Contact" },

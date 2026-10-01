@@ -1,4 +1,5 @@
 import { Container } from "@/components/ui/Container";
+import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { AnimatedSection } from "@/components/motion/AnimatedSection";
 import { Stitch } from "@/components/motion/Stitch";
@@ -14,12 +15,15 @@ export function CTABand({
   title = "Ready to outfit your team?",
   description = "Tell us your sector, headcount and timeline — we'll come back with a garment mix and a quote.",
   document = SCHOOL_CATALOGUE,
+  allDownloads = true,
 }: {
   title?: string;
   description?: string;
   // The download beside the quote button. Pass null on pages that already carry
   // their own, or another document where the school catalogue is the wrong one.
   document?: Doc | null;
+  // A plain link to /downloads under the buttons.
+  allDownloads?: boolean;
 }) {
   return (
     <section className="bg-navy-950 py-20">
@@ -47,6 +51,14 @@ export function CTABand({
               </Button>
             )}
           </div>
+          {allDownloads && (
+            <Link
+              href="/downloads"
+              className="inline-block py-3 text-sm text-ivory-100/75 underline underline-offset-4 transition-colors hover:text-ivory-50"
+            >
+              See all downloads
+            </Link>
+          )}
         </AnimatedSection>
       </Container>
     </section>
