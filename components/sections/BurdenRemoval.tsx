@@ -1,6 +1,7 @@
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { AnimatedSection } from "@/components/motion/AnimatedSection";
+import { AnimatedGrid, AnimatedGridItem } from "@/components/motion/AnimatedGrid";
 import { StitchHeading } from "@/components/ui/StitchHeading";
 import { StockIcon, MoneyIcon, MeasureIcon, ChatIcon } from "@/components/graphics/Icons";
 
@@ -41,9 +42,11 @@ export function BurdenRemoval() {
           description="Once a school works with us, we sell to its parents directly. The school sets the specification and approves the samples — and then hands the running of it to us."
         />
 
-        <ul className="mt-14 grid gap-x-14 gap-y-10 sm:grid-cols-2">
+        <AnimatedGrid className="mt-14">
+        <ul className="grid gap-x-14 gap-y-10 sm:grid-cols-2">
           {STOPS.map((item) => (
-            <li key={item.title} className="border-t border-ivory-50/15 pt-6">
+            <li key={item.title}>
+              <AnimatedGridItem className="border-t border-ivory-50/15 pt-6">
               <div className="flex items-center gap-3">
                 <item.Icon className="h-6 w-6 shrink-0 text-crimson-400" />
                 <h3 className="font-display text-xl text-ivory-50">{item.title}</h3>
@@ -51,9 +54,11 @@ export function BurdenRemoval() {
               <p className="mt-3 max-w-md text-base leading-relaxed text-ivory-100/70">
                 {item.body}
               </p>
+              </AnimatedGridItem>
             </li>
           ))}
         </ul>
+        </AnimatedGrid>
 
         <AnimatedSection className="mt-12 flex flex-col gap-4 sm:flex-row sm:items-center">
           <Button href="/contact" variant="secondary">

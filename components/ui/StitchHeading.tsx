@@ -1,4 +1,5 @@
 import { Stitch } from "@/components/motion/Stitch";
+import { RevealLine } from "@/components/motion/RevealLine";
 import { cn } from "@/lib/cn";
 
 // A section heading marked by a vertical running stitch instead of a small
@@ -25,7 +26,7 @@ export function StitchHeading({
           dark ? "text-ivory-50" : "text-navy-900",
         )}
       >
-        {title}
+        <RevealLine>{title}</RevealLine>
       </h2>
       {description && (
         <p

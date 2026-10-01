@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
+import { AnimatedGrid, AnimatedGridItem } from "@/components/motion/AnimatedGrid";
 import { StitchHeading } from "@/components/ui/StitchHeading";
 import { SECTOR_LISTING } from "@/lib/content/sectors";
 import { SectorIcon, ArrowIcon } from "@/components/graphics/Icons";
@@ -20,9 +21,11 @@ export function SectorsBand() {
           description="Schools first, and — from the same facility and the same quality checks — offices, hospitals, kitchens and industrial sites. Branded apparel and business stationery are supplied alongside."
         />
 
-        <ul className="mt-12 border-t border-navy-900/15">
+        <AnimatedGrid className="mt-12">
+        <ul className="border-t border-navy-900/15">
           {SECTOR_LISTING.map((sector) => (
             <li key={sector.slug} className="border-b border-navy-900/15">
+              <AnimatedGridItem>
               <Link
                 href={sector.href}
                 className="group grid grid-cols-[1.75rem_1fr] items-start gap-x-4 gap-y-1 px-1 py-5 transition-colors hover:bg-ivory-100/70 focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-crimson-500 sm:grid-cols-[2rem_13rem_1fr_auto] sm:items-center sm:gap-x-8 sm:px-3 sm:py-6"
@@ -49,9 +52,11 @@ export function SectorsBand() {
                   />
                 </span>
               </Link>
+              </AnimatedGridItem>
             </li>
           ))}
         </ul>
+        </AnimatedGrid>
 
         <div className="mt-12">
           <ImageGrid

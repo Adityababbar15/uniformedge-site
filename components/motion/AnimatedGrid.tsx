@@ -8,16 +8,16 @@ import { cn } from "@/lib/cn";
 const containerVariants = (reduce: boolean): Variants => ({
   hidden: {},
   visible: {
-    transition: { staggerChildren: reduce ? 0 : 0.03 },
+    transition: { staggerChildren: reduce ? 0 : 0.14 },
   },
 });
 
 const itemVariants = (reduce: boolean): Variants => ({
-  hidden: { opacity: 0, y: 8 },
+  hidden: { opacity: 0, y: 64 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: reduce ? { duration: 0 } : { duration: 0.3, ease: "easeOut" },
+    transition: reduce ? { duration: 0 } : { duration: 1, ease: [0.22, 1, 0.36, 1] },
   },
 });
 

@@ -1,4 +1,5 @@
 import { Container } from "@/components/ui/Container";
+import { AnimatedGrid, AnimatedGridItem } from "@/components/motion/AnimatedGrid";
 import { StitchHeading } from "@/components/ui/StitchHeading";
 import { cn } from "@/lib/cn";
 
@@ -22,9 +23,9 @@ export function ValueProps() {
     <section className="py-20 sm:py-28">
       <Container>
         <StitchHeading title="Manufacturing built around schools, not the other way around" />
-        <div className="mt-14 grid gap-10 md:grid-cols-3 md:gap-0">
+        <AnimatedGrid className="mt-14 grid gap-10 md:grid-cols-3 md:gap-0">
           {VALUES.map((value, i) => (
-            <div
+            <AnimatedGridItem
               key={value.title}
               className={cn(
                 "md:px-8",
@@ -36,9 +37,9 @@ export function ValueProps() {
               <p className="mt-3 max-w-sm text-base leading-relaxed text-ink-700">
                 {value.body}
               </p>
-            </div>
+            </AnimatedGridItem>
           ))}
-        </div>
+        </AnimatedGrid>
       </Container>
     </section>
   );
