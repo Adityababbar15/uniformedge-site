@@ -26,7 +26,7 @@ export default function SchoolProgramsPage() {
   return (
     <>
       <PageHero
-        eyebrow="School Programs"
+        eyebrow="School programs"
         title="A uniform program that fits how your school buys"
         description="Whether you're setting up a first custom uniform or consolidating across branches, the program scales to your size spread and reorder cycle."
       />
@@ -145,7 +145,7 @@ export default function SchoolProgramsPage() {
 
           <div className="mt-14 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <Button href={CATALOGUE_PDF} variant="primary" external>
-              Download the Catalogue (PDF)
+              Download the catalogue (PDF)
             </Button>
             <Button href="/contact" variant="ghost">
               Speak to our team

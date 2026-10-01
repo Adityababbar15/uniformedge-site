@@ -23,7 +23,7 @@ export const NAV_LINKS = [
   { href: "/products", label: "Products" },
   { href: "/manufacturing", label: "Manufacturing" },
   { href: "/blog", label: "Insights" },
-  { href: "/parents", label: "For Parents" },
+  { href: "/parents", label: "For parents" },
   { href: "/contact", label: "Contact" },
 ] as const;
 
@@ -36,8 +36,8 @@ export const FOOTER_LINKS = [
   { href: "/products", label: "Products" },
   { href: "/manufacturing", label: "Manufacturing" },
   { href: "/school-programs", label: "Programs" },
-  { href: "/custom-t-shirts", label: "Custom T-Shirts" },
-  { href: "/parents", label: "For Parents" },
+  { href: "/custom-t-shirts", label: "Custom T-shirts" },
+  { href: "/parents", label: "For parents" },
   { href: "/gallery", label: "Gallery" },
   { href: "/blog", label: "Insights" },
   { href: "/faqs", label: "FAQs" },

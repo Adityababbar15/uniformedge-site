@@ -69,7 +69,7 @@ export type Sector = {
 export const SECTORS: Sector[] = [
   {
     slug: "schools",
-    name: "School Uniforms",
+    name: "School uniforms",
     navLabel: "Schools",
     eyebrow: "Schools",
     title: "School uniforms, tailored per school",
@@ -115,7 +115,7 @@ export const SECTORS: Sector[] = [
   },
   {
     slug: "corporate-uniforms",
-    name: "Corporate Uniforms",
+    name: "Corporate uniforms",
     navLabel: "Corporate",
     eyebrow: "Corporate",
     title: "Corporate uniforms that hold a brand together",
@@ -169,7 +169,7 @@ export const SECTORS: Sector[] = [
   },
   {
     slug: "healthcare-uniforms",
-    name: "Healthcare Uniforms",
+    name: "Healthcare uniforms",
     navLabel: "Healthcare",
     eyebrow: "Healthcare",
     title: "Healthcare uniforms built for hard laundering",
@@ -219,8 +219,8 @@ export const SECTORS: Sector[] = [
   },
   {
     slug: "hospitality-uniforms",
-    name: "F&B & Hospitality Uniforms",
-    navLabel: "F&B & Hospitality",
+    name: "F&B & hospitality uniforms",
+    navLabel: "F&B & hospitality",
     eyebrow: "F&B & Hospitality",
     title: "Kitchen and front-of-house, dressed for the job",
     summary:
@@ -269,7 +269,7 @@ export const SECTORS: Sector[] = [
   },
   {
     slug: "industrial-uniforms",
-    name: "Industrial Uniforms & Workwear",
+    name: "Industrial uniforms & workwear",
     navLabel: "Industrial",
     eyebrow: "Industrial",
     title: "Workwear that survives the shift",
@@ -319,7 +319,7 @@ export const SECTORS: Sector[] = [
   },
   {
     slug: "business-stationery",
-    name: "Business Stationery & Office Supplies",
+    name: "Business stationery & office supplies",
     navLabel: "Stationery",
     eyebrow: "Stationery",
     title: "Brand-matched stationery, ordered alongside your uniforms",
@@ -395,7 +395,7 @@ export type SectorCard = Pick<
 // listed beside the sectors rather than given a second page of its own.
 const CUSTOM_APPAREL_CARD: SectorCard = {
   slug: "custom-branded-apparel",
-  name: "Custom-Branded Apparel",
+  name: "Custom-branded apparel",
   navLabel: "Custom apparel",
   summary:
     "Custom-branded T-shirts and hoodies, embroidered or printed — your logo or crest, names and numbers, ready in 1 day to 1 week, confirmed at quote.",

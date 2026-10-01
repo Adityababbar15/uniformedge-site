@@ -14,7 +14,7 @@ export const TSHIRT_PAGE = {
   metaTitle: "Custom & Personalised T-Shirts, Delhi",
   metaDescription:
     "Personalised T-shirts for companies, events and groups — your logo, names, numbers or artwork, in the colour you choose. Screen print, digital print, embroidery or heat transfer, from UniformEdge in Dwarka, New Delhi.",
-  eyebrow: "Custom T-Shirts",
+  eyebrow: "Custom T-shirts",
   title: "Personalised T-shirts for your team, event or group",
   summary:
     "Your logo, names, numbers or your own design, on T-shirts in the colour you choose — for companies, events and groups across Delhi NCR.",

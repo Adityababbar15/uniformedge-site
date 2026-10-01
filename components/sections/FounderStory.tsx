@@ -21,7 +21,7 @@ export function FounderStory() {
             {COMPANY.foundingStory.relationshipNote}
           </p>
           <Button href="/about" variant="ghost" className="mt-8">
-            Read Our Full Story
+            Read our full story
           </Button>
         </AnimatedSection>
         <AnimatedSection delay={0.1}>

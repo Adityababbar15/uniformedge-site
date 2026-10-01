@@ -27,7 +27,7 @@ export default function ParentsPage() {
   return (
     <>
       <PageHero
-        eyebrow="For Parents"
+        eyebrow="For parents"
         title="Getting your child's uniform"
         description="If your school works with us, you can order directly — no forms through the school office, and no waiting for the next uniform day."
       />

@@ -71,7 +71,7 @@ export function Header() {
 
         <div className="hidden xl:block">
           <Button href="/contact" variant="secondary">
-            Request a Quote
+            Request a quote
           </Button>
         </div>
 
@@ -130,7 +130,7 @@ export function Header() {
                 className="mt-3 w-full"
                 onClick={closeMenu}
               >
-                Request a Quote
+                Request a quote
               </Button>
             </Container>
           </motion.div>

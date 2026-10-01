@@ -13,13 +13,13 @@ export function Hero() {
     <section className="relative flex flex-col overflow-hidden bg-navy-950 lg:block">
       <Container className="relative z-10 py-8 sm:py-20 lg:py-32">
         <div className="lg:max-w-xl">
-          <p className="mb-4 text-balance text-xs font-semibold uppercase tracking-[0.18em] text-crimson-400 sm:mb-5 sm:tracking-[0.25em]">
+          <p className="hero-rise [--i:0] mb-4 text-balance text-xs font-semibold uppercase tracking-[0.18em] text-crimson-400 sm:mb-5 sm:tracking-[0.25em]">
             {COMPANY.city} &middot; Tailoring roots since 1995
           </p>
-          <h1 className="font-display text-4xl leading-[1.1] text-ivory-50 sm:text-5xl lg:text-6xl">
+          <h1 className="hero-rise [--i:1] font-display text-4xl leading-[1.1] text-ivory-50 sm:text-5xl lg:text-6xl">
             {COMPANY.tagline}
           </h1>
-          <p className="mt-4 max-w-lg text-base leading-relaxed text-ivory-100/75 sm:mt-6 sm:text-lg">
+          <p className="hero-rise [--i:2] mt-4 max-w-lg text-base leading-relaxed text-ivory-100/75 sm:mt-6 sm:text-lg">
             School uniforms are our core, on tailoring roots going back to 1995. From the same Delhi
             facility we also manufacture corporate, healthcare, hospitality and
             industrial uniforms
@@ -29,16 +29,16 @@ export function Hero() {
             </span>
             .
           </p>
-          <div className="mt-7 flex flex-wrap gap-3 sm:mt-10 sm:gap-4">
+          <div className="hero-rise [--i:3] mt-7 flex flex-wrap gap-3 sm:mt-10 sm:gap-4">
             <Button href="/contact" variant="secondary">
-              Request a Quote
+              Request a quote
             </Button>
             <Button
               href="/products"
               variant="ghost"
               className="border-ivory-50/25 text-ivory-50 hover:border-ivory-50/60"
             >
-              Explore Products
+              Explore products
             </Button>
           </div>
         </div>
@@ -51,7 +51,7 @@ export function Hero() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[88%_center] lg:object-right"
+          className="hero-settle object-cover object-[88%_center] lg:object-right"
         />
         {/* Holds the copy area dark, then falls off fast so the subjects aren't muddied. */}
         <div
@@ -59,6 +59,15 @@ export function Hero() {
           className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/25 to-transparent lg:bg-[linear-gradient(to_right,rgba(10,18,32,0.97)_0%,rgba(10,18,32,0.92)_34%,rgba(10,18,32,0.4)_56%,rgba(10,18,32,0)_74%)]"
         />
       </div>
+      {/* A running stitch sewn along the foot of the hero. */}
+      <div
+        aria-hidden="true"
+        className="hero-sew pointer-events-none absolute inset-x-0 bottom-0 z-10 h-0.5 opacity-80"
+        style={{
+          backgroundImage:
+            "repeating-linear-gradient(90deg, var(--color-crimson-500) 0 10px, transparent 10px 18px)",
+        }}
+      />
     </section>
   );
 }

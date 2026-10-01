@@ -1,6 +1,7 @@
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { AnimatedSection } from "@/components/motion/AnimatedSection";
+import { Stitch } from "@/components/motion/Stitch";
 import { CATALOGUE_PDF } from "@/lib/content/catalogue";
 
 type Doc = { href: string; label: string };
@@ -24,6 +25,7 @@ export function CTABand({
     <section className="bg-navy-950 py-20">
       <Container>
         <AnimatedSection className="flex flex-col items-center gap-6 text-center">
+          <Stitch className="w-24" />
           <h2 className="font-display max-w-2xl text-3xl leading-tight text-ivory-50 sm:text-4xl">
             {title}
           </h2>
@@ -32,7 +34,7 @@ export function CTABand({
           </p>
           <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
             <Button href="/contact" variant="secondary">
-              Request a Quote
+              Request a quote
             </Button>
             {document && (
               <Button

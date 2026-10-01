@@ -59,9 +59,9 @@ export default function SectorsPage() {
 
                   <div className={cn("flex flex-1 flex-col p-7", sector.isCore && "md:w-1/2 md:justify-center md:p-10")}>
                     {sector.isCore && (
-                      <span className="mb-3 inline-flex w-fit items-center rounded-full bg-crimson-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-crimson-600">
+                      <p className="mb-2 text-sm font-medium text-crimson-600">
                         Our core business
-                      </span>
+                      </p>
                     )}
                     <h2 className="font-display text-xl text-navy-900">
                       <Link

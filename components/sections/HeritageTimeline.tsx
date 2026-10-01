@@ -1,5 +1,6 @@
 import { COMPANY } from "@/lib/content/company";
 import { AnimatedSection } from "@/components/motion/AnimatedSection";
+import { Stitch } from "@/components/motion/Stitch";
 
 /**
  * The founding story as a dated sequence. Same facts as the prose above it —
@@ -12,7 +13,9 @@ import { AnimatedSection } from "@/components/motion/AnimatedSection";
 export function HeritageTimeline() {
   return (
     <AnimatedSection>
-      <ol className="relative space-y-10 border-l-2 border-navy-900/10 pl-8">
+      <div className="relative">
+        <Stitch axis="y" className="absolute left-0 top-0" />
+      <ol className="space-y-10 pl-8">
         {COMPANY.foundingStory.timeline.map((entry) => (
           <li key={entry.year} className="relative">
             <span
@@ -31,6 +34,7 @@ export function HeritageTimeline() {
           </li>
         ))}
       </ol>
+      </div>
     </AnimatedSection>
   );
 }

@@ -79,6 +79,26 @@ h1, h2, h3, h4,
   color: var(--color-navy-900);
 }
 
+/* The hero's opening sequence: the copy rises into place, the photograph settles,
+   and a stitch sews across the foot of the section. Transform only — nothing here
+   changes opacity or layout, so the headline is painted (and counted by LCP) from
+   the first frame. Played once. */
+@keyframes hero-rise { from { transform: translateY(14px); } }
+@keyframes hero-settle { from { transform: scale(1.06); } }
+@keyframes hero-sew { from { transform: scaleX(0); } }
+
+.hero-rise {
+  animation: hero-rise 600ms cubic-bezier(0.22, 1, 0.36, 1) backwards;
+  animation-delay: calc(var(--i, 0) * 90ms);
+}
+.hero-settle {
+  animation: hero-settle 1200ms cubic-bezier(0.22, 1, 0.36, 1) backwards;
+}
+.hero-sew {
+  transform-origin: left center;
+  animation: hero-sew 1100ms cubic-bezier(0.22, 1, 0.36, 1) 450ms backwards;
+}
+
 /* Respect reduced-motion preference globally; components also guard motion via useReducedMotion */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

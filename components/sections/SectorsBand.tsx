@@ -3,6 +3,7 @@ import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { AnimatedGrid, AnimatedGridItem } from "@/components/motion/AnimatedGrid";
 import { SECTOR_LISTING } from "@/lib/content/sectors";
+import { SectorIcon } from "@/components/graphics/Icons";
 import { ImageGrid } from "@/components/gallery/ImageGrid";
 import { HOME_STRIP_IMAGES } from "@/lib/content/gallery";
 
@@ -24,13 +25,9 @@ export function SectorsBand() {
             <AnimatedGridItem key={sector.slug} className={sector.isCore ? "sm:col-span-2" : undefined}>
               <Link
                 href={sector.href}
-                className="group flex h-full flex-col rounded-2xl border border-navy-900/10 bg-white p-5 transition-colors hover:border-crimson-500/50 sm:p-6"
+                className="group flex h-full flex-col rounded-2xl border border-navy-900/10 bg-white p-5 transition-[transform,border-color] duration-200 hover:-translate-y-0.5 hover:border-crimson-500/50 motion-reduce:hover:translate-y-0 sm:p-6"
               >
-                {sector.isCore && (
-                  <span className="mb-3 inline-flex w-fit items-center rounded-full bg-crimson-100 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wide text-crimson-600">
-                    Core
-                  </span>
-                )}
+                <SectorIcon slug={sector.slug} className="mb-3 h-6 w-6 text-navy-800" />
                 <h3 className="font-display text-lg leading-snug text-navy-900 transition-colors group-hover:text-crimson-600">
                   {sector.navLabel}
                 </h3>
@@ -39,7 +36,7 @@ export function SectorsBand() {
                 </p>
                 <span
                   aria-hidden="true"
-                  className="mt-4 text-sm font-medium text-crimson-600"
+                  className="mt-4 inline-block text-sm font-medium text-crimson-600 transition-transform duration-200 group-hover:translate-x-1 motion-reduce:group-hover:translate-x-0"
                 >
                   View range &rarr;
                 </span>

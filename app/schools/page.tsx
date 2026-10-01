@@ -29,7 +29,7 @@ export default function SchoolsPage() {
   return (
     <>
       <PageHero
-        eyebrow="Partner Schools"
+        eyebrow="Partner schools"
         title="Find your school"
         description="Each partner school has its own ordering page, showing only the garments held for that school."
       />
@@ -98,7 +98,7 @@ export default function SchoolsPage() {
                   Request a reference
                 </Button>
                 <Button href="/parents" variant="ghost">
-                  For Parents
+                  For parents
                 </Button>
               </div>
             </AnimatedSection>

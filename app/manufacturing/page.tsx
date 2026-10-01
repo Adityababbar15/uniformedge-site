@@ -82,7 +82,7 @@ export default function ManufacturingPage() {
       <section className="bg-ivory-100/60 py-20 sm:py-24">
         <Container>
           <SectionHeading
-            eyebrow="Our Process"
+            eyebrow="Our process"
             title="From consultation to delivery"
             align="center"
             className="mx-auto"

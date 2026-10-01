@@ -2,6 +2,7 @@ import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { AnimatedSection } from "@/components/motion/AnimatedSection";
 import { AnimatedGrid, AnimatedGridItem } from "@/components/motion/AnimatedGrid";
+import { StockIcon, MoneyIcon, MeasureIcon, ChatIcon } from "@/components/graphics/Icons";
 
 // The strongest argument to a school is not manufacturing quality — it is that
 // the uniform stops being the school's problem. We sell direct to parents once
@@ -9,18 +10,22 @@ import { AnimatedGrid, AnimatedGridItem } from "@/components/motion/AnimatedGrid
 // complaints. That was previously one buried line on the site.
 const STOPS = [
   {
+    Icon: StockIcon,
     title: "Holding stock",
     body: "No storeroom full of sizes nobody ordered, and no cupboard of last year's blazers.",
   },
   {
+    Icon: MoneyIcon,
     title: "Handling money",
     body: "Parents pay us directly. No uniform cash through the school office, no reconciliation.",
   },
   {
+    Icon: MeasureIcon,
     title: "Chasing sizes",
     body: "Exchanges and mid-year replacements come to us. A parent with an outgrown blazer messages us, not you.",
   },
   {
+    Icon: ChatIcon,
     title: "Fielding complaints",
     body: "Fit, quality and delivery questions land with the people who can actually fix them.",
   },
@@ -48,6 +53,7 @@ export function BurdenRemoval() {
           {STOPS.map((item) => (
             <AnimatedGridItem key={item.title}>
               <div className="h-full rounded-2xl border border-ivory-50/10 bg-ivory-50/[0.04] p-6">
+                <item.Icon className="mb-4 h-7 w-7 text-crimson-400" />
                 <p className="text-xs font-semibold uppercase tracking-wide text-crimson-400">
                   You stop
                 </p>

@@ -82,13 +82,13 @@ export default function ProductsPage() {
 
           <div className="mt-14 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <Button href="/contact" variant="primary">
-              Request a Quote for Your School
+              Request a quote for your school
             </Button>
             <Button href={CATALOGUE_PDF} variant="ghost" external>
-              Download the Catalogue (PDF)
+              Download the catalogue (PDF)
             </Button>
             <Button href="/school-programs" variant="ghost">
-              School Programmes
+              School programmes
             </Button>
           </div>
         </Container>

@@ -19,7 +19,7 @@ export default function AboutPage() {
   return (
     <>
       <PageHero
-        eyebrow="About Us"
+        eyebrow="About us"
         title="A tailoring heritage, carried forward"
         description="UniformEdge builds on three decades of experience clothing Delhi's students."
       />
@@ -27,7 +27,7 @@ export default function AboutPage() {
       <section className="py-20 sm:py-28">
         <Container className="max-w-3xl">
           <AnimatedSection>
-            <SectionHeading eyebrow="Our Story" title="Where it began" />
+            <SectionHeading eyebrow="Our story" title="Where it began" />
             <div className="mt-6 space-y-5 text-base leading-relaxed text-ink-700">
               <p>{COMPANY.foundingStory.origin}</p>
               <p>{COMPANY.foundingStory.growth}</p>

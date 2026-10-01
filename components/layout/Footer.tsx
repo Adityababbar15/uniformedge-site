@@ -83,7 +83,7 @@ export function Footer() {
             href="/contact"
             className="mt-2 inline-block py-3 text-sm font-medium text-crimson-300 underline underline-offset-4 hover:text-crimson-200"
           >
-            Request a Quote &rarr;
+            Request a quote &rarr;
           </Link>
         </div>
       </Container>

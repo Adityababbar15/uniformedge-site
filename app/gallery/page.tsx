@@ -27,7 +27,7 @@ export default function GalleryPage() {
       <section className="py-16 sm:py-20">
         <Container>
           <SectionHeading
-            eyebrow="In Context"
+            eyebrow="In context"
             title="The same program, worn through a school day"
             description="Uniforms photographed in classrooms, corridors and on the sports ground — where fit, layering and colour consistency actually show."
           />
@@ -63,7 +63,7 @@ export default function GalleryPage() {
       <section className="border-t border-navy-900/10 py-16 sm:py-20">
         <Container>
           <SectionHeading
-            eyebrow="Uniform Styles"
+            eyebrow="Uniform styles"
             title="Looks across our range"
             description="Individual uniform combinations shot on a studio sweep, one garment set per frame."
           />
@@ -76,7 +76,7 @@ export default function GalleryPage() {
       <section className="bg-ivory-100/60 py-16 sm:py-20">
         <Container className="max-w-3xl">
           <SectionHeading
-            eyebrow="School Partners"
+            eyebrow="School partners"
             title="Who these uniforms are made for"
             description="We supply international, global and convent schools across Delhi NCR, alongside diagnostic and pathology laboratories."
           />

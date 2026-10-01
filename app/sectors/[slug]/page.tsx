@@ -253,7 +253,7 @@ export default async function SectorPage({
 
           <AnimatedSection className="mt-10 flex flex-col gap-4 sm:flex-row">
             <Button href="/contact" variant="primary">
-              Request a Quote
+              Request a quote
             </Button>
             <Button href={doc.href} variant="ghost" external>
               {doc.label}
@@ -285,7 +285,7 @@ export default async function SectorPage({
                 href="/products"
                 className="inline-block py-3 text-sm font-medium text-crimson-600 underline underline-offset-4 hover:text-crimson-700"
               >
-                School Uniforms
+                School uniforms
               </Link>
             </li>
           </ul>
