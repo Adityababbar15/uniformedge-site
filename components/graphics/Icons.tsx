@@ -24,6 +24,12 @@ function Icon({ children, ...props }: SVGProps<SVGSVGElement>) {
 
 type P = SVGProps<SVGSVGElement>;
 
+export const ArrowIcon = (p: P) => (
+  <Icon {...p}>
+    <path d="M5 12h14M13 6l6 6-6 6" />
+  </Icon>
+);
+
 // Why a school stops carrying the work
 export const StockIcon = (p: P) => (
   <Icon {...p}>

@@ -23,6 +23,11 @@
   --color-ivory-100: #f5efe3;
   --color-ivory-200: #ece1cd;
 
+  /* Chalk blue — the wall colour in the hero photograph, so the page and the
+     picture share one tint. A ground colour for a single section. */
+  --color-chalk-100: #e8f0f8;
+  --color-chalk-200: #c9daec;
+
   --color-ink-900: #17191c;
   --color-ink-700: #3a3d42;
   --color-ink-500: #6b6f76;
@@ -36,6 +41,9 @@
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
+  --color-chalk-100: var(--color-chalk-100);
+  --color-chalk-200: var(--color-chalk-200);
 
   --color-navy-950: var(--color-navy-950);
   --color-navy-900: var(--color-navy-900);

@@ -13,8 +13,8 @@ export function Hero() {
     <section className="relative flex flex-col overflow-hidden bg-navy-950 lg:block">
       <Container className="relative z-10 py-8 sm:py-20 lg:py-32">
         <div className="lg:max-w-xl">
-          <p className="hero-rise [--i:0] mb-4 text-balance text-xs font-semibold uppercase tracking-[0.18em] text-crimson-400 sm:mb-5 sm:tracking-[0.25em]">
-            {COMPANY.city} &middot; Tailoring roots since 1995
+          <p className="hero-rise [--i:0] mb-4 text-sm font-medium text-crimson-300 sm:mb-5 sm:text-base">
+            Tailoring roots in Delhi since 1995
           </p>
           <h1 className="hero-rise [--i:1] font-display text-4xl leading-[1.1] text-ivory-50 sm:text-5xl lg:text-6xl">
             {COMPANY.tagline}

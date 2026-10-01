@@ -7,6 +7,7 @@ import { AnimatedSection } from "@/components/motion/AnimatedSection";
 import { CTABand } from "@/components/sections/CTABand";
 import { COMPANY, SITE_URL } from "@/lib/content/company";
 import { QUALITY_CHECKS, FABRIC_TYPES } from "@/lib/content/catalogue";
+import { PROCESS_STEPS } from "@/lib/content/process";
 
 export const metadata: Metadata = {
   title: "Manufacturing",
@@ -15,33 +16,6 @@ export const metadata: Metadata = {
   alternates: { canonical: `${SITE_URL}/manufacturing/` },
 };
 
-const PROCESS_STEPS = [
-  {
-    step: "01",
-    title: "Consultation & Design",
-    body: "We start with your school's colours, crest, and existing uniform specification — or help design one from scratch.",
-  },
-  {
-    step: "02",
-    title: "Fabric Sourcing",
-    body: "Fabrics are sourced to match the durability and comfort school uniforms need for daily wear.",
-  },
-  {
-    step: "03",
-    title: "Cutting & Stitching",
-    body: "Garments are cut and stitched at our Delhi facility, with outsourced partners engaged only where volume or specialisation calls for it.",
-  },
-  {
-    step: "04",
-    title: "Quality Checks",
-    body: "Every batch is checked before packaging — stitching, sizing, and crest placement included.",
-  },
-  {
-    step: "05",
-    title: "Packaging & Delivery",
-    body: "Finished uniforms are packaged and delivered on the schedule agreed with your school.",
-  },
-];
 
 export default function ManufacturingPage() {
   return (

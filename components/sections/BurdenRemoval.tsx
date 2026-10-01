@@ -1,7 +1,7 @@
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { AnimatedSection } from "@/components/motion/AnimatedSection";
-import { AnimatedGrid, AnimatedGridItem } from "@/components/motion/AnimatedGrid";
+import { StitchHeading } from "@/components/ui/StitchHeading";
 import { StockIcon, MoneyIcon, MeasureIcon, ChatIcon } from "@/components/graphics/Icons";
 
 // The strongest argument to a school is not manufacturing quality — it is that
@@ -33,40 +33,27 @@ const STOPS = [
 
 export function BurdenRemoval() {
   return (
-    <section className="bg-navy-950 py-20 sm:py-24">
+    <section className="bg-navy-950 py-20 sm:py-28">
       <Container>
-        <div className="max-w-2xl">
-          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-crimson-400">
-            For schools
-          </p>
-          <h2 className="font-display text-3xl leading-tight text-ivory-50 sm:text-4xl">
-            Appoint us, and the uniform stops being your problem
-          </h2>
-          <p className="mt-5 text-base leading-relaxed text-ivory-100/75">
-            Once a school works with us, we sell to its parents directly. The
-            school sets the specification and approves the samples — and then
-            hands the running of it to us.
-          </p>
-        </div>
+        <StitchHeading
+          tone="dark"
+          title="Appoint us, and the uniform stops being your problem"
+          description="Once a school works with us, we sell to its parents directly. The school sets the specification and approves the samples — and then hands the running of it to us."
+        />
 
-        <AnimatedGrid className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <ul className="mt-14 grid gap-x-14 gap-y-10 sm:grid-cols-2">
           {STOPS.map((item) => (
-            <AnimatedGridItem key={item.title}>
-              <div className="h-full rounded-2xl border border-ivory-50/10 bg-ivory-50/[0.04] p-6">
-                <item.Icon className="mb-4 h-7 w-7 text-crimson-400" />
-                <p className="text-xs font-semibold uppercase tracking-wide text-crimson-400">
-                  You stop
-                </p>
-                <h3 className="font-display mt-2 text-lg text-ivory-50">
-                  {item.title}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-ivory-100/70">
-                  {item.body}
-                </p>
+            <li key={item.title} className="border-t border-ivory-50/15 pt-6">
+              <div className="flex items-center gap-3">
+                <item.Icon className="h-6 w-6 shrink-0 text-crimson-400" />
+                <h3 className="font-display text-xl text-ivory-50">{item.title}</h3>
               </div>
-            </AnimatedGridItem>
+              <p className="mt-3 max-w-md text-base leading-relaxed text-ivory-100/70">
+                {item.body}
+              </p>
+            </li>
           ))}
-        </AnimatedGrid>
+        </ul>
 
         <AnimatedSection className="mt-12 flex flex-col gap-4 sm:flex-row sm:items-center">
           <Button href="/contact" variant="secondary">

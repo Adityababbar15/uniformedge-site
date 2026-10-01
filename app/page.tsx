@@ -3,6 +3,7 @@ import { SITE_URL } from "@/lib/content/company";
 import { Hero } from "@/components/sections/Hero";
 import { ClientProof } from "@/components/sections/ClientProof";
 import { SectorsBand } from "@/components/sections/SectorsBand";
+import { OrderPath } from "@/components/sections/OrderPath";
 import { BurdenRemoval } from "@/components/sections/BurdenRemoval";
 import { ValueProps } from "@/components/sections/ValueProps";
 import { FounderStory } from "@/components/sections/FounderStory";
@@ -19,6 +20,7 @@ export default function Home() {
       <ClientProof />
       <BurdenRemoval />
       <SectorsBand />
+      <OrderPath />
       <ValueProps />
       <FounderStory />
       <CTABand />
