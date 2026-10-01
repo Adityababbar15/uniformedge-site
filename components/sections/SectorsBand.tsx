@@ -27,7 +27,7 @@ export function SectorsBand() {
                 className="group flex h-full flex-col rounded-2xl border border-navy-900/10 bg-white p-5 transition-colors hover:border-crimson-500/50 sm:p-6"
               >
                 {sector.isCore && (
-                  <span className="mb-3 inline-flex w-fit items-center rounded-full bg-crimson-100 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-crimson-600">
+                  <span className="mb-3 inline-flex w-fit items-center rounded-full bg-crimson-100 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wide text-crimson-600">
                     Core
                   </span>
                 )}

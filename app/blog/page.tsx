@@ -50,7 +50,7 @@ export default function BlogIndexPage() {
                         alt={post.heroAlt ?? ""}
                         fill
                         sizes="(min-width: 1024px) 380px, 92vw"
-                        className="object-cover transition-transform duration-500 hover:scale-105"
+                        className="object-cover transition-transform duration-300 hover:scale-105 motion-reduce:transition-none motion-reduce:hover:scale-100"
                       />
                     </Link>
                   )}

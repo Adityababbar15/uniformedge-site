@@ -20,10 +20,10 @@ export function AnimatedSection({
   return (
     <MotionTag
       className={cn(className)}
-      initial={shouldReduceMotion ? undefined : { opacity: 0, y: 28 }}
+      initial={shouldReduceMotion ? undefined : { opacity: 0, y: 8 }}
       whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay }}
+      transition={{ duration: 0.3, ease: "easeOut", delay }}
     >
       {children}
     </MotionTag>

@@ -27,7 +27,7 @@ export function Footer() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="inline-block py-3 text-sm text-ivory-100/80 transition-colors hover:text-crimson-300"
+                  className="inline-block min-w-11 py-3 text-sm text-ivory-100/80 transition-colors hover:text-crimson-300"
                 >
                   {link.label}
                 </Link>
@@ -38,7 +38,7 @@ export function Footer() {
                 href={COMPANY_PROFILE_PDF}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block py-3 text-sm text-ivory-100/80 transition-colors hover:text-crimson-300"
+                className="inline-block min-w-11 py-3 text-sm text-ivory-100/80 transition-colors hover:text-crimson-300"
               >
                 Company profile (PDF)
               </a>
@@ -55,7 +55,7 @@ export function Footer() {
             <li>
               <a
                 href={COMPANY.phoneHref}
-                className="inline-block py-3 transition-colors hover:text-crimson-300"
+                className="inline-block min-w-11 py-3 transition-colors hover:text-crimson-300"
               >
                 {COMPANY.phone}
               </a>
@@ -63,7 +63,7 @@ export function Footer() {
             <li>
               <a
                 href={`mailto:${COMPANY.email}`}
-                className="inline-block py-3 transition-colors hover:text-crimson-300"
+                className="inline-block min-w-11 py-3 transition-colors hover:text-crimson-300"
               >
                 {COMPANY.email}
               </a>

@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Logo } from "@/components/brand/Logo";
@@ -13,6 +13,8 @@ import { cn } from "@/lib/cn";
 export function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const reduceMotion = useReducedMotion();
+  const menuButton = useRef<HTMLButtonElement>(null);
   const closeMenu = () => setOpen(false);
 
   useEffect(() => {
@@ -22,8 +24,21 @@ export function Header() {
     };
   }, [open]);
 
+  // Escape closes the menu and hands focus back to the button that opened it.
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setOpen(false);
+        menuButton.current?.focus();
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [open]);
+
   return (
-    <header className="sticky top-0 z-50 border-b border-navy-900/10 bg-ivory-50/90 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-navy-900/10 bg-ivory-50">
       <Container className="flex h-18 items-center justify-between py-4">
         <Link href="/" className="shrink-0 py-2" aria-label={`${COMPANY.name} home`}>
           <Logo priority className="h-7 w-auto sm:h-8" />
@@ -61,6 +76,7 @@ export function Header() {
         </div>
 
         <button
+          ref={menuButton}
           type="button"
           className="flex h-11 w-11 items-center justify-center rounded-full text-navy-900 xl:hidden"
           aria-expanded={open}
@@ -92,11 +108,10 @@ export function Header() {
         {open && (
           <motion.div
             id="mobile-menu"
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-            className="overflow-hidden border-b border-navy-900/10 bg-ivory-50 xl:hidden"
+            initial={reduceMotion ? false : { opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0, transition: { duration: reduceMotion ? 0 : 0.2, ease: "easeOut" } }}
+            exit={{ opacity: 0, y: reduceMotion ? 0 : -8, transition: { duration: reduceMotion ? 0 : 0.15, ease: "easeIn" } }}
+            className="border-b border-navy-900/10 bg-ivory-50 xl:hidden"
           >
             <Container className="flex flex-col gap-1 py-4">
               {NAV_LINKS.map((link) => (

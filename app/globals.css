@@ -32,6 +32,8 @@
 }
 
 @theme inline {
+  --leading-relaxed: 1.6;
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 

@@ -30,7 +30,7 @@ export function ImageGrid({
                 alt={image.alt}
                 fill
                 sizes={sizes}
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                className="object-cover transition-transform duration-300 group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:scale-100"
               />
             </div>
             {image.caption && (

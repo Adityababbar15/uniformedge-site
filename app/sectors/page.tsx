@@ -59,14 +59,14 @@ export default function SectorsPage() {
 
                   <div className={cn("flex flex-1 flex-col p-7", sector.isCore && "md:w-1/2 md:justify-center md:p-10")}>
                     {sector.isCore && (
-                      <span className="mb-3 inline-flex w-fit items-center rounded-full bg-crimson-100 px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-crimson-600">
+                      <span className="mb-3 inline-flex w-fit items-center rounded-full bg-crimson-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-crimson-600">
                         Our core business
                       </span>
                     )}
                     <h2 className="font-display text-xl text-navy-900">
                       <Link
                         href={sector.href}
-                        className="transition-colors hover:text-crimson-600"
+                        className="-my-2 inline-block py-2 transition-colors hover:text-crimson-600"
                       >
                         {sector.name}
                       </Link>
@@ -76,7 +76,7 @@ export default function SectorsPage() {
                     </p>
                     <Link
                       href={sector.href}
-                      className="mt-6 inline-block py-1 text-sm font-medium text-crimson-600 underline underline-offset-4 hover:text-crimson-700"
+                      className="mt-4 inline-block py-3 text-sm font-medium text-crimson-600 underline underline-offset-4 hover:text-crimson-700"
                     >
                       {sector.linkLabel ?? (sector.isCore ? "See the school range" : `${sector.navLabel} uniforms`)}{" "}
                       &rarr;

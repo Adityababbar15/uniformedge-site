@@ -269,12 +269,12 @@ export default async function SectorPage({
       <section className="border-t border-navy-900/10 bg-ivory-100/60 py-14">
         <Container>
           <h2 className="font-display text-xl text-navy-900">Other sectors we serve</h2>
-          <ul className="mt-5 flex flex-wrap gap-x-8 gap-y-3">
+          <ul className="mt-5 flex flex-wrap gap-x-8 gap-y-1">
             {others.map((s) => (
               <li key={s.slug}>
                 <Link
                   href={s.href}
-                  className="inline-block py-1 text-sm font-medium text-crimson-600 underline underline-offset-4 hover:text-crimson-700"
+                  className="inline-block py-3 text-sm font-medium text-crimson-600 underline underline-offset-4 hover:text-crimson-700"
                 >
                   {s.name}
                 </Link>
@@ -283,7 +283,7 @@ export default async function SectorPage({
             <li>
               <Link
                 href="/products"
-                className="inline-block py-1 text-sm font-medium text-crimson-600 underline underline-offset-4 hover:text-crimson-700"
+                className="inline-block py-3 text-sm font-medium text-crimson-600 underline underline-offset-4 hover:text-crimson-700"
               >
                 School Uniforms
               </Link>
