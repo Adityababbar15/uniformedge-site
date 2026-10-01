@@ -38,7 +38,7 @@ export default function DownloadsPage() {
               >
                 <div>
                   <h3 className="font-display text-2xl text-navy-900">{doc.title}</h3>
-                  <p className="mt-2 max-w-2xl text-base leading-relaxed text-ink-700">
+                  <p className="mt-2 max-w-xl text-base leading-relaxed text-ink-700">
                     {doc.description}
                   </p>
                   <p className="mt-3 text-sm text-ink-500">

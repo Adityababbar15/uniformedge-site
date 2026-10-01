@@ -30,7 +30,7 @@ export function StitchHeading({
       {description && (
         <p
           className={cn(
-            "mt-4 text-base leading-relaxed",
+            "mt-4 max-w-[60ch] text-base leading-relaxed",
             dark ? "text-ivory-100/75" : "text-ink-700",
           )}
         >

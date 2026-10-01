@@ -30,7 +30,7 @@ export function Stitch({
       initial={horizontal ? { scaleX: 0 } : { scaleY: 0 }}
       whileInView={horizontal ? { scaleX: 1 } : { scaleY: 1 }}
       viewport={{ once: true, margin: "-10% 0px" }}
-      transition={reduce ? { duration: 0 } : { duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+      transition={reduce ? { duration: 0 } : { duration: 0.3, ease: "easeOut" }}
     />
   );
 }
