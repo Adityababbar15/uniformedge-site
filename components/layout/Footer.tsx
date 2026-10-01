@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { Logo } from "@/components/brand/Logo";
 import { FOOTER_LINKS, COMPANY } from "@/lib/content/company";
+import { COMPANY_PROFILE_PDF } from "@/lib/content/catalogue";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -26,12 +27,22 @@ export function Footer() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="inline-block py-2 text-sm text-ivory-100/80 transition-colors hover:text-crimson-300"
+                  className="inline-block py-3 text-sm text-ivory-100/80 transition-colors hover:text-crimson-300"
                 >
                   {link.label}
                 </Link>
               </li>
             ))}
+            <li>
+              <a
+                href={COMPANY_PROFILE_PDF}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block py-3 text-sm text-ivory-100/80 transition-colors hover:text-crimson-300"
+              >
+                Company profile (PDF)
+              </a>
+            </li>
           </ul>
         </div>
 
@@ -40,11 +51,11 @@ export function Footer() {
             Contact
           </p>
           <ul className="mt-3 space-y-0.5 text-sm text-ivory-100/80">
-            <li className="py-2">{COMPANY.city}</li>
+            <li className="py-3">{COMPANY.city}</li>
             <li>
               <a
                 href={COMPANY.phoneHref}
-                className="inline-block py-2 transition-colors hover:text-crimson-300"
+                className="inline-block py-3 transition-colors hover:text-crimson-300"
               >
                 {COMPANY.phone}
               </a>
@@ -52,7 +63,7 @@ export function Footer() {
             <li>
               <a
                 href={`mailto:${COMPANY.email}`}
-                className="inline-block py-2 transition-colors hover:text-crimson-300"
+                className="inline-block py-3 transition-colors hover:text-crimson-300"
               >
                 {COMPANY.email}
               </a>
@@ -70,7 +81,7 @@ export function Footer() {
           </p>
           <Link
             href="/contact"
-            className="mt-3 inline-block py-2 text-sm font-medium text-crimson-300 underline underline-offset-4 hover:text-crimson-200"
+            className="mt-2 inline-block py-3 text-sm font-medium text-crimson-300 underline underline-offset-4 hover:text-crimson-200"
           >
             Request a Quote &rarr;
           </Link>

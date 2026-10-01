@@ -4,6 +4,7 @@ import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { AnimatedSection } from "@/components/motion/AnimatedSection";
 import { CTABand } from "@/components/sections/CTABand";
+import { COMPANY_PROFILE_PDF } from "@/lib/content/catalogue";
 import { HeritageTimeline } from "@/components/sections/HeritageTimeline";
 import { COMPANY, SITE_URL } from "@/lib/content/company";
 
@@ -97,6 +98,7 @@ export default function AboutPage() {
       </section>
 
       <CTABand
+        document={{ href: COMPANY_PROFILE_PDF, label: "Download the company profile (PDF)" }}
         title="Want to know more about how we work?"
         description="We're happy to walk you through our process, facility, and past school partnerships."
       />

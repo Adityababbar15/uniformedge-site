@@ -7,7 +7,8 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { AnimatedGrid, AnimatedGridItem } from "@/components/motion/AnimatedGrid";
 import { AnimatedSection } from "@/components/motion/AnimatedSection";
 import { CTABand } from "@/components/sections/CTABand";
-import { SECTORS } from "@/lib/content/sectors";
+import { SECTOR_LISTING } from "@/lib/content/sectors";
+import { cn } from "@/lib/cn";
 import { SITE_URL } from "@/lib/content/company";
 
 export const metadata: Metadata = {
@@ -22,8 +23,8 @@ export default function SectorsPage() {
     <>
       <PageHero
         eyebrow="Sectors"
-        title="One cutting floor, five very different jobs"
-        description="Schools are our core sector, and the one our tailoring roots come from. The same manufacturing discipline now dresses offices, hospitals, kitchens and factories."
+        title="One partner, seven sectors"
+        description="Schools are our core sector, and the one our tailoring roots come from. The same discipline now dresses offices, hospitals, kitchens and factories — and supplies branded apparel and business stationery to match."
       />
 
       <section className="py-16 sm:py-20">
@@ -35,10 +36,10 @@ export default function SectorsPage() {
           />
 
           <AnimatedGrid className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {SECTORS.map((sector) => (
-              <AnimatedGridItem key={sector.slug}>
-                <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-navy-900/10 bg-white shadow-sm">
-                  <div className="relative aspect-[16/9] bg-ivory-100">
+            {SECTOR_LISTING.map((sector) => (
+              <AnimatedGridItem key={sector.slug} className={sector.isCore ? "md:col-span-2 lg:col-span-3" : undefined}>
+                <article className={cn("flex h-full flex-col overflow-hidden rounded-2xl border border-navy-900/10 bg-white shadow-sm", sector.isCore && "md:flex-row")}>
+                  <div className={cn("relative aspect-[16/9] bg-ivory-100", sector.isCore && "md:aspect-auto md:min-h-[18rem] md:w-1/2")}>
                     {sector.image ? (
                       <>
                         <Image
@@ -56,7 +57,7 @@ export default function SectorsPage() {
                     )}
                   </div>
 
-                  <div className="flex flex-1 flex-col p-7">
+                  <div className={cn("flex flex-1 flex-col p-7", sector.isCore && "md:w-1/2 md:justify-center md:p-10")}>
                     {sector.isCore && (
                       <span className="mb-3 inline-flex w-fit items-center rounded-full bg-crimson-100 px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-crimson-600">
                         Our core business
@@ -77,7 +78,7 @@ export default function SectorsPage() {
                       href={sector.href}
                       className="mt-6 inline-block py-1 text-sm font-medium text-crimson-600 underline underline-offset-4 hover:text-crimson-700"
                     >
-                      {sector.isCore ? "See the school range" : `${sector.navLabel} uniforms`}{" "}
+                      {sector.linkLabel ?? (sector.isCore ? "See the school range" : `${sector.navLabel} uniforms`)}{" "}
                       &rarr;
                     </Link>
                   </div>

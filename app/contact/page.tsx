@@ -22,7 +22,7 @@ export default function ContactPage() {
 
       <section className="py-16 sm:py-20">
         <Container className="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)]">
-          <AnimatedSection>
+          <AnimatedSection className="order-2 lg:order-1">
             <h2 className="font-display text-2xl text-navy-900">
               Get in touch
             </h2>
@@ -69,7 +69,7 @@ export default function ContactPage() {
             </dl>
           </AnimatedSection>
 
-          <AnimatedSection delay={0.1}>
+          <AnimatedSection delay={0.1} className="order-1 lg:order-2">
             <ContactForm />
           </AnimatedSection>
         </Container>

@@ -160,3 +160,9 @@ export const PROGRAM_TIERS: ProgramTier[] = [
 // site's content modules, so a change here does not propagate to the PDF.
 // Anything factual edited in lib/content must be mirrored in that HTML.
 export const CATALOGUE_PDF = "/uniformedge-catalogue-2026.pdf";
+
+// Designed in Canva and kept at ~/Desktop/UniformEdge Master/Catalogue/canva-2026-10/.
+// Unlike the school catalogue above, these are not built from this repo — replace
+// the files in public/ under the same names to update them.
+export const CORPORATE_CATALOGUE_PDF = "/uniformedge-corporate-catalogue-2026.pdf";
+export const COMPANY_PROFILE_PDF = "/uniformedge-company-profile-2026.pdf";

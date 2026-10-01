@@ -9,10 +9,11 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { AnimatedSection } from "@/components/motion/AnimatedSection";
 import { AnimatedGrid, AnimatedGridItem } from "@/components/motion/AnimatedGrid";
 import { CTABand } from "@/components/sections/CTABand";
-import { SUB_SECTORS, getSector , CUSTOM_CAPABILITY } from "@/lib/content/sectors";
+import { SUB_SECTORS, SECTOR_LISTING, getSector , CUSTOM_CAPABILITY } from "@/lib/content/sectors";
 import { SITE_URL } from "@/lib/content/company";
 import {
-  CATALOGUE_PDF,
+  CORPORATE_CATALOGUE_PDF,
+  COMPANY_PROFILE_PDF,
 } from "@/lib/content/catalogue";
 
 export function generateStaticParams() {
@@ -49,7 +50,23 @@ export default async function SectorPage({
   const sector = getSector(slug);
   if (!sector || sector.isCore) notFound();
 
-  const others = SUB_SECTORS.filter((s) => s.slug !== sector.slug);
+  const others = SECTOR_LISTING.filter((s) => !s.isCore && s.slug !== sector.slug);
+  const labels = sector.labels ?? {};
+
+  // Corporate has its own catalogue; the other sectors are covered in the company
+  // profile. The school catalogue is the wrong document for all four.
+  const doc =
+    sector.slug === "corporate-uniforms" || sector.slug === "business-stationery"
+      ? {
+          href: CORPORATE_CATALOGUE_PDF,
+          label: "Download the corporate catalogue (PDF)",
+          note: "The corporate catalogue covers uniforms, branded apparel and stationery.",
+        }
+      : {
+          href: COMPANY_PROFILE_PDF,
+          label: "Download the company profile (PDF)",
+          note: "Our company profile outlines this range.",
+        };
 
   return (
     <>
@@ -74,6 +91,31 @@ export default async function SectorPage({
         </Container>
       )}
 
+      {sector.moreImages && sector.moreImages.length > 0 && (
+        <Container className="max-w-5xl">
+          <div
+            className={`mt-4 grid gap-4 ${
+              sector.moreImages.length === 1 ? "grid-cols-1" : "grid-cols-1 sm:grid-cols-2"
+            }`}
+          >
+            {sector.moreImages.map((img) => (
+              <figure
+                key={img.src}
+                className="relative aspect-[16/9] overflow-hidden rounded-2xl border border-navy-900/10"
+              >
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  sizes="(min-width: 1120px) 560px, 92vw"
+                  className="object-cover"
+                />
+              </figure>
+            ))}
+          </div>
+        </Container>
+      )}
+
       <section className="py-16 sm:py-20">
         <Container className="max-w-3xl">
           <AnimatedSection>
@@ -90,7 +132,7 @@ export default async function SectorPage({
         <Container>
           <SectionHeading
             eyebrow="The range"
-            title="What we make for this sector"
+            title={labels.range ?? "What we make for this sector"}
           />
           <AnimatedGrid className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {sector.garments.map((g) => (
@@ -126,7 +168,7 @@ export default async function SectorPage({
         <Container className="max-w-3xl">
           <SectionHeading
             eyebrow="Your identity"
-            title="A uniform that looks like it belongs to you"
+            title={labels.identityTitle ?? "A uniform that looks like it belongs to you"}
           />
           <AnimatedSection className="mt-6">
             <p className="text-base leading-relaxed text-ink-700">
@@ -136,9 +178,12 @@ export default async function SectorPage({
 
           <div className="mt-14">
             <SectionHeading
-              eyebrow="How the programme runs"
+              eyebrow={labels.deliveryEyebrow ?? "How the programme runs"}
               title="Organised so the work sits with us"
-              description="Uniform is rarely anyone's main job on your side. This is how we keep it off your desk."
+              description={
+                labels.deliveryDescription ??
+                "Uniform is rarely anyone's main job on your side. This is how we keep it off your desk."
+              }
             />
             <AnimatedSection className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2">
               {sector.delivery.map((d) => (
@@ -164,7 +209,10 @@ export default async function SectorPage({
           <SectionHeading
             eyebrow="What matters here"
             title="Where this sector is different"
-            description="Every uniform sector fails in its own way. These are the decisions that carry the most weight in this one."
+            description={
+              labels.considerationsDescription ??
+              "Every uniform sector fails in its own way. These are the decisions that carry the most weight in this one."
+            }
           />
           <AnimatedSection className="mt-10 space-y-8">
             {sector.considerations.map((c, i) => (
@@ -195,7 +243,9 @@ export default async function SectorPage({
           </AnimatedSection>
 
           <AnimatedSection className="mt-6 rounded-2xl border-l-4 border-crimson-500 bg-ivory-100/70 px-6 py-5">
-            <h3 className="font-display text-lg text-navy-900">Fabric</h3>
+            <h3 className="font-display text-lg text-navy-900">
+              {labels.fabricHeading ?? "Fabric"}
+            </h3>
             <p className="mt-2 text-base leading-relaxed text-navy-800">
               {sector.fabricNote}
             </p>
@@ -205,18 +255,13 @@ export default async function SectorPage({
             <Button href="/contact" variant="primary">
               Request a Quote
             </Button>
-            <Button
-              href={CATALOGUE_PDF}
-              variant="ghost"
-              external
-            >
-              "Download the Catalogue (PDF)"
+            <Button href={doc.href} variant="ghost" external>
+              {doc.label}
             </Button>
           </AnimatedSection>
           <p className="mt-3 text-xs leading-relaxed text-ink-500">
-            Our published catalogue currently covers the school range. Ask us for
-            {" "}
-            {sector.navLabel.toLowerCase()} samples and specifications directly.
+            {doc.note} Ask us for {sector.navLabel.toLowerCase()} samples and
+            specifications directly.
           </p>
         </Container>
       </section>
@@ -247,7 +292,11 @@ export default async function SectorPage({
         </Container>
       </section>
 
-      <CTABand title={sector.ctaTitle} description={sector.ctaBody} />
+      <CTABand
+        title={sector.ctaTitle}
+        description={sector.ctaBody}
+        document={null}
+      />
     </>
   );
 }

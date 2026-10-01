@@ -275,7 +275,7 @@ export default function ProductsPage() {
         </Container>
       </section>
 
-      <CTABand />
+      <CTABand document={null} />
     </>
   );
 }

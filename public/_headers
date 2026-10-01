@@ -26,3 +26,9 @@
 
 /uniformedge-catalogue-2026.pdf
   Cache-Control: public, max-age=86400
+
+/uniformedge-corporate-catalogue-2026.pdf
+  Cache-Control: public, max-age=86400
+
+/uniformedge-company-profile-2026.pdf
+  Cache-Control: public, max-age=86400

@@ -57,5 +57,62 @@ export const CONTEXT_IMAGES: GalleryImage[] = [
   },
 ];
 
+// Third set — the same quality of manufacture for offices, hospitals, kitchens,
+// factories and branded apparel. Descriptive captions only; no client is named.
+export const BEYOND_SCHOOL_IMAGES: GalleryImage[] = [
+  {
+    src: "/images/beyond-school/group-all-sectors.webp",
+    alt: "Seven colleagues in a blazer, scrubs, a chef jacket, coveralls and navy tees standing together",
+    caption: "One palette across corporate, healthcare, kitchen and site teams",
+  },
+  {
+    src: "/images/beyond-school/corporate-group-navy-blazers.webp",
+    alt: "Five colleagues in navy blazers and white shirts smiling at the camera in an office",
+    caption: "Corporate team — navy blazers and white shirts",
+  },
+  {
+    src: "/images/beyond-school/office-walk-laptops.webp",
+    alt: "Three colleagues in navy and light-blue office wear walking through a bright office with laptops",
+    caption: "Office wear for everyday work",
+  },
+  {
+    src: "/images/beyond-school/reception-lanyard-smile.webp",
+    alt: "Smiling front-desk colleague in a white shirt with a navy lanyard",
+    caption: "Front desk — shirt and ID lanyard",
+  },
+  {
+    src: "/images/beyond-school/team-navy-tees-outdoors.webp",
+    alt: "Six young colleagues in navy t-shirts and cream hoodies laughing together outdoors",
+    caption: "Custom-branded t-shirts and hoodies for teams and events",
+  },
+  {
+    src: "/images/beyond-school/merchandise-unpacking-team.webp",
+    alt: "Four colleagues holding up navy polo shirts, an apron and caps from an open carton",
+    caption: "Branded apparel, unpacked and checked",
+  },
+  {
+    src: "/images/beyond-school/handshake-fabric-swatches.webp",
+    alt: "Two men shaking hands over fabric swatches and folded garments in a uniform showroom",
+    caption: "Fabric and colour approved before production begins",
+  },
+  {
+    src: "/images/beyond-school/production-floor-stitching.webp",
+    alt: "Tailors stitching garments at sewing machines on a bright production floor with stacks of folded navy garments",
+    caption: "On the production floor",
+  },
+  {
+    src: "/images/beyond-school/business-card-hands-stationery.webp",
+    alt: "Hands holding a blank business card above notepaper and a navy notebook on a desk",
+    caption: "Business stationery alongside uniforms",
+  },
+];
+
+// Homepage strip under the sectors band — three frames from the set above.
+export const HOME_STRIP_IMAGES: GalleryImage[] = [
+  "/images/beyond-school/group-all-sectors.webp",
+  "/images/beyond-school/merchandise-unpacking-team.webp",
+  "/images/beyond-school/production-floor-stitching.webp",
+].map((src) => BEYOND_SCHOOL_IMAGES.find((i) => i.src === src)!);
+
 // Kept for any consumer still expecting the original flat list.
 export const GALLERY_IMAGES = STUDIO_IMAGES;

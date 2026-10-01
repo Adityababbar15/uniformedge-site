@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/Button";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ImageGrid } from "@/components/gallery/ImageGrid";
 import { CTABand } from "@/components/sections/CTABand";
-import { CONTEXT_IMAGES } from "@/lib/content/gallery";
+import { CONTEXT_IMAGES, BEYOND_SCHOOL_IMAGES } from "@/lib/content/gallery";
 import { SITE_URL } from "@/lib/content/company";
 
 export const metadata: Metadata = {
@@ -34,6 +34,24 @@ export default function GalleryPage() {
           <div className="mt-8">
             <ImageGrid
               images={CONTEXT_IMAGES}
+              columns="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+              aspect="aspect-[3/2]"
+              sizes="(min-width: 1024px) 380px, (min-width: 640px) 45vw, 92vw"
+            />
+          </div>
+        </Container>
+      </section>
+
+      <section className="border-t border-navy-900/10 py-16 sm:py-20">
+        <Container>
+          <SectionHeading
+            eyebrow="Beyond the Classroom"
+            title="Offices, hospitals, kitchens and factory floors"
+            description="The same manufacture, colour matching and finishing for corporate teams, clinical staff, hospitality, industrial sites and custom-branded apparel."
+          />
+          <div className="mt-8">
+            <ImageGrid
+              images={BEYOND_SCHOOL_IMAGES}
               columns="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
               aspect="aspect-[3/2]"
               sizes="(min-width: 1024px) 380px, (min-width: 640px) 45vw, 92vw"

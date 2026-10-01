@@ -5,26 +5,31 @@ import { COMPANY } from "@/lib/content/company";
 
 // The hero image is composed with its subjects in the right third and clean wall
 // on the left, so on lg+ it runs full-bleed behind the copy. Below lg that crop
-// would put text over faces, so the image drops to a band beneath the copy instead.
+// would put text over faces, so the image becomes a band instead — placed ABOVE
+// the copy, so a phone's first screen shows the students rather than a wall of
+// text, with the headline and first button still inside 812px.
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-navy-950">
-      <Container className="relative z-10 py-16 sm:py-20 lg:py-32">
+    <section className="relative flex flex-col overflow-hidden bg-navy-950 lg:block">
+      <Container className="relative z-10 py-8 sm:py-20 lg:py-32">
         <div className="lg:max-w-xl">
-          <p className="mb-5 text-xs font-semibold uppercase tracking-[0.25em] text-crimson-400">
+          <p className="mb-4 text-balance text-xs font-semibold uppercase tracking-[0.18em] text-crimson-400 sm:mb-5 sm:tracking-[0.25em]">
             {COMPANY.city} &middot; Tailoring roots since 1995
           </p>
           <h1 className="font-display text-4xl leading-[1.1] text-ivory-50 sm:text-5xl lg:text-6xl">
             {COMPANY.tagline}
           </h1>
-          <p className="mt-6 max-w-lg text-base leading-relaxed text-ivory-100/75 sm:text-lg">
+          <p className="mt-4 max-w-lg text-base leading-relaxed text-ivory-100/75 sm:mt-6 sm:text-lg">
             School uniforms are our core, on tailoring roots going back to 1995. From the same Delhi
             facility we also manufacture corporate, healthcare, hospitality and
-            industrial uniforms — for organisations that expect tailoring
-            quality, colour consistency, and a partner who stands behind every
-            order.
+            industrial uniforms
+            <span className="hidden sm:inline">
+              {" "}— for organisations that expect tailoring quality, colour
+              consistency, and a partner who stands behind every order
+            </span>
+            .
           </p>
-          <div className="mt-10 flex flex-wrap gap-4">
+          <div className="mt-7 flex flex-wrap gap-3 sm:mt-10 sm:gap-4">
             <Button href="/contact" variant="secondary">
               Request a Quote
             </Button>
@@ -39,7 +44,7 @@ export function Hero() {
         </div>
       </Container>
 
-      <div className="relative h-64 w-full sm:h-80 lg:absolute lg:inset-0 lg:h-full">
+      <div className="relative order-first h-56 w-full sm:h-80 lg:absolute lg:inset-0 lg:order-none lg:h-full">
         <Image
           src="/images/hero/two-students-portrait-negative-space.webp"
           alt="Two senior students in navy UniformEdge blazers, white shirts and navy ties"

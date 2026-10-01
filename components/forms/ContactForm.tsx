@@ -1,9 +1,9 @@
 "use client";
 
-import { useId, useState, type FormEvent } from "react";
+import { useId, useRef, useState, type FormEvent } from "react";
 import { Button } from "@/components/ui/Button";
 import { COMPANY } from "@/lib/content/company";
-import { SECTORS } from "@/lib/content/sectors";
+import { SECTOR_LISTING } from "@/lib/content/sectors";
 
 const fieldClasses =
   "w-full rounded-lg border border-navy-900/15 bg-white px-4 py-3 text-sm text-ink-900 placeholder:text-ink-500/60 focus:border-crimson-500 focus:outline-none focus:ring-2 focus:ring-crimson-500/30 disabled:bg-ivory-100/60 disabled:text-ink-500";
@@ -18,6 +18,7 @@ export function ContactForm() {
   const formId = useId();
   const [status, setStatus] = useState<Status>("idle");
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const phoneRef = useRef<HTMLInputElement>(null);
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -30,6 +31,19 @@ export function ContactForm() {
       setErrorMessage(
         "This form isn't connected yet. Please reach us on WhatsApp, or by phone or email — the details are on this page.",
       );
+      return;
+    }
+
+    // A school office is as likely to want a call or a WhatsApp as an email, so
+    // either one is enough — but we need at least one way to reply.
+    const email = String(new FormData(form).get("email") || "").trim();
+    const phone = String(new FormData(form).get("phone") || "").trim();
+    if (!email && !phone) {
+      setStatus("error");
+      setErrorMessage(
+        "Add a phone number or an email so we know where to reply.",
+      );
+      phoneRef.current?.focus();
       return;
     }
 
@@ -67,7 +81,7 @@ export function ContactForm() {
       setStatus("error");
       setErrorMessage(
         detail ??
-          "Something went wrong sending your message. Please try again, or reach us directly using the details on this page.",
+          "Something went wrong sending your enquiry. Please try again, or reach us directly using the details on this page.",
       );
     } catch {
       setStatus("error");
@@ -159,6 +173,24 @@ export function ContactForm() {
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
         <div>
           <label
+            htmlFor={`${formId}-phone`}
+            className="mb-2 block text-sm font-medium text-navy-900"
+          >
+            Phone or WhatsApp
+          </label>
+          <input
+            id={`${formId}-phone`}
+            ref={phoneRef}
+            name="phone"
+            type="tel"
+            inputMode="tel"
+            disabled={busy}
+            autoComplete="tel"
+            className={fieldClasses}
+          />
+        </div>
+        <div>
+          <label
             htmlFor={`${formId}-email`}
             className="mb-2 block text-sm font-medium text-navy-900"
           >
@@ -168,29 +200,15 @@ export function ContactForm() {
             id={`${formId}-email`}
             name="email"
             type="email"
-            required
             disabled={busy}
             autoComplete="email"
             className={fieldClasses}
           />
         </div>
-        <div>
-          <label
-            htmlFor={`${formId}-phone`}
-            className="mb-2 block text-sm font-medium text-navy-900"
-          >
-            Phone
-          </label>
-          <input
-            id={`${formId}-phone`}
-            name="phone"
-            type="tel"
-            disabled={busy}
-            autoComplete="tel"
-            className={fieldClasses}
-          />
-        </div>
       </div>
+      <p className="-mt-2 text-sm text-ink-500">
+        Give us at least one — we&apos;ll reply on whichever you choose.
+      </p>
 
       <div>
         <label
@@ -210,7 +228,7 @@ export function ContactForm() {
           <option value="" disabled>
             Select a sector
           </option>
-          {SECTORS.map((sector) => (
+          {SECTOR_LISTING.map((sector) => (
             <option key={sector.slug} value={sector.name}>
               {sector.name}
             </option>
@@ -251,11 +269,11 @@ export function ContactForm() {
         className="w-full sm:w-auto"
         disabled={busy}
       >
-        {busy ? "Sending…" : "Send Message"}
+        {busy ? "Sending…" : "Send enquiry"}
       </Button>
 
       <p aria-live="polite" className="sr-only">
-        {busy ? "Sending your message" : ""}
+        {busy ? "Sending your enquiry" : ""}
       </p>
     </form>
   );
