@@ -136,6 +136,19 @@ export default function RootLayout({
       lang="en"
       className={`${fraunces.variable} ${inter.variable} h-full antialiased`}
     >
+      <head>
+        {/* Google tag (gtag.js) — one per page, as Google requires. */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-S900LPEPCE" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-S900LPEPCE');`,
+          }}
+        />
+      </head>
       <body className="min-h-full flex flex-col bg-ivory-50 text-ink-900">
         <script
           type="application/ld+json"
