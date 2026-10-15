@@ -27,7 +27,7 @@ export default function DownloadsPage() {
         <Container>
           <StitchHeading
             title="Choose a document"
-            description="The corporate catalogue and company profile are large files. On mobile data, the school catalogue is the quickest to open."
+            description="Each one opens as a PDF in a new tab, and all three are small enough to open on mobile data."
           />
 
           <ul className="mt-12 border-t border-navy-900/15">

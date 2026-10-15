@@ -21,7 +21,7 @@ export const DOWNLOADS = [
       "Corporate uniforms, branded apparel and business stationery, and how we build, check and deliver them.",
     href: CORPORATE_CATALOGUE_PDF,
     pages: 24,
-    sizeMb: 21,
+    sizeMb: 3,
   },
   {
     title: "Company profile",
@@ -29,6 +29,6 @@ export const DOWNLOADS = [
       "A short introduction to UniformEdge and the sectors we serve: schools, corporate, healthcare, F&B and hospitality, industrial, custom-branded apparel and stationery.",
     href: COMPANY_PROFILE_PDF,
     pages: 13,
-    sizeMb: 12,
+    sizeMb: 2,
   },
 ] as const;
