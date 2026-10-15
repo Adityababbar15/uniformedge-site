@@ -60,7 +60,7 @@ in the subject, anything with an exclamation mark.
 >
 > [NAME]
 > UniformEdge
-> +91 99533 99534 · info@uniformedge.co.in
+> +91 96433 99533 · info@uniformedge.co.in
 
 **Why it is shaped this way**
 
@@ -140,7 +140,7 @@ That distinction matters: "message us to order" makes it sound manual, while
 >
 > Happy to send samples either way.
 >
-> [NAME] · UniformEdge · +91 99533 99534
+> [NAME] · UniformEdge · +91 96433 99533
 
 Giving them an easy way out raises reply rates and keeps you out of spam
 complaints. **Do not send a third email.**

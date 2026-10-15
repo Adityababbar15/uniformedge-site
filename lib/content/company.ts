@@ -50,8 +50,8 @@ export const COMPANY = {
   tagline: "Premium uniforms, tailored for trust",
   schoolTagline: "Premium school uniforms, tailored for trust",
   city: "Delhi, India",
-  phone: "+91 99533 99534",
-  phoneHref: "tel:+919953399534",
+  phone: "+91 96433 99533",
+  phoneHref: "tel:+919643399533",
   /**
    * Delivery, client-confirmed 19 Aug 2026. Parents ask this first and the site
    * previously had no answer, which is why the shop's cart could only say
@@ -75,7 +75,7 @@ export const COMPANY = {
       "Plot No. 2, Basement, Sector-12A, Dwarka, New Delhi 110075",
   },
   email: "info@uniformedge.co.in",
-  whatsappNumber: "919953399534",
+  whatsappNumber: "919643399533",
   foundingStory: {
     founderName: "Ramesh C Verma",
     origin:
