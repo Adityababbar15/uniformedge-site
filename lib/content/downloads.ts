@@ -13,7 +13,7 @@ export const DOWNLOADS = [
       "Our main catalogue: school uniforms in detail, plus the corporate, healthcare, hospitality and industrial ranges and school essentials.",
     href: CATALOGUE_PDF,
     pages: 27,
-    sizeMb: 3,
+    sizeMb: 4,
   },
   {
     title: "Corporate catalogue",
