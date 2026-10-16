@@ -10,8 +10,8 @@ import { cn } from "@/lib/cn";
 // Close-up already on the products page — used here so the school row matches
 // the editorial "construction" crops in the reference, without new artwork.
 const SCHOOL_FEATURE = {
-  src: "/images/product/navy-blazer-single-student-detail.webp",
-  alt: "Navy UniformEdge school blazer with embroidered crest, photographed in detail",
+  src: "/images/campus/senior-summer-shirt-tie-corridor.webp",
+  alt: "Three students in white shirts, navy ties, grey trousers and pleated skirts talking in a school corridor",
 };
 
 function FeatureCopy({
@@ -60,6 +60,7 @@ function FeaturedRow({
       alt={imageAlt}
       sizes="(min-width: 1024px) 44vw, 92vw"
       aspect="aspect-[4/3] sm:aspect-[16/10]"
+      position="object-[50%_18%]"
       className={imageOnRight ? "order-first lg:order-none" : undefined}
     />
   );

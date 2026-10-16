@@ -11,8 +11,8 @@ const FRAMES = [
     caption: QUALITY_CHECKS[3],
   },
   {
-    src: "/images/product/navy-blazer-single-student-detail.webp",
-    alt: "Navy UniformEdge school blazer with embroidered crest, photographed in detail",
+    src: "/images/product/senior-charcoal-blazer-staircase.webp",
+    alt: "Three senior students in charcoal blazers and maroon ties on a school staircase",
     caption: QUALITY_CHECKS[2],
   },
   {

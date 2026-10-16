@@ -12,6 +12,7 @@ export function EditorialImage({
   priority = false,
   className,
   aspect = "aspect-[4/5]",
+  position = "object-center",
 }: {
   src: string;
   alt: string;
@@ -19,6 +20,8 @@ export function EditorialImage({
   priority?: boolean;
   className?: string;
   aspect?: string;
+  /** Where the crop sits; people shots need faces kept in frame. */
+  position?: string;
 }) {
   return (
     <figure
@@ -34,7 +37,7 @@ export function EditorialImage({
         fill
         priority={priority}
         sizes={sizes}
-        className="object-cover"
+        className={cn("object-cover", position)}
       />
     </figure>
   );
