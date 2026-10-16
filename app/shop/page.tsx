@@ -35,7 +35,7 @@ export default function ShopPage() {
         <Container>
           <div
             role="note"
-            className="-mt-8 rounded-2xl border-2 border-dashed border-crimson-500 bg-crimson-100/60 p-6"
+            className="mt-8 rounded-xl border-2 border-dashed border-crimson-500 bg-crimson-100/60 p-6"
           >
             <p className="font-display text-lg text-navy-900">
               Prototype — these are not {DEMO_SCHOOL}&apos;s prices

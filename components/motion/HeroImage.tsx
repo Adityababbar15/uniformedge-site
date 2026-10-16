@@ -11,10 +11,12 @@ export function HeroImage({
   src,
   alt,
   className,
+  sizes = "100vw",
 }: {
   src: string;
   alt: string;
   className?: string;
+  sizes?: string;
 }) {
   const frame = useRef<HTMLDivElement>(null);
   const reduceMotion = useReducedMotion();
@@ -30,7 +32,7 @@ export function HeroImage({
         className="absolute inset-x-0 -top-[14%] h-[128%]"
         style={reduceMotion ? undefined : { y }}
       >
-        <Image src={src} alt={alt} fill priority sizes="100vw" className={className} />
+        <Image src={src} alt={alt} fill priority sizes={sizes} className={className} />
       </motion.div>
     </div>
   );

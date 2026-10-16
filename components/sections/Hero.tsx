@@ -3,67 +3,62 @@ import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { COMPANY } from "@/lib/content/company";
 
-// The hero image is composed with its subjects in the right third and clean wall
-// on the left, so on lg+ it runs full-bleed behind the copy. Below lg that crop
-// would put text over faces, so the image becomes a band instead — placed ABOVE
-// the copy, so a phone's first screen shows the students rather than a wall of
-// text, with the headline and first button still inside 812px.
+const HEADLINE = COMPANY.tagline.split(", ");
+
+// Pattern: marketing landing. Ivory split — type on the left, framed photograph
+// on the right — so the page matches the approved editorial direction without
+// painting over the wordmark. Existing tagline and body claims are unchanged.
 export function Hero() {
   return (
-    <section className="relative flex flex-col overflow-hidden bg-navy-950 lg:block">
-      <Container className="relative z-10 py-8 sm:py-20 lg:py-32">
-        <div className="lg:max-w-xl">
-          <p className="hero-rise [--i:0] mb-4 text-sm font-medium text-crimson-300 sm:mb-5 sm:text-base">
+    <section className="relative overflow-hidden bg-ivory-50">
+      <Container className="grid grid-cols-1 items-start gap-10 py-10 sm:py-12 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:items-center lg:gap-16 lg:py-12">
+        <div>
+          <p className="hero-rise [--i:0] mb-5 text-sm font-medium text-crimson-600">
             Tailoring roots in Delhi since 1995
           </p>
-          <h1 className="font-display text-4xl leading-[1.1] text-ivory-50 sm:text-5xl lg:text-6xl">
-            {COMPANY.tagline.split(", ").map((line, i, all) => (
+          <h1 className="font-display text-4xl leading-[1.08] text-navy-900 sm:text-5xl lg:text-6xl">
+            {HEADLINE.map((line, i, all) => (
               <span key={line} className="hero-line">
-                <span style={{ ["--i" as string]: i } as React.CSSProperties}>
+                <span
+                  className={i === 1 ? "italic" : undefined}
+                  style={{ ["--i" as string]: i } as React.CSSProperties}
+                >
                   {line}
                   {i < all.length - 1 ? "," : ""}
                 </span>
               </span>
             ))}
           </h1>
-          <p className="hero-rise [--i:1] mt-4 max-w-lg text-base leading-relaxed text-ivory-100/75 sm:mt-6 sm:text-lg">
-            School uniforms are our core, on tailoring roots going back to 1995. From the same Delhi
-            facility we also manufacture corporate, healthcare, hospitality and
-            industrial uniforms
+          <p className="hero-rise [--i:1] mt-5 max-w-lg text-base leading-relaxed text-ink-700 sm:mt-6 sm:text-lg">
+            School uniforms are our core, on tailoring roots going back to 1995.
+            From the same Delhi facility we also manufacture corporate, healthcare,
+            hospitality and industrial uniforms
             <span className="hidden sm:inline">
-              {" "}— for organisations that expect tailoring quality, colour
+              {" "}
+              — for organisations that expect tailoring quality, colour
               consistency, and a partner who stands behind every order
             </span>
             .
           </p>
-          <div className="hero-rise [--i:2] mt-7 flex flex-wrap gap-3 sm:mt-10 sm:gap-4">
-            <Button href="/contact" variant="secondary">
+          <div className="hero-rise [--i:2] mt-8 flex flex-wrap gap-3 sm:mt-10 sm:gap-4">
+            <Button href="/contact" variant="primary">
               Request a quote
             </Button>
-            <Button
-              href="/products"
-              variant="ghost"
-              className="border-ivory-50/25 text-ivory-50 hover:border-ivory-50/60"
-            >
-              Explore products
+            <Button href="/sectors" variant="ghost">
+              Explore sectors
             </Button>
           </div>
         </div>
-      </Container>
 
-      <div className="hero-wipe relative order-first h-56 w-full overflow-hidden sm:h-80 lg:absolute lg:inset-0 lg:order-none lg:h-full">
-        <HeroImage
-          src="/images/hero/two-students-portrait-negative-space.webp"
-          alt="Two senior students in navy UniformEdge blazers, white shirts and navy ties"
-          className="hero-settle object-cover object-[88%_center] lg:object-right"
-        />
-        {/* Holds the copy area dark, then falls off fast so the subjects aren't muddied. */}
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/25 to-transparent lg:bg-[linear-gradient(to_right,rgba(10,18,32,0.97)_0%,rgba(10,18,32,0.92)_34%,rgba(10,18,32,0.4)_56%,rgba(10,18,32,0)_74%)]"
-        />
-      </div>
-      {/* A running stitch sewn along the foot of the hero. */}
+        <div className="hero-wipe relative order-first aspect-[4/3] overflow-hidden rounded-xl border border-navy-900/10 sm:aspect-[5/4] lg:order-none lg:aspect-[4/5]">
+          <HeroImage
+            src="/images/beyond-school/group-all-sectors.webp"
+            alt="Seven colleagues in a blazer, scrubs, a chef jacket, coveralls and navy tees standing together"
+            sizes="(min-width: 1024px) 42vw, 92vw"
+            className="hero-settle object-cover object-center"
+          />
+        </div>
+      </Container>
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-0.5"

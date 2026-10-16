@@ -16,7 +16,7 @@ import { AnimatedSection } from "@/components/motion/AnimatedSection";
 export function ComparisonTable() {
   return (
     <AnimatedSection>
-      <div className="overflow-x-auto rounded-2xl border border-navy-900/10 bg-white">
+      <div className="overflow-x-auto border-t border-navy-900/10">
         <table className="w-full min-w-[44rem] border-collapse text-left text-sm">
           <caption className="sr-only">
             How a typical uniform arrangement compares with a managed UniformEdge

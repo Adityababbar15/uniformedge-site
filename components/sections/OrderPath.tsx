@@ -1,35 +1,45 @@
 import { Container } from "@/components/ui/Container";
 import { AnimatedGrid, AnimatedGridItem } from "@/components/motion/AnimatedGrid";
 import { StitchHeading } from "@/components/ui/StitchHeading";
-import { Stitch } from "@/components/motion/Stitch";
+import { EditorialImage } from "@/components/ui/EditorialImage";
 import { PROCESS_STEPS } from "@/lib/content/process";
 
-// The only numbered section on the homepage, because it is the only real
-// sequence. Chalk blue is the one ground colour borrowed from the hero photograph.
 export function OrderPath() {
   return (
-    <section className="bg-chalk-100 py-16 sm:py-24">
-      <Container>
-        <StitchHeading
-          title="From brief to delivery"
-          description="How an order moves through our Delhi facility."
-        />
+    <section className="border-t border-navy-900/10 bg-ivory-100/50 py-16 sm:py-24">
+      <Container className="grid grid-cols-1 items-start gap-12 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-16">
+        <div>
+          <StitchHeading
+            title="From brief to delivery"
+            description="How an order moves through our Delhi facility."
+          />
+          <EditorialImage
+            src="/images/beyond-school/production-floor-stitching.webp"
+            alt="Tailors stitching garments at sewing machines on a bright production floor with stacks of folded navy garments"
+            sizes="(min-width: 1024px) 38vw, 92vw"
+            aspect="aspect-[4/5] sm:aspect-[4/3] lg:aspect-[4/5]"
+            className="mt-10"
+          />
+        </div>
 
-        <Stitch className="mt-12 hidden md:block" />
-        <AnimatedGrid className="mt-12 md:mt-8">
-        <ol className="space-y-8 border-l-2 border-dashed border-crimson-500/60 pl-6 md:grid md:grid-cols-5 md:gap-8 md:space-y-0 md:border-l-0 md:pl-0">
-          {PROCESS_STEPS.map((item) => (
-            <li key={item.step}>
-              <AnimatedGridItem>
-              <p className="font-display text-3xl leading-none text-crimson-600">
-                {item.step}
-              </p>
-              <h3 className="mt-3 font-display text-lg text-navy-900">{item.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-ink-700">{item.body}</p>
-              </AnimatedGridItem>
-            </li>
-          ))}
-        </ol>
+        <AnimatedGrid>
+          <ol>
+            {PROCESS_STEPS.map((item) => (
+              <li key={item.step} className="border-t border-navy-900/10 first:border-t-0">
+                <AnimatedGridItem className="grid grid-cols-[auto_1fr] gap-5 py-6">
+                  <p className="font-display text-2xl leading-none text-crimson-600">
+                    {item.step}
+                  </p>
+                  <div>
+                    <h3 className="font-display text-lg text-navy-900">{item.title}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-ink-700">
+                      {item.body}
+                    </p>
+                  </div>
+                </AnimatedGridItem>
+              </li>
+            ))}
+          </ol>
         </AnimatedGrid>
       </Container>
     </section>

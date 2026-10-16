@@ -22,6 +22,8 @@ export default function AboutPage() {
         eyebrow="About us"
         title="A tailoring heritage, carried forward"
         description="UniformEdge builds on three decades of experience clothing Delhi's students."
+        image="/images/beyond-school/handshake-fabric-swatches.webp"
+        imageAlt="Two men shaking hands over fabric swatches and folded garments in a uniform showroom"
       />
 
       <section className="py-20 sm:py-28">
@@ -64,7 +66,7 @@ export default function AboutPage() {
               {COMPANY.vision.pillars.map((pillar) => (
                 <div
                   key={pillar.title}
-                  className="rounded-2xl border border-navy-900/10 bg-white p-6"
+                  className="border-t border-navy-900/10 pt-5"
                 >
                   <dt className="font-display text-lg text-navy-900">
                     {pillar.title}

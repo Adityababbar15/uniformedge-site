@@ -74,34 +74,21 @@ export default async function SectorPage({
         eyebrow={sector.eyebrow}
         title={sector.title}
         description={sector.summary}
+        image={sector.image}
+        imageAlt={sector.imageAlt ?? sector.name}
       />
 
-      {sector.image && (
-        <Container className="max-w-5xl">
-          <figure className="relative -mt-10 aspect-[16/9] overflow-hidden rounded-2xl border border-navy-900/10 shadow-lg shadow-navy-950/10">
-            <Image
-              src={sector.image}
-              alt={sector.imageAlt ?? sector.name}
-              fill
-              priority
-              sizes="(min-width: 1120px) 1120px, 92vw"
-              className="object-cover"
-            />
-          </figure>
-        </Container>
-      )}
-
       {sector.moreImages && sector.moreImages.length > 0 && (
-        <Container className="max-w-5xl">
+        <Container className="max-w-5xl py-10">
           <div
-            className={`mt-4 grid gap-4 ${
+            className={`grid gap-4 ${
               sector.moreImages.length === 1 ? "grid-cols-1" : "grid-cols-1 sm:grid-cols-2"
             }`}
           >
             {sector.moreImages.map((img) => (
               <figure
                 key={img.src}
-                className="relative aspect-[16/9] overflow-hidden rounded-2xl border border-navy-900/10"
+                className="relative aspect-[16/9] overflow-hidden rounded-xl border border-navy-900/10"
               >
                 <Image
                   src={img.src}
@@ -140,7 +127,7 @@ export default async function SectorPage({
                 {g.href ? (
                   <Link
                     href={g.href}
-                    className="flex h-full flex-col rounded-2xl border border-navy-900/10 bg-white p-6 transition-colors hover:border-navy-900/30"
+                    className="flex h-full flex-col border-t border-navy-900/10 pt-6 transition-colors hover:border-crimson-500"
                   >
                     <h3 className="font-display text-lg text-navy-900">{g.name}</h3>
                     <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-700">
@@ -151,7 +138,7 @@ export default async function SectorPage({
                     </span>
                   </Link>
                 ) : (
-                  <div className="h-full rounded-2xl border border-navy-900/10 bg-white p-6">
+                  <div className="h-full border-t border-navy-900/10 pt-6">
                     <h3 className="font-display text-lg text-navy-900">{g.name}</h3>
                     <p className="mt-2 text-sm leading-relaxed text-ink-700">
                       {g.detail}
@@ -189,7 +176,7 @@ export default async function SectorPage({
               {sector.delivery.map((d) => (
                 <div
                   key={d.title}
-                  className="rounded-2xl border border-navy-900/10 bg-white p-6"
+                  className="border-t border-navy-900/10 pt-6"
                 >
                   <h3 className="font-display text-lg text-navy-900">
                     {d.title}
@@ -233,7 +220,7 @@ export default async function SectorPage({
             ))}
           </AnimatedSection>
 
-          <AnimatedSection className="mt-12 rounded-2xl border border-navy-900/10 bg-white px-6 py-5">
+          <AnimatedSection className="mt-12 border-t border-navy-900/10 pt-6">
             <h3 className="font-display text-lg text-navy-900">
               Beyond the standard range
             </h3>
@@ -242,7 +229,7 @@ export default async function SectorPage({
             </p>
           </AnimatedSection>
 
-          <AnimatedSection className="mt-6 rounded-2xl border-l-4 border-crimson-500 bg-ivory-100/70 px-6 py-5">
+          <AnimatedSection className="mt-6 border-l-4 border-crimson-500 pl-6">
             <h3 className="font-display text-lg text-navy-900">
               {labels.fabricHeading ?? "Fabric"}
             </h3>

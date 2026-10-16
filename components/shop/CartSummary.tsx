@@ -10,7 +10,7 @@ export function CartSummary() {
 
   if (lines.length === 0) {
     return (
-      <div className="rounded-2xl border border-dashed border-navy-900/20 bg-white p-8 text-center">
+      <div className="border-t border-dashed border-navy-900/20 pt-8 text-center">
         <p className="font-display text-lg text-navy-900">Your order is empty</p>
         <p className="mt-2 text-sm leading-relaxed text-ink-700">
           Add the items you need above. Nothing is charged here — the order is
@@ -21,7 +21,7 @@ export function CartSummary() {
   }
 
   return (
-    <div className="rounded-2xl border border-navy-900/10 bg-white p-6 sm:p-8">
+    <div className="border-t border-navy-900/10 pt-6 sm:pt-8">
       <div className="flex items-baseline justify-between">
         <h2 className="font-display text-xl text-navy-900">Your order</h2>
         <p className="text-sm text-ink-500">

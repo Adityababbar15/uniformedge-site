@@ -19,24 +19,23 @@ export function CTABand({
 }: {
   title?: string;
   description?: string;
-  // The download beside the quote button. Pass null on pages that already carry
-  // their own, or another document where the school catalogue is the wrong one.
   document?: Doc | null;
-  // A plain link to /downloads under the buttons.
   allDownloads?: boolean;
 }) {
   return (
-    <section className="bg-navy-950 py-20">
+    <section className="bg-navy-950 py-16 sm:py-24">
       <Container>
-        <AnimatedSection className="flex flex-col items-center gap-6 text-center">
-          <Stitch className="w-24" />
-          <h2 className="font-display max-w-2xl text-3xl leading-tight text-ivory-50 sm:text-4xl">
-            {title}
-          </h2>
-          <p className="max-w-xl text-base leading-relaxed text-ivory-100/75">
-            {description}
-          </p>
-          <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
+        <AnimatedSection className="grid grid-cols-1 items-end gap-10 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,0.7fr)]">
+          <div>
+            <Stitch className="w-24" />
+            <h2 className="font-display mt-6 max-w-xl text-3xl leading-tight text-ivory-50 sm:text-4xl lg:text-5xl">
+              {title}
+            </h2>
+            <p className="mt-5 max-w-lg text-base leading-relaxed text-ivory-100/75">
+              {description}
+            </p>
+          </div>
+          <div className="flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap lg:flex-col lg:items-stretch">
             <Button href="/contact" variant="secondary">
               Request a quote
             </Button>
@@ -50,15 +49,15 @@ export function CTABand({
                 {document.label}
               </Button>
             )}
+            {allDownloads && (
+              <Link
+                href="/downloads"
+                className="inline-flex min-h-11 items-center text-sm text-ivory-100/75 underline underline-offset-4 transition-colors hover:text-ivory-50"
+              >
+                See all downloads
+              </Link>
+            )}
           </div>
-          {allDownloads && (
-            <Link
-              href="/downloads"
-              className="inline-block py-3 text-sm text-ivory-100/75 underline underline-offset-4 transition-colors hover:text-ivory-50"
-            >
-              See all downloads
-            </Link>
-          )}
         </AnimatedSection>
       </Container>
     </section>

@@ -19,7 +19,7 @@ export function ProductCard({ item }: { item: ShopItem }) {
   }
 
   return (
-    <div className="flex h-full flex-col rounded-2xl border border-navy-900/10 bg-white p-6">
+    <div className="flex h-full flex-col border-t border-navy-900/10 pt-6">
       <div className="flex items-start justify-between gap-3">
         <div>
           <h3 className="font-display text-lg leading-snug text-navy-900">

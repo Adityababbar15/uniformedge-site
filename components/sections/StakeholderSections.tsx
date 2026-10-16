@@ -14,7 +14,7 @@ export function StakeholderSections() {
     <AnimatedGrid className="grid grid-cols-1 gap-8 lg:grid-cols-2">
       {STAKEHOLDERS.map((s) => (
         <AnimatedGridItem key={s.role}>
-          <article className="flex h-full flex-col rounded-2xl border border-navy-900/10 bg-white p-8">
+          <article className="flex h-full flex-col border-t border-navy-900/10 pt-8">
             <p className="text-xs font-semibold uppercase tracking-[0.15em] text-crimson-600">
               {s.eyebrow}
             </p>

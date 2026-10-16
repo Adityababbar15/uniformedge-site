@@ -2,10 +2,10 @@ import type { FAQ } from "@/lib/content/faqs";
 
 export function FAQAccordion({ items }: { items: FAQ[] }) {
   return (
-    <div className="divide-y divide-navy-900/10 rounded-2xl border border-navy-900/10 bg-white">
+    <div className="divide-y divide-navy-900/10 border-y border-navy-900/10">
       {items.map((item) => (
-        <details key={item.question} className="group px-6 py-5">
-          <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-display text-lg text-navy-900 marker:content-none">
+        <details key={item.question} className="group py-5">
+          <summary className="flex min-h-11 cursor-pointer list-none items-center justify-between gap-4 font-display text-lg text-navy-900 marker:content-none">
             {item.question}
             <span
               aria-hidden="true"

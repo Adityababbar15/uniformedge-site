@@ -77,6 +77,12 @@ body {
   font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
 }
 
+/* Editorial rhythm: generous section air, tight type measure. */
+:root {
+  --section-y: 4.5rem;
+  --section-y-lg: 7rem;
+}
+
 @layer base {
   h1, h2, h3, h4 { --tw-leading: 1.25; }
 }

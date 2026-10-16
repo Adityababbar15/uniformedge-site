@@ -72,27 +72,35 @@ export default async function BlogPostPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
 
-      <section className="bg-navy-950 py-16 sm:py-20">
-        <Container className="max-w-3xl">
+      <section className="relative overflow-hidden bg-ivory-50">
+        <Container className="max-w-3xl py-12 sm:py-16">
           <Link
             href="/blog"
-            className="text-xs font-semibold uppercase tracking-[0.2em] text-crimson-400 hover:text-crimson-300"
+            className="inline-flex min-h-11 items-center text-sm font-medium text-crimson-600 hover:text-crimson-700"
           >
             &larr; Insights
           </Link>
-          <h1 className="font-display mt-6 text-4xl leading-tight text-ivory-50 sm:text-5xl">
+          <h1 className="font-display mt-6 text-4xl leading-[1.1] text-navy-900 sm:text-5xl">
             {post.title}
           </h1>
-          <p className="mt-5 text-sm text-ivory-100/70">
+          <p className="mt-5 text-sm text-ink-500">
             {dateFormat.format(new Date(post.published))} ·{" "}
             {post.readingMinutes} min read · Written for {post.audience}
           </p>
         </Container>
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-0.5 opacity-80"
+          style={{
+            backgroundImage:
+              "repeating-linear-gradient(90deg, var(--color-crimson-500) 0 10px, transparent 10px 18px)",
+          }}
+        />
       </section>
 
       {post.heroImage && (
-        <Container className="max-w-4xl">
-          <figure className="relative -mt-10 aspect-[16/9] overflow-hidden rounded-2xl border border-navy-900/10 shadow-lg shadow-navy-950/10">
+        <Container className="max-w-4xl py-10">
+          <figure className="relative aspect-[16/9] overflow-hidden rounded-xl border border-navy-900/10">
             <Image
               src={post.heroImage}
               alt={post.heroAlt ?? ""}

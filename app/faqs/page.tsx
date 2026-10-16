@@ -30,7 +30,7 @@ export default function FAQsPage() {
 
       <CTABand
         title="Still have questions?"
-        description="Our team is happy to talk through your school's specific requirements."
+        description="Our team is happy to talk through your requirements."
       />
     </>
   );

@@ -30,6 +30,8 @@ export default function ParentsPage() {
         eyebrow="For parents"
         title="Getting your child's uniform"
         description="If your school works with us, you can order directly — no forms through the school office, and no waiting for the next uniform day."
+        image="/images/product/girls-collection-three-ages-courtyard.webp"
+        imageAlt="Three students in the same uniform program at primary, middle and senior sizes"
       />
 
       <section className="py-16 sm:py-20">
@@ -43,7 +45,7 @@ export default function ParentsPage() {
           <AnimatedGrid className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
             {ORDER_ROUTES.map((route) => (
               <AnimatedGridItem key={route.key}>
-                <div className="flex h-full flex-col rounded-2xl border border-navy-900/10 bg-white p-7">
+                <div className="flex h-full flex-col border-t border-navy-900/10 pt-6">
                   <h3 className="font-display text-lg text-navy-900">
                     {route.title}
                   </h3>
@@ -79,7 +81,7 @@ export default function ParentsPage() {
             {PARENT_DELIVERY.map((row) => (
               <div
                 key={row.label}
-                className="rounded-2xl border border-navy-900/10 bg-white p-6"
+                className="border-t border-navy-900/10 pt-5"
               >
                 <dt className="text-xs font-semibold uppercase tracking-wide text-ink-500">
                   {row.label}

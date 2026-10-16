@@ -1,7 +1,7 @@
+import { StitchHeading } from "@/components/ui/StitchHeading";
 import { cn } from "@/lib/cn";
 
 export function SectionHeading({
-  eyebrow,
   title,
   description,
   align = "left",
@@ -14,26 +14,10 @@ export function SectionHeading({
   className?: string;
 }) {
   return (
-    <div
-      className={cn(
-        "max-w-2xl",
-        align === "center" && "mx-auto text-center",
-        className,
-      )}
-    >
-      {eyebrow && (
-        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-crimson-600">
-          {eyebrow}
-        </p>
-      )}
-      <h2 className="font-display text-3xl leading-tight text-navy-900 sm:text-4xl">
-        {title}
-      </h2>
-      {description && (
-        <p className="mt-4 text-base leading-relaxed text-ink-700">
-          {description}
-        </p>
-      )}
-    </div>
+    <StitchHeading
+      title={title}
+      description={description}
+      className={cn(align === "center" && "mx-auto", className)}
+    />
   );
 }

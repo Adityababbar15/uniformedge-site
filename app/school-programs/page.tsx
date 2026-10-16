@@ -29,6 +29,8 @@ export default function SchoolProgramsPage() {
         eyebrow="School programs"
         title="A uniform program that fits how your school buys"
         description="Whether you're setting up a first custom uniform or consolidating across branches, the program scales to your size spread and reorder cycle."
+        image="/images/campus/students-corridor-between-periods.webp"
+        imageAlt="Senior students in matching grey and white uniforms walking along a school corridor"
       />
 
       <section className="py-16 sm:py-20">
@@ -42,7 +44,7 @@ export default function SchoolProgramsPage() {
           <AnimatedGrid className="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-3">
             {PROGRAM_TIERS.map((tier) => (
               <AnimatedGridItem key={tier.name}>
-                <div className="flex h-full flex-col rounded-2xl border border-navy-900/10 bg-white p-8">
+                <div className="flex h-full flex-col border-t border-navy-900/10 pt-6">
                   <h3 className="font-display text-2xl text-navy-900">
                     {tier.name}
                   </h3>
@@ -123,7 +125,7 @@ export default function SchoolProgramsPage() {
           <AnimatedGrid className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {ORDERING_STEPS.map((item) => (
               <AnimatedGridItem key={item.step}>
-                <div className="h-full rounded-2xl border border-navy-900/10 bg-white p-6">
+                <div className="h-full border-t border-navy-900/10 pt-6">
                   <span className="font-display text-3xl text-crimson-600">
                     {item.step}
                   </span>

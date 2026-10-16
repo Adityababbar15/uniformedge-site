@@ -36,6 +36,8 @@ export default function ProductsPage() {
         eyebrow="Products"
         title="A full uniform wardrobe, tailored per school"
         description="Every category below is manufactured to your school's specification — colours, crests, and sizing included."
+        image="/images/product/navy-blazer-single-student-detail.webp"
+        imageAlt="Navy UniformEdge school blazer with embroidered crest, photographed in detail"
       />
 
       <section className="py-16 sm:py-20">
@@ -49,7 +51,7 @@ export default function ProductsPage() {
           <AnimatedGrid className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {PRODUCT_CATEGORIES.map((category) => (
               <AnimatedGridItem key={category.slug}>
-                <div className="flex h-full flex-col overflow-hidden rounded-2xl border border-navy-900/10 bg-white shadow-sm">
+                <div className="flex h-full flex-col overflow-hidden rounded-xl border border-navy-900/10 bg-ivory-50">
                   <div className="relative aspect-[4/3] bg-ivory-100">
                     {category.images[0] ? (
                       <>
@@ -101,7 +103,7 @@ export default function ProductsPage() {
             title="Every item available under the program"
             description="Fabric and sizing notes for each garment. Use this as a quick reference when planning a school order."
           />
-          <AnimatedSection className="mt-10 overflow-x-auto rounded-2xl border border-navy-900/10 bg-white">
+          <AnimatedSection className="mt-10 overflow-x-auto border-t border-navy-900/10">
             <table className="w-full min-w-[42rem] border-collapse text-left text-sm">
               <caption className="sr-only">
                 UniformEdge full product list with SKU, category, fabric options and size range
@@ -143,7 +145,7 @@ export default function ProductsPage() {
             {FABRIC_TYPES.map((fabric) => (
               <div
                 key={fabric.name}
-                className="rounded-2xl border border-navy-900/10 bg-white p-6"
+                className="border-t border-navy-900/10 pt-6"
               >
                 <h3 className="font-display text-lg text-navy-900">{fabric.name}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-ink-700">{fabric.body}</p>
@@ -194,7 +196,7 @@ export default function ProductsPage() {
             title="Sample size chart"
             description="The final chart is calibrated to your school's actual student measurements during onboarding."
           />
-          <AnimatedSection className="mt-10 overflow-x-auto rounded-2xl border border-navy-900/10 bg-white">
+          <AnimatedSection className="mt-10 overflow-x-auto border-t border-navy-900/10">
             <table className="w-full min-w-[30rem] border-collapse text-left text-sm">
               <caption className="sr-only">
                 Sample school uniform size chart by size, approximate age, chest and height
@@ -226,7 +228,7 @@ export default function ProductsPage() {
 
           <AnimatedSection className="mt-10">
             <figure>
-              <div className="relative aspect-[3/2] overflow-hidden rounded-2xl border border-navy-900/10">
+              <div className="relative aspect-[3/2] overflow-hidden rounded-xl border border-navy-900/10">
                 <Image
                   src="/images/product/girls-collection-three-ages-courtyard.webp"
                   alt="Three students in the same uniform program at primary, middle and senior sizes"
@@ -255,7 +257,7 @@ export default function ProductsPage() {
           <AnimatedGrid className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {ESSENTIALS.map((item) => (
               <AnimatedGridItem key={item.name}>
-                <div className="flex h-full flex-col rounded-2xl border border-navy-900/10 bg-white p-6">
+                <div className="flex h-full flex-col border-t border-navy-900/10 pt-6">
                   <h3 className="font-display text-lg text-navy-900">
                     {item.name}
                   </h3>
@@ -267,7 +269,7 @@ export default function ProductsPage() {
             ))}
           </AnimatedGrid>
 
-          <AnimatedSection className="mt-10 rounded-2xl border-l-4 border-crimson-500 bg-ivory-100/70 px-6 py-5">
+          <AnimatedSection className="mt-10 border-l-4 border-crimson-500 pl-6">
             <p className="text-sm leading-relaxed text-ink-700">
               {ESSENTIALS_CAVEAT}
             </p>

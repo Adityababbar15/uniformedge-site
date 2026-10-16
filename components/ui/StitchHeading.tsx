@@ -22,7 +22,7 @@ export function StitchHeading({
       <Stitch axis="y" className="absolute left-0 top-1 h-[calc(100%-0.5rem)]" />
       <h2
         className={cn(
-          "font-display text-3xl leading-tight sm:text-4xl",
+          "font-display text-3xl leading-[1.15] sm:text-4xl lg:text-[2.75rem]",
           dark ? "text-ivory-50" : "text-navy-900",
         )}
       >

@@ -39,7 +39,7 @@ export default function BlogIndexPage() {
           <AnimatedGrid className="grid grid-cols-1 gap-8 lg:grid-cols-3">
             {posts.map((post) => (
               <AnimatedGridItem key={post.slug}>
-                <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-navy-900/10 bg-white">
+                <article className="flex h-full flex-col overflow-hidden rounded-xl border border-navy-900/10 bg-ivory-50">
                   {post.heroImage && (
                     <Link
                       href={`/blog/${post.slug}`}

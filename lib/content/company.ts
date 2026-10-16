@@ -76,6 +76,14 @@ export const COMPANY = {
   },
   email: "info@uniformedge.co.in",
   whatsappNumber: "919643399533",
+  // Tracking parameters removed from the shared links. LinkedIn is Aditya's
+  // personal profile, not a company page, so it is left out of the
+  // Organization schema's sameAs.
+  social: [
+    { name: "Instagram", href: "https://www.instagram.com/uniformedgeindia", handle: "@uniformedgeindia", inSchema: true },
+    { name: "LinkedIn", href: "https://www.linkedin.com/in/aditya-babbar-26940943b", handle: "Aditya Babbar", inSchema: false },
+    { name: "X", href: "https://x.com/uniformedgeco", handle: "@uniformedgeco", inSchema: true },
+  ],
   foundingStory: {
     founderName: "Ramesh C Verma",
     origin:

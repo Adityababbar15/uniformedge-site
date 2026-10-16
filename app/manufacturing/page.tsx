@@ -24,6 +24,8 @@ export default function ManufacturingPage() {
         eyebrow="Manufacturing"
         title="Made in Delhi, checked at every step"
         description="Direct control where it matters, flexible capacity where it counts."
+        image="/images/beyond-school/production-floor-stitching.webp"
+        imageAlt="Tailors stitching garments at sewing machines on a bright production floor with stacks of folded navy garments"
       />
 
       <section className="py-20 sm:py-24">
@@ -64,7 +66,7 @@ export default function ManufacturingPage() {
           <AnimatedGrid className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
             {PROCESS_STEPS.map((item) => (
               <AnimatedGridItem key={item.step}>
-                <div className="h-full rounded-2xl border border-navy-900/10 bg-white p-6">
+                <div className="h-full border-t border-navy-900/10 pt-6">
                   <span className="font-display text-3xl text-crimson-600">
                     {item.step}
                   </span>
@@ -92,7 +94,7 @@ export default function ManufacturingPage() {
           <AnimatedGrid className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-3">
             {FABRIC_TYPES.map((fabric) => (
               <AnimatedGridItem key={fabric.name}>
-                <div className="h-full rounded-2xl border border-navy-900/10 bg-white p-6">
+                <div className="h-full border-t border-navy-900/10 pt-6">
                   <h3 className="font-display text-lg text-navy-900">
                     {fabric.name}
                   </h3>

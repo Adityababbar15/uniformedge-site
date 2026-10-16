@@ -22,6 +22,8 @@ export default function GalleryPage() {
         eyebrow="Gallery"
         title="Uniform styles across every sector"
         description="A visual look at what we make, and who we make it for."
+        image="/images/campus/students-corridor-between-periods.webp"
+        imageAlt="Senior students in matching grey and white uniforms walking along a school corridor"
       />
 
       <section className="py-16 sm:py-20">

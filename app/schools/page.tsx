@@ -48,7 +48,7 @@ export default function SchoolsPage() {
                       <li key={school.slug}>
                         <Link
                           href={`/schools/${school.slug}`}
-                          className="flex h-full flex-col rounded-2xl border border-navy-900/10 bg-white p-6 transition-colors hover:border-crimson-500/40"
+                          className="flex h-full flex-col border-t border-navy-900/10 pt-6 transition-colors hover:border-crimson-500"
                         >
                           <span className="font-display text-lg leading-snug text-navy-900">
                             {school.name}

@@ -25,6 +25,8 @@ export default function SectorsPage() {
         eyebrow="Sectors"
         title="One partner, seven sectors"
         description="Schools are our core sector, and the one our tailoring roots come from. The same discipline now dresses offices, hospitals, kitchens and factories — and supplies branded apparel and business stationery to match."
+        image="/images/beyond-school/group-all-sectors.webp"
+        imageAlt="Seven colleagues in a blazer, scrubs, a chef jacket, coveralls and navy tees standing together"
       />
 
       <section className="py-16 sm:py-20">
@@ -38,7 +40,7 @@ export default function SectorsPage() {
           <AnimatedGrid className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {SECTOR_LISTING.map((sector) => (
               <AnimatedGridItem key={sector.slug} className={sector.isCore ? "md:col-span-2 lg:col-span-3" : undefined}>
-                <article className={cn("flex h-full flex-col overflow-hidden rounded-2xl border border-navy-900/10 bg-white shadow-sm", sector.isCore && "md:flex-row")}>
+                <article className={cn("flex h-full flex-col overflow-hidden rounded-xl border border-navy-900/10 bg-ivory-50", sector.isCore && "md:flex-row")}>
                   <div className={cn("relative aspect-[16/9] bg-ivory-100", sector.isCore && "md:aspect-auto md:min-h-[18rem] md:w-1/2")}>
                     {sector.image ? (
                       <>
@@ -66,7 +68,7 @@ export default function SectorsPage() {
                     <h2 className="font-display text-xl text-navy-900">
                       <Link
                         href={sector.href}
-                        className="-my-2 inline-block py-2 transition-colors hover:text-crimson-600"
+                        className="-my-2 inline-block py-2.5 transition-colors hover:text-crimson-600"
                       >
                         {sector.name}
                       </Link>

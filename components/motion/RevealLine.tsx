@@ -28,7 +28,7 @@ export function RevealLine({ children }: { children: React.ReactNode }) {
       className="block overflow-hidden pb-[0.14em] -mb-[0.14em]"
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-60px" }}
+      viewport={{ once: true, margin: "0px" }}
     >
       <motion.span className="block" variants={rise(reduceMotion)}>
         {children}

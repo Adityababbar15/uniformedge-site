@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/Button";
 import { COMPANY } from "@/lib/content/company";
 import { SECTOR_LISTING } from "@/lib/content/sectors";
 
-const invalidClasses = "border-red-700/70";
+const invalidClasses = "border-crimson-700/70";
 
 const fieldClasses =
   "w-full rounded-lg border border-navy-900/15 bg-white px-4 py-3 text-sm text-ink-900 placeholder:text-ink-500/60 focus:border-crimson-500 focus:outline-none focus:ring-2 focus:ring-crimson-500/30 disabled:bg-ivory-100/60 disabled:text-ink-500";
@@ -163,7 +163,7 @@ export function ContactForm() {
     return (
       <div
         role="status"
-        className="rounded-2xl border border-navy-900/10 bg-white p-8 text-center"
+        className="border-t border-navy-900/10 pt-8 text-center"
       >
         <p className="font-display text-xl text-navy-900">Thank you.</p>
         <p className="mt-2 text-sm leading-relaxed text-ink-700">
@@ -207,7 +207,7 @@ export function ContactForm() {
       onBlur={handleBlur}
       onInput={handleInput}
       noValidate
-      className="space-y-5 rounded-2xl border border-navy-900/10 bg-white p-8"
+      className="space-y-5"
     >
       <input
         type="hidden"

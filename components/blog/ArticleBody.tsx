@@ -70,7 +70,7 @@ export function ArticleBody({ blocks }: { blocks: Block[] }) {
             return (
               <div
                 key={i}
-                className="overflow-x-auto rounded-2xl border border-navy-900/10 bg-white"
+                className="overflow-x-auto border-t border-navy-900/10"
               >
                 <table className="w-full min-w-[34rem] border-collapse text-left text-sm">
                   <thead>
@@ -123,7 +123,7 @@ export function ArticleBody({ blocks }: { blocks: Block[] }) {
             return (
               <div
                 key={i}
-                className="mt-4 rounded-2xl border border-navy-900/10 bg-ivory-100/60 p-8"
+                className="mt-4 border-t border-navy-900/10 pt-8"
               >
                 <p className="text-base leading-relaxed text-ink-700">
                   {block.text}

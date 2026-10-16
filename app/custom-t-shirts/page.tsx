@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 
 function Card({ title, body }: { title: string; body: string }) {
   return (
-    <div className="h-full rounded-2xl border border-navy-900/10 bg-white p-6">
+    <div className="h-full border-t border-navy-900/10 pt-6">
       <h3 className="font-display text-lg text-navy-900">{title}</h3>
       <p className="mt-2 text-sm leading-relaxed text-ink-700">{body}</p>
     </div>
@@ -46,6 +46,8 @@ export default function CustomTshirtsPage() {
         eyebrow={TSHIRT_PAGE.eyebrow}
         title={TSHIRT_PAGE.title}
         description={TSHIRT_PAGE.summary}
+        image="/images/beyond-school/team-navy-tees-outdoors.webp"
+        imageAlt="Six young colleagues in navy t-shirts and cream hoodies laughing together outdoors"
       />
 
       <section className="py-16 sm:py-20">
