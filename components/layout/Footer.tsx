@@ -104,6 +104,7 @@ export function Footer() {
                 {COMPANY.email}
               </a>
             </li>
+            <li className="flex min-h-11 items-center">GSTIN {COMPANY.gstin}</li>
           </ul>
           <Link
             href="/contact"

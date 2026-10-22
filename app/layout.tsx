@@ -101,6 +101,7 @@ const organizationSchema = {
   // verification process later needs it, the value is "2026".
   telephone: COMPANY.phone,
   email: COMPANY.email,
+  taxID: COMPANY.gstin,
   sameAs: COMPANY.social.filter((s) => s.inSchema).map((s) => s.href),
   address: {
     "@type": "PostalAddress",

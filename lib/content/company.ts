@@ -75,6 +75,7 @@ export const COMPANY = {
       "Plot No. 2, Basement, Sector-12A, Dwarka, New Delhi 110075",
   },
   email: "info@uniformedge.co.in",
+  gstin: "07EMJPB3422G1ZE",
   whatsappNumber: "919643399533",
   // Tracking parameters removed from the shared links. LinkedIn is Aditya's
   // personal profile, not a company page, so it is left out of the

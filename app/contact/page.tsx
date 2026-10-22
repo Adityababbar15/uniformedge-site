@@ -62,6 +62,10 @@ export default function ContactPage() {
                 </dd>
               </div>
               <div className="border-t border-navy-900/10 pt-5">
+                <dt className="text-sm font-medium text-ink-500">GSTIN</dt>
+                <dd className="mt-1 text-base text-ink-900">{COMPANY.gstin}</dd>
+              </div>
+              <div className="border-t border-navy-900/10 pt-5">
                 <dt className="text-sm font-medium text-ink-500">Follow us</dt>
                 <dd className="mt-2">
                   <SocialLinks />
