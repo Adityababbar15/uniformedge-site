@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     template: "%s | UniformEdge",
   },
   description:
-    "UniformEdge manufactures school, corporate, healthcare, hospitality and industrial uniforms in Delhi, with a uniform shop in Dwarka, New Delhi, serving schools across Delhi NCR.",
+    "School, corporate, healthcare, hospitality and industrial uniforms, made in our own Delhi facility, with a uniform shop in Dwarka, New Delhi.",
   // No canonical here on purpose. A layout-level relative canonical resolves
   // to the homepage for every page that does not override it, which tells
   // Google those pages are duplicates of "/". Each page sets its own.

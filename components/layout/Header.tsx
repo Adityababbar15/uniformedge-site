@@ -7,7 +7,7 @@ import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Logo } from "@/components/brand/Logo";
-import { NAV_LINKS, COMPANY } from "@/lib/content/company";
+import { NAV_LINKS, COMPANY, SHOP_URL } from "@/lib/content/company";
 import { cn } from "@/lib/cn";
 
 // Home is the wordmark. Showing it again in the bar crowds eight items
@@ -57,7 +57,7 @@ export function Header() {
   }, [open]);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-navy-900/10 bg-ivory-50/95">
+    <header className="sticky top-0 z-50 border-b border-navy-900/10 bg-ivory-50">
       <Container className="flex h-16 items-center justify-between sm:h-18">
         <Link href="/" className="shrink-0 py-2" aria-label={`${COMPANY.name} home`}>
           <Logo priority className="h-7 w-auto sm:h-8" />
@@ -73,7 +73,7 @@ export function Header() {
                     href={link.href}
                     aria-current={active ? "page" : undefined}
                     className={cn(
-                      "text-[13px] font-medium tracking-wide text-ink-700 transition-colors hover:text-navy-900",
+                      "inline-flex min-h-11 items-center text-[13px] font-medium tracking-wide text-ink-700 transition-colors hover:text-navy-900",
                       active &&
                         "text-navy-900 underline decoration-crimson-500 decoration-2 underline-offset-8",
                     )}
@@ -86,7 +86,10 @@ export function Header() {
           </ul>
         </nav>
 
-        <div className="hidden xl:block">
+        <div className="hidden items-center gap-3 xl:flex">
+          <Button href={SHOP_URL} variant="ghost" external>
+            Shop uniforms
+          </Button>
           <Button href="/contact" variant="primary">
             Request a quote
           </Button>
@@ -155,9 +158,18 @@ export function Header() {
                 </Link>
               ))}
               <Button
+                href={SHOP_URL}
+                variant="ghost"
+                external
+                className="mt-3 w-full"
+                onClick={closeMenu}
+              >
+                Shop uniforms
+              </Button>
+              <Button
                 href="/contact"
                 variant="primary"
-                className="mt-3 w-full"
+                className="mt-2 w-full"
                 onClick={closeMenu}
               >
                 Request a quote

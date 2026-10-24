@@ -16,9 +16,9 @@ export const SITE_INDEXABLE = true;
 // a site now covering five sectors and parents. Programs is not orphaned — it is
 // linked from the school pitch on the homepage and from Products, as well as the
 // footer. Gallery, FAQs and Programs all remain in FOOTER_LINKS and the sitemap.
-// The parent-facing online shop (Odoo). Switch to https://shop.uniformedge.co.in
-// once the CNAME and Odoo custom domain are live — every shop link reads this.
-export const SHOP_URL = "https://uniformedge.odoo.com";
+// The parent-facing online shop (Odoo), on its own subdomain. The odoo.com address
+// is noindex as a duplicate, so links must use this one. Every shop link reads it.
+export const SHOP_URL = "https://shop.uniformedge.co.in";
 
 export const NAV_LINKS = [
   { href: "/", label: "Home" },

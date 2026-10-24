@@ -1,7 +1,7 @@
 import { HeroImage } from "@/components/motion/HeroImage";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
-import { COMPANY } from "@/lib/content/company";
+import { COMPANY, SHOP_URL } from "@/lib/content/company";
 
 const HEADLINE = COMPANY.tagline.split(", ");
 
@@ -46,6 +46,9 @@ export function Hero() {
             </Button>
             <Button href="/sectors" variant="ghost">
               Explore sectors
+            </Button>
+            <Button href={SHOP_URL} variant="ghost" external>
+              Shop school uniforms
             </Button>
           </div>
         </div>

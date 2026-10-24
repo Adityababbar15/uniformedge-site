@@ -7,7 +7,7 @@ import { FAQS } from "@/lib/content/faqs";
 import { SITE_URL } from "@/lib/content/company";
 
 export const metadata: Metadata = {
-  title: "FAQs",
+  title: "Uniform FAQs: Orders, Sizing and Delivery",
   description:
     "Answers to common questions about UniformEdge's manufacturing, ordering, and school uniform programs.",
   alternates: { canonical: `${SITE_URL}/faqs/` },

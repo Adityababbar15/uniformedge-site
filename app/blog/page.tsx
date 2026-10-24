@@ -72,7 +72,7 @@ export default function BlogIndexPage() {
                   </p>
                   <Link
                     href={`/blog/${post.slug}`}
-                    className="mt-6 text-sm font-medium text-crimson-600 underline underline-offset-4 hover:text-crimson-700"
+                    className="mt-6 inline-flex min-h-11 items-center self-start text-sm font-medium text-crimson-600 underline underline-offset-4 hover:text-crimson-700"
                   >
                     Read article &rarr;
                   </Link>

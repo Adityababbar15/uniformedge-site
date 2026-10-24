@@ -37,7 +37,7 @@ export function Button({
 
   if (href && external) {
     return (
-      <a href={href} className={classes} target="_blank" rel="noopener noreferrer">
+      <a href={href} className={classes} target="_blank" rel="noopener noreferrer" onClick={onClick}>
         {children}
       </a>
     );

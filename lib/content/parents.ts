@@ -81,7 +81,7 @@ export const PARENT_FAQS = [
   {
     question: "How do I know what size to order?",
     answer:
-      "Our size chart runs from XS (about 4–5 years) through XXL (about 14–15 years), plus an adult range for senior students. Sizes are calibrated to each school's own measurement drive, so if you're between sizes or unsure, message us your child's height and age and we'll advise. For a first uniform we'd always recommend coming in to be measured.",
+      "Each product in the shop lists the sizes we stock for it. If you're between sizes or unsure, message us your child's height and age and we'll advise. For a first uniform we'd always recommend coming in to be measured.",
   },
   {
     question: "What if it doesn't fit?",
@@ -113,7 +113,7 @@ export const PARENT_FAQS = [
 /** WhatsApp deep link, optionally naming the school so we can answer faster. */
 export function parentWhatsAppLink(school?: string) {
   const message = school
-    ? `Hi, I'd like to order the uniform for ${school}. Class: , Size: `
-    : "Hi, I'd like to order a school uniform. School: , Class: , Size: ";
+    ? `Hi, I'd like to order the uniform for ${school}.`
+    : "Hi, I'd like to order a school uniform.";
   return `https://wa.me/${COMPANY.whatsappNumber}?text=${encodeURIComponent(message)}`;
 }

@@ -35,7 +35,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "How Schools Should Choose a Uniform Manufacturer",
     metaTitle: "How Schools Should Choose a Uniform Manufacturer | UniformEdge",
     metaDescription:
-      "A practical evaluation framework for school management and procurement teams choosing a uniform supplier — what to ask, what to verify, and which failures show up only after delivery.",
+      "How school procurement teams can choose a uniform supplier: what to ask, what to verify, and which failures only show up after delivery.",
     excerpt:
       "Most uniform supplier decisions are made on price per piece and regretted on the reorder. Here's what to evaluate instead.",
     primaryKeyword: "how to choose a school uniform manufacturer",
@@ -328,7 +328,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "How to Plan a School Uniform Procurement Process",
     metaTitle: "How to Plan a School Uniform Procurement Process | UniformEdge",
     metaDescription:
-      "A term-by-term planning framework for school uniform procurement — when to start, how to sequence sampling and measurement, and how to avoid the peak-season delivery crunch.",
+      "A term-by-term plan for school uniform buying: when to start, how to order sampling and measurement, and how to avoid the peak-season rush.",
     excerpt:
       "Most uniform delivery problems are calendar problems. Working backwards from term start is what prevents them.",
     primaryKeyword: "school uniform procurement process",

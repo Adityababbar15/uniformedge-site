@@ -13,7 +13,7 @@ export const TSHIRT_PAGE = {
   path: "/custom-t-shirts",
   metaTitle: "Custom & Personalised T-Shirts, Delhi",
   metaDescription:
-    "Personalised T-shirts for companies, events and groups — your logo, names, numbers or artwork, in the colour you choose. Screen print, digital print, embroidery or heat transfer, from UniformEdge in Dwarka, New Delhi.",
+    "Personalised T-shirts for companies, events and groups: your logo, names or artwork, printed or embroidered by UniformEdge in Dwarka, New Delhi.",
   eyebrow: "Custom T-shirts",
   title: "Personalised T-shirts for your team, event or group",
   summary:
