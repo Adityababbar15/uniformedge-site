@@ -12,12 +12,15 @@ export function PageHero({
   description,
   image,
   imageAlt,
+  actions,
 }: {
   eyebrow?: string;
   title: string;
   description?: string;
   image?: string;
   imageAlt?: string;
+  /** Optional buttons under the description (e.g. the page's primary action). */
+  actions?: React.ReactNode;
 }) {
   const withPhoto = Boolean(image && imageAlt);
 
@@ -41,6 +44,9 @@ export function PageHero({
             <p className="mt-5 max-w-xl text-base leading-relaxed text-ink-700 sm:text-lg">
               {description}
             </p>
+          )}
+          {actions && (
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">{actions}</div>
           )}
         </div>
         {image && imageAlt && (

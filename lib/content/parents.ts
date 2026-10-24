@@ -1,9 +1,37 @@
-import { COMPANY } from "./company";
+import { COMPANY, SHOP_URL } from "./company";
 
 // The business sells direct to parents once a school appoints us, which is what
-// takes the work off the school. There is no online checkout today — parents
-// order in store, on WhatsApp, or through their school — so this content routes
-// them to those channels rather than implying a storefront that does not exist.
+// takes the work off the school. Parents can order in the online shop (Odoo,
+// SHOP_URL), on WhatsApp, in store, or through their school.
+//
+// Payment: cash on delivery only until Razorpay is connected in Odoo. When it
+// is, update SHOP_PAYMENT below — nothing else on the page states the method.
+
+/**
+ * Schools with a shop page. Aditya confirmed (Oct 2026) that all seven have
+ * agreed to be named. Paths are the Odoo category URLs under /shop.
+ */
+export const SHOP_SCHOOLS = [
+  { name: "Dwarka International School", path: "/shop/category/schools-9/dwarka-international-school-10" },
+  { name: "J M International School", path: "/shop/category/schools-9/j-m-international-school-11" },
+  { name: "Delhi Public School, Dwarka Sector 3", path: "/shop/category/schools-9/delhi-public-school-dwarka-sector-3-12" },
+  { name: "Nirmal Bhartia School", path: "/shop/category/schools-9/nirmal-bhartia-school-13" },
+  { name: "Bal Bharti Public School", path: "/shop/category/schools-9/bal-bharti-public-school-14" },
+  { name: "Kendriya Vidyalaya", path: "/shop/category/schools-9/kendriya-vidyalaya-15" },
+  { name: "O P G World School", path: "/shop/category/schools-9/o-p-g-world-school-16" },
+] as const;
+
+export const shopLink = (path = "/shop/category/schools-9") => `${SHOP_URL}${path}`;
+
+export const SHOP_PAYMENT = "Cash on delivery";
+
+/** The online order, start to finish. */
+export const SHOP_STEPS = [
+  { title: "Pick your school", body: "Each school's page lists the uniform it has approved." },
+  { title: "Choose the size", body: "Prices are shown per size and include GST." },
+  { title: "Check out", body: `Enter your address and pay. Payment: ${SHOP_PAYMENT.toLowerCase()}.` },
+  { title: "Delivered or collected", body: "We deliver to your door, or you collect from our Dwarka store." },
+] as const;
 
 export type OrderRoute = {
   key: string;
@@ -23,6 +51,12 @@ export const PARENT_DELIVERY = [
 ] as const;
 
 export const ORDER_ROUTES: OrderRoute[] = [
+  {
+    key: "shop",
+    title: "Order online",
+    body: "Choose your school, pick sizes and check out in the online shop.",
+    detail: "Some items are still being added. If yours is missing, message us.",
+  },
   {
     key: "whatsapp",
     title: "Order on WhatsApp",
@@ -53,6 +87,11 @@ export const PARENT_FAQS = [
     question: "What if it doesn't fit?",
     answer:
       "Unworn, unwashed garments with tags intact can be exchanged within 14 days of purchase. Anything with a manufacturing defect is replaced at our cost.",
+  },
+  {
+    question: "How do I pay?",
+    answer:
+      `In the online shop: ${SHOP_PAYMENT.toLowerCase()}. On WhatsApp or in store, we confirm availability and price with you first.`,
   },
   {
     question: "Can I order mid-year, or only before term starts?",
