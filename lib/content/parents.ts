@@ -4,8 +4,8 @@ import { COMPANY, SHOP_URL } from "./company";
 // takes the work off the school. Parents can order in the online shop (Odoo,
 // SHOP_URL), on WhatsApp, in store, or through their school.
 //
-// Payment: cash on delivery only until Razorpay is connected in Odoo. When it
-// is, update SHOP_PAYMENT below — nothing else on the page states the method.
+// Payment: online through Razorpay (cash on delivery switched off, Oct 2026).
+// SHOP_PAYMENT is the only place the page states the method.
 
 /**
  * Schools with a shop page. Aditya confirmed (Oct 2026) that all seven have
@@ -23,13 +23,13 @@ export const SHOP_SCHOOLS = [
 
 export const shopLink = (path = "/shop/category/schools-9") => `${SHOP_URL}${path}`;
 
-export const SHOP_PAYMENT = "Cash on delivery";
+export const SHOP_PAYMENT = "Online by card, UPI, net banking or wallet";
 
 /** The online order, start to finish. */
 export const SHOP_STEPS = [
   { title: "Pick your school", body: "Each school's page lists the uniform it has approved." },
   { title: "Choose the size", body: "Prices are shown per size and include GST." },
-  { title: "Check out", body: `Enter your address and pay. Payment: ${SHOP_PAYMENT.toLowerCase()}.` },
+  { title: "Check out", body: "Enter your address. Delivery is calculated from your PIN code, then you pay online by card, UPI, net banking or wallet." },
   { title: "Delivered or collected", body: "We deliver to your door, or you collect from our Dwarka store." },
 ] as const;
 
@@ -91,7 +91,7 @@ export const PARENT_FAQS = [
   {
     question: "How do I pay?",
     answer:
-      `In the online shop: ${SHOP_PAYMENT.toLowerCase()}. On WhatsApp or in store, we confirm availability and price with you first.`,
+      `In the online shop, you pay online by card, UPI, net banking or wallet when you place the order. On WhatsApp or in store, we confirm availability and price with you first.`,
   },
   {
     question: "Can I order mid-year, or only before term starts?",
